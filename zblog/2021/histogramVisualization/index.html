@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>Visualize Data Distribution with Histogram</title>
+  <meta name="description" content="">
+  <meta name="author" content="Pc Ng">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Visualize Data Distribution with Histogram">
+  <meta property="og:description" content="Histogram allows us to visualize the frequency distribution of our data.
+It breaks the data into a few smaller bins according to the value of the data, and then count the number of occurences (i.e., the frequency) in each bin.
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap & MDB -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link rel="stylesheet" href="/css/main.css?1618805589676764100">
+  <link rel="canonical" href="http://localhost:4000/zblog/2021/histogramVisualization/">
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover "
+  style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <a href="/" title="link to home of Pc Ng">
+          <img src="/images/pc.jpg" class="user-image" alt="Pc's Photo">
+          <h1 class="panel-cover__title panel-title">Pc Ng</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Welcome! No matter what bring you to my page, I just want to give you a SMILE. Forget about my first name, you can just call me Pc. My current research focuses on Proximity-based Sensing and Networking, Physiological Signals with Mobile and Wearable Devices, and IoT Systems with Artificial Intelligence. </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">              
+              <li class="navigation__item"><a href="/zpublications" title="link to Pc Ng publications"
+                class="blog-button">Publications</a></li>
+              <li class="navigation__item"><a href="/zresearch" title="link to Pc Ng research"
+                class="blog-button">Research</a></li>
+              <li class="navigation__item"><a href="/zdevelopments" title="link to Pc Ng developments"
+                class="blog-button">Developments</a></li>
+              <li class="navigation__item"><a href="/zcv" title="link to Pc Ng CV"
+                class="blog-button">CV</a></li>
+              <li class="navigation__item"><a href="/zblog" title="link to Pc Ng blog"
+                  class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+              
+              <!-- Google Scholar -->
+              <li class="navigation__item">
+                <a href="https://scholar.google.com.hk/citations?user=WBieghIAAAAJ&hl=en&authuser=2"
+                  title="@WBieghIAAAAJ on Google Scholar" target="_blank">
+                  <i class="ai ai-google-scholar" style="font-size: 1.7em;"></i>
+                  <span class="label">Google Scholar</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+
+              
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/pc-ng-3b45072b"
+                  title="pc-ng-3b45072b on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/pc-ng"
+                  title="pc-ng on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- ResearchGate -->
+              <li class="navigation__item">
+                <a href="https://www.researchgate.net/profile/Pc-Ng-2"
+                  title="Pc-Ng-2 on ResearchGate" target="_blank">
+                  <i class="ai ai-researchgate" style="font-size: 1.7em;"></i>
+                  <span class="label">ResearchGate</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- ORCID -->
+              <li class="navigation__item">
+                <a href="https://orcid.org/0000-0001-9153-5411"
+                  title="0000-0001-9153-5411 on ORCID" target="_blank">
+                  <i class="ai ai-orcid" style="font-size: 1.7em;"></i>
+                  <span class="label">ORCID</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:pc.ng@utoronto.ca" title="Email pc.ng@utoronto.ca" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+
+              <!-- RSS -->
+              <!-- <li class="navigation__item">
+                <a href="/feed.xml" title="Subscribe" target="_blank">
+                  <i class="icon icon-rss"></i>
+                  <span class="label">RSS</span>
+                </a>
+              </li> -->
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+    
+    
+    <div class="navigation-wrapper">
+      <!-- Nav Bar -->
+<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top"">
+
+        <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/" >
+        <span class="font-weight-bold">Perfectly Imperfect</span> 
+        </a>
+
+
+        <!-- Navbar Toggle -->
+        <!-- <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+        </button> -->
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zpublications" title="Publications">
+                    Publications <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zresearch/" title="Research">
+                    Research <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zdevelopments/" title="Developments">
+                    Developments <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zcv" title="CV">
+                    CV <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zblog" title="Blog">
+                    Blog <span class="sr-only">(current)</span>
+                </a></li>
+        </ul>
+        </div>
+</nav>
+
+
+
+    </div>  
+    <div class="content-wrapper" style = "padding-top: 70px;">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2021-04-12 12:30" class="post-meta__date date">12 Apr 2021</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#Matplotlib">Matplotlib</a>, <a href="/tags/#Seaborn">Seaborn</a>, <a href="/tags/#Python">Python</a></span>
+      
+    </div>
+    <h1 class="post-title">Visualize Data Distribution with Histogram</h1>
+  </header>
+
+  <section class="post">
+    <p>Histogram allows us to visualize the frequency distribution of our data.
+It breaks the data into a few smaller bins according to the value of the data, and then count the number of occurences (i.e., the frequency) in each bin.</p>
+
+<p>We can obtain the frequency and bins for a given data using the <code class="language-plaintext highlighter-rouge">histogram()</code> function from numpy. Let’s consider the following example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="c1"># generate 1000 random numbers
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># count the occurences in each bin in x
+</span><span class="n">frequency</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">frequency</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'value: </span><span class="si">{</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="si">}</span><span class="s"> &gt;&gt; frequency: </span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p><button type="button" class="btn-sm btn-note disabled">Output: </button></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>value: 0.1 &gt;&gt; frequency: 80
+value: 0.2 &gt;&gt; frequency: 80
+value: 0.3 &gt;&gt; frequency: 98
+value: 0.4 &gt;&gt; frequency: 91
+value: 0.5 &gt;&gt; frequency: 123
+value: 0.6 &gt;&gt; frequency: 97
+value: 0.7 &gt;&gt; frequency: 105
+value: 0.8 &gt;&gt; frequency: 102
+value: 0.9 &gt;&gt; frequency: 117
+value: 1.0 &gt;&gt; frequency: 107
+</code></pre></div></div>
+
+<p>Here, we used <code class="language-plaintext highlighter-rouge">numpy.random.rand()</code> function to generate 1000 uniformly distributed values, ranging from 0 to 1. An array x is defined to store the generated values.
+We would like to know how many data is within 0-0.1, how many occurs at 0.1-0.2, and so on.
+These can be obtained by calling <code class="language-plaintext highlighter-rouge">numpy.histogram()</code> function.</p>
+
+<h2 id="histogram-with-matplotlib">Histogram with Matplotlib</h2>
+<p>Matplotlib allows us to plot the histogram with <code class="language-plaintext highlighter-rouge">pyplot.hist()</code> function.
+Let’s continue with the above example, and use the histogram function in Matplotlib to visualize the data distribution.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> 
+
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Data Distribution"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Value"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Frequency"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><img src="/zblog/images/5_matplotlibHistogram_4_0.svg" alt="svg" /></p>
+</blockquote>
+
+<p>Let’s generate another set of random number, but with normal distribution.
+Instead of <code class="language-plaintext highlighter-rouge">numpy.random.rand()</code>, we can use <code class="language-plaintext highlighter-rouge">numpy.random.randn()</code> to generate a series of values that follow standard normal distribution with zero mean and standard deviation equals to 1.</p>
+
+<blockquote>
+  <p>Notes:
+if we would like to have a normal distribution with specific mean and standard deviation, we can use the following formula:
+\(\sigma * numpy.random.randn() + \mu\)</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># generate 1000 random numbers
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Data Distribution"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Value"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Frequency"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><img src="/zblog/images/5_matplotlibHistogram_6_0.svg" alt="svg" /></p>
+</blockquote>
+
+<h2 id="multiple-histograms-in-a-single-plot">Multiple Histograms in a Single Plot</h2>
+
+<p>We can plot multiple histograms for easy comparison. 
+Let’s create 3 numpy arrays each consists of 1000 normally distributed random numbers based on different mean and standard deviation.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x1</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">7</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="n">x</span> 
+
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'red'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'x1'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'green'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'x2'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x3</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'blue'</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">'x3'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Data Distribution"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Value"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Frequency"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><img src="/zblog/images/5_matplotlibHistogram_8_0.svg" alt="svg" /></p>
+</blockquote>
+
+<h2 id="density-distribution">Density Distribution</h2>
+<p>Instead of using the number of occurences as the y-axis, we can normalize the occurences frequency by setting density to <code class="language-plaintext highlighter-rouge">True</code>, as shown below:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Data Distribution"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Value"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Probability"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><img src="/zblog/images/5_matplotlibHistogram_10_0.svg" alt="svg" /></p>
+</blockquote>
+
+<h2 id="style-the-histogram">Style the Histogram</h2>
+<p>We can create spacing between each bin in the histogram using the <code class="language-plaintext highlighter-rouge">set_style()</code> function from seaborn. 
+Note that seaborn is built upon matplotlib, so we can use seaborn and matplotlib together.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span> 
+<span class="n">sns</span><span class="p">.</span><span class="n">set_style</span><span class="p">(</span><span class="s">"white"</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Data Distribution"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Value"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Probability"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><img src="/zblog/images/5_matplotlibHistogram_12_0.svg" alt="svg" /></p>
+</blockquote>
+
+<p>We can also use the <code class="language-plaintext highlighter-rouge">seaborn.histplot()</code> function to visualize the histogram and density curve on the same plot.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1"># sns.histplot(x, bins = 10, hist_kws={'alpha': 0.5}, kde_kws={'linewidth': 2})
+</span><span class="n">sns</span><span class="p">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s">"probability"</span><span class="p">,</span> <span class="n">kde</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Data Distribution"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Value"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Probability"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><img src="/zblog/images/5_matplotlibHistogram_14_0.svg" alt="svg" /></p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+
+  </section>
+  
+</article>
+
+
+
+
+        <footer class="fixed-bottom">
+  <div class="container mt-0">
+    <span class="footer__copyright">&copy; 2021 Pc Ng. All rights reserved.</span>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1618805589676764100"></script>
+
+
+<script>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script>
+
+    </div>
+
+  </body>
+
+  <!-- Load my JS -->
+  <script src="/js/my.js"></script>
+</html>
