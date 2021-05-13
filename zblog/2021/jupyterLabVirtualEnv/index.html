@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title></title>
+  <title>Adding Virtual Environment to Jupyter Lab</title>
   <meta name="description" content="">
   <meta name="author" content="Pc Ng">
   <meta name="HandheldFriendly" content="True">
@@ -17,8 +17,86 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="">
-  <meta property="og:description" content="
+  <meta property="og:title" content="Adding Virtual Environment to Jupyter Lab">
+  <meta property="og:description" content="JupyterLab is the next-generation Jupyter notebook with more comprehensive user interface.
+The interface is highly modular and customizable.
+
+If you have worked with JupyterLab, you might be realized that the JupyterLab only consists of the virtual environment you created through Anaconda, but those virtual environments created through venv or virtualenv are not found inside the launcher.
+While IPython kernel is always available in JupyterLab, other version of Python and virtual environment might not available when you start the JupyterLab. That’s being said, we got to add the virtual environment to JupyterLab manually.
+
+To add the virtual environment, first, make sure that the virtual environment is created and activated. For windows, we can create the virtual environment with PowerShell by typing the following command:
+
+python -m venv env
+
+
+Next, we need to activate the virtual environment (i.e., the env that we have created).
+
+env/Scripts/activate
+
+
+Check if ipykernel is installed, we can use pip list to list down a list of installed packages.
+
+  
+
+
+If ipykernel is not installed, install the ipykernel which provides the IPython kernel for JupyterLab.
+
+pip install ipykernel
+
+
+Once it is installed, we can add the virtual environment we created just now to JupyterLab. To add the virtual environment, enter the following command:
+
+python -m ipykernel install --name=env
+
+
+You should get the following output:
+
+  
+
+
+The output said that the kernelspec env is installed in the above directory (i.e.,C:\ProgramData\jupyter\kernels\env in this case). Navigate to the said directory, you can see that the folder containing your environment spec.
+
+  
+
+
+Inside the folder, you will find a kernel.json file containing the information of your virtual environment env.
+
+  
+
+
+If you open the kernel.json, you should see that it contains the following information:
+
+  
+
+
+Now, if you open the JupyterLab again, you can find your virtual environment env inside the Launcher
+
+  
+
+
+Remove the manually added Kernelspec from JupyterLab
+You can check the list of kernels you have in your JupyterLab with the following command:
+
+jupyter kernelspec list
+
+
+You should see env inside the list.
+
+  
+
+
+If you would like to remove the virtual environment env from JupyterLab, type in the following command to uninstall the kernelspec.
+
+jupyter kernelspec uninstall env
+
+
+
+  
+
+
+The output shows that the kernelspec is successfully removed.
+
+
 
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
@@ -54,7 +132,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
   <link rel="stylesheet" href="/css/main.css?1620942179043942200">
-  <link rel="canonical" href="http://localhost:4000/zdevelopments/blank/">
+  <link rel="canonical" href="http://localhost:4000/zblog/2021/jupyterLabVirtualEnv/">
 
 
   <!-- jQuery -->
@@ -93,7 +171,8 @@
 
 
   <body>
-    <span class="mobile btn-mobile-menu">
+    
+<span class="mobile btn-mobile-menu">
   <i class="icon icon-list btn-mobile-menu__icon"></i>
   <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
 </span>
@@ -104,30 +183,80 @@
 
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
-        <a href="/" title="link to home of Pc Ng">
-          <img src="/images/pc.jpg" class="user-image" alt="Pc's Photo">
-          <h1 class="panel-cover__title panel-title">Pc Ng</h1>
-        </a>
-        <hr class="panel-cover__divider">
-        <p class="panel-cover__description">Welcome! No matter what bring you to my page, I just want to give you a SMILE. Forget about my first name, you can just call me Pc. My current research focuses on Proximity-based Sensing and Networking, Physiological Signals with Mobile and Wearable Devices, and IoT Systems with Artificial Intelligence. </p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary">
+        
+        <ol class="post-list">      
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/jupyterLabVirtualEnv/" title="Adding Virtual Environment to Jupyter Lab">
+              <h4 style="color:white">
+                Adding Virtual Environment to Jupyter Lab
+              </h2> 
+              <p class="excerpt">JupyterLab is the next-generation Jupyter notebook with...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-05-12 19:30" class="post-list__meta--date date">12 May 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#JupyterLab">JupyterLab</a>, <a href="/tags/#Virtual Environment">Virtual Environment</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/flattenRavel/" title="Flatten vs Ravel functions in Numpy">
+              <h4 style="color:white">
+                Flatten vs Ravel functions in Numpy
+              </h2> 
+              <p class="excerpt">Dealing with multidimensional array with Numpy is...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-04-18 19:48" class="post-list__meta--date date">18 Apr 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#Numpy">Numpy</a>, <a href="/tags/#Python">Python</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/histogramVisualization/" title="Visualize Data Distribution with Histogram">
+              <h4 style="color:white">
+                Visualize Data Distribution with Histogram
+              </h2> 
+              <p class="excerpt">Histogram allows us to visualize the frequency...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-04-12 12:30" class="post-list__meta--date date">12 Apr 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#Matplotlib">Matplotlib</a>, <a href="/tags/#Seaborn">Seaborn</a>, <a href="/tags/#Python">Python</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/contactTracing/" title="Smart Contact Tracing Project at University of Guelph">
+              <h4 style="color:white">
+                Smart Contact Tracing Project at University of Guelph
+              </h2> 
+              <p class="excerpt">Last year about the same time, we...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-01-08 10:04" class="post-list__meta--date date">8 Jan 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#BLE">BLE</a>, <a href="/tags/#contact tracing">contact tracing</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+        </ol>
 
         <div class="navigation-wrapper">
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">              
-              <li class="navigation__item"><a href="/zpublications" title="link to Pc Ng publications"
-                class="blog-button">Publications</a></li>
-              <li class="navigation__item"><a href="/zresearch" title="link to Pc Ng research"
-                class="blog-button">Research</a></li>
-              <li class="navigation__item"><a href="/zdevelopments" title="link to Pc Ng developments"
-                class="blog-button">Developments</a></li>
-              <li class="navigation__item"><a href="/zcv" title="link to Pc Ng CV"
-                class="blog-button">CV</a></li>
-              <li class="navigation__item"><a href="/zblog" title="link to Pc Ng blog"
-                  class="blog-button">Blog</a></li>
-            </ul>
-          </nav>
-
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
               
@@ -219,8 +348,7 @@
     <div class="panel-cover--overlay"></div>
   </div>
 </header>
-    
-    
+
     <div class="navigation-wrapper">
       <!-- Nav Bar -->
 <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top"">
@@ -268,22 +396,105 @@
 
     </div>  
     <div class="content-wrapper" style = "padding-top: 70px;">
-        <div class="post">
-
+        <article class="post-container post-container--single">
   <header class="post-header">
-    <h2 class="post-title"></h2>
+    <div class="post-meta">
+      <time datetime="2021-05-12 19:30" class="post-meta__date date">12 May 2021</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#JupyterLab">JupyterLab</a>, <a href="/tags/#Virtual Environment">Virtual Environment</a></span>
+      
+    </div>
+    <h1 class="post-title">Adding Virtual Environment to Jupyter Lab</h1>
   </header>
 
-    <article>
-      <script>
-  location.replace("https://pc-ng.github.io/")
-</script>
+  <section class="post">
+    <p>JupyterLab is the next-generation Jupyter notebook with more comprehensive user interface.
+The interface is highly modular and customizable.</p>
 
+<p>If you have worked with JupyterLab, you might be realized that the JupyterLab only consists of the virtual environment you created through Anaconda, but those virtual environments created through <code class="language-plaintext highlighter-rouge">venv</code> or <code class="language-plaintext highlighter-rouge">virtualenv</code> are not found inside the launcher.
+While IPython kernel is always available in JupyterLab, other version of Python and virtual environment might not available when you start the JupyterLab. That’s being said, we got to add the virtual environment to JupyterLab manually.</p>
 
-    </article>
+<p>To add the virtual environment, first, make sure that the virtual environment is created and activated. For windows, we can create the virtual environment with <code class="language-plaintext highlighter-rouge">PowerShell</code> by typing the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m venv env
+</code></pre></div></div>
+
+<p>Next, we need to activate the virtual environment (i.e., the <code class="language-plaintext highlighter-rouge">env</code> that we have created).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>env/Scripts/activate
+</code></pre></div></div>
+
+<p>Check if <code class="language-plaintext highlighter-rouge">ipykernel</code> is installed, we can use <code class="language-plaintext highlighter-rouge">pip list</code> to list down a list of installed packages.</p>
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/piplist.jpg" alt="jpg" /></p>
+</blockquote>
+
+<p>If <code class="language-plaintext highlighter-rouge">ipykernel</code> is not installed, install the <code class="language-plaintext highlighter-rouge">ipykernel</code> which provides the IPython kernel for JupyterLab.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install ipykernel
+</code></pre></div></div>
+
+<p>Once it is installed, we can add the virtual environment we created just now to JupyterLab. To add the virtual environment, enter the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m ipykernel install --name=env
+</code></pre></div></div>
+
+<p>You should get the following output:</p>
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/envadded.JPG" alt="JPG" /></p>
+</blockquote>
+
+<p>The output said that the kernelspec <code class="language-plaintext highlighter-rouge">env</code> is installed in the above directory (i.e.,<code class="language-plaintext highlighter-rouge">C:\ProgramData\jupyter\kernels\env</code> in this case). Navigate to the said directory, you can see that the folder containing your environment spec.</p>
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/installedspec.JPG" alt="JPG" /></p>
+</blockquote>
+
+<p>Inside the folder, you will find a <code class="language-plaintext highlighter-rouge">kernel.json</code> file containing the information of your virtual environment <code class="language-plaintext highlighter-rouge">env</code>.</p>
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/kernelspec.JPG" alt="JPG" /></p>
+</blockquote>
+
+<p>If you open the <code class="language-plaintext highlighter-rouge">kernel.json</code>, you should see that it contains the following information:</p>
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/kernel.JPG" alt="JPG" /></p>
+</blockquote>
+
+<p>Now, if you open the JupyterLab again, you can find your virtual environment <code class="language-plaintext highlighter-rouge">env</code> inside the <code class="language-plaintext highlighter-rouge">Launcher</code></p>
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/jupyter.JPG" alt="JPG" /></p>
+</blockquote>
+
+<h2 id="remove-the-manually-added-kernelspec-from-jupyterlab">Remove the manually added Kernelspec from JupyterLab</h2>
+<p>You can check the list of kernels you have in your JupyterLab with the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter kernelspec list
+</code></pre></div></div>
+
+<p>You should see <code class="language-plaintext highlighter-rouge">env</code> inside the list.</p>
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/kernellist.JPG" alt="JPG" /></p>
+</blockquote>
+
+<p>If you would like to remove the virtual environment <code class="language-plaintext highlighter-rouge">env</code> from JupyterLab, type in the following command to uninstall the kernelspec.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter kernelspec uninstall env
+</code></pre></div></div>
+
+<blockquote>
+  <p><img src="/zblog/images-jupyterlab/remove.JPG" alt="JPG" /></p>
+</blockquote>
+
+<p>The output shows that the kernelspec is successfully removed.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+  </section>
   
+</article>
 
-</div>
+
+
 
         <footer class="fixed-bottom">
   <div class="container mt-0">
