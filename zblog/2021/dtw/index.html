@@ -33,6 +33,9 @@ This can be done by warping the time axis of one sequences to align the time axi
     DTW can efficiently align two time series sequences, allowing a more intuitive similarity measure between out of sync data points.
 
 
+
+
+
 Warping Function
 DTW uses warping function to find the best alignment between two time series sequences.
 The objective is to find the path through the grids
@@ -100,6 +103,9 @@ Given \(P_s = (i, j)\) and \(P_{s-1} = (i', j')\),  \(i - i' \leq 1\) and \(j - 
   
 
 
+
+
+
 Dynamic Programming
 Dynamic Programming is an efficient method to find the warping path. 
 In general, dynamic programming evaluate the cumulative distance \(\gamma(i, j)\) based on the distance $d(P_s)$ at the current cell and the minimum of the cumulative distances of the adjacent elements.
@@ -152,6 +158,9 @@ The warping path can be obtained by backtracking from the end point to the begin
 
 
   
+
+
+
 
 
 Implementation
@@ -260,6 +269,9 @@ output:
 Normalized Distance: 2.111111
 
 
+
+
+
 Wrap Up the Implementation with function
 We can also define a few functions to handle the DTW matrix computation, get the warping path and also compute the normalized distance.
 
@@ -320,11 +332,7 @@ def get_warpingPath(A, B):
     warp = np.zeros((len(B), len(A)))
     for p in path:
         warp[p[0], p[1]] = 1 
-
-    return path, warp, dtw_mat
-
-
-The function takes in time series A and time series B as input, and return the path, warp and dtw_mat.
+```python
 path, warp, dtw_matrix = get_warpingPath(A, B)
 print(warp)
 print(dtw_mat)
@@ -364,15 +372,15 @@ output:
 Normalized Distance: 2.111111
 
 
-Wrap-Up
+
+
+
+Summary
 A python script containing all the above functions is provided here
 You can also refer to the example notebook here on how to apply those functions.
 
 There is also a useful dtw-python package provided by Toni dot Giorgino. You can visit his site for more information about dtw-python package.
-You can also install the package by issuing the following command:
-
-pip install dtw-python
-
+You can also install the package by issuing the following command: pip install dtw-python.
 
 DTW is available in Matlab through the Signal Processing Toolbox. For more information about using DTW with Matlab, check out the Matlab documentation about DTW here.
 
@@ -411,7 +419,7 @@ DTW is available in Matlab through the Signal Processing Toolbox. For more infor
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-  <link rel="stylesheet" href="/css/main.css?1621095052817988300">
+  <link rel="stylesheet" href="/css/main.css?1621099905496252300">
   <link rel="canonical" href="http://localhost:4000/zblog/2021/dtw/">
 
 
@@ -472,7 +480,7 @@ DTW is available in Matlab through the Signal Processing Toolbox. For more infor
               <h4 style="color:white">
                 Adding Virtual Environment to Jupyter Lab
               </h2> 
-              <p class="excerpt">JupyterLab is the next-generation Jupyter notebook with...&hellip;</p>
+              <!-- <p class="excerpt">JupyterLab is the next-generation Jupyter notebook with...&hellip;</p> -->
               </a>
               <div class="post-list__meta">
                   <time datetime="2021-05-12 19:30" class="post-list__meta--date date">12 May 2021</time>
@@ -489,7 +497,7 @@ DTW is available in Matlab through the Signal Processing Toolbox. For more infor
               <h4 style="color:white">
                 Dynamic Time Warping
               </h2> 
-              <p class="excerpt">Dynamic Time Warping (DTW) is a non-linear...&hellip;</p>
+              <!-- <p class="excerpt">Dynamic Time Warping (DTW) is a non-linear...&hellip;</p> -->
               </a>
               <div class="post-list__meta">
                   <time datetime="2021-05-01 19:48" class="post-list__meta--date date">1 May 2021</time>
@@ -506,7 +514,7 @@ DTW is available in Matlab through the Signal Processing Toolbox. For more infor
               <h4 style="color:white">
                 Flatten vs Ravel functions in Numpy
               </h2> 
-              <p class="excerpt">Dealing with multidimensional array with Numpy is...&hellip;</p>
+              <!-- <p class="excerpt">Dealing with multidimensional array with Numpy is...&hellip;</p> -->
               </a>
               <div class="post-list__meta">
                   <time datetime="2021-04-18 19:48" class="post-list__meta--date date">18 Apr 2021</time>
@@ -523,7 +531,7 @@ DTW is available in Matlab through the Signal Processing Toolbox. For more infor
               <h4 style="color:white">
                 Visualize Data Distribution with Histogram
               </h2> 
-              <p class="excerpt">Histogram allows us to visualize the frequency...&hellip;</p>
+              <!-- <p class="excerpt">Histogram allows us to visualize the frequency...&hellip;</p> -->
               </a>
               <div class="post-list__meta">
                   <time datetime="2021-04-12 12:30" class="post-list__meta--date date">12 Apr 2021</time>
@@ -540,7 +548,7 @@ DTW is available in Matlab through the Signal Processing Toolbox. For more infor
               <h4 style="color:white">
                 Smart Contact Tracing Project at University of Guelph
               </h2> 
-              <p class="excerpt">Last year about the same time, we...&hellip;</p>
+              <!-- <p class="excerpt">Last year about the same time, we...&hellip;</p> -->
               </a>
               <div class="post-list__meta">
                   <time datetime="2021-01-08 10:04" class="post-list__meta--date date">8 Jan 2021</time>
@@ -713,12 +721,15 @@ This can be done by warping the time axis of one sequences to align the time axi
 
 <!-- <img src="/zblog/images-dtw/twosequences.JPG" alt="drawing" width="200"/> -->
 <blockquote>
-  <p><img src="/zblog/images-dtw/twosequences.JPG" alt="drawing" width="800" /> 
+  <p><img src="/zblog/images-dtw/twosequences.JPG" alt="drawing" width="1000" /> 
 <!-- > ![sequences](/zblog/images-dtw/twosequences.JPG) --></p>
 </blockquote>
 <div class="caption">
     DTW can efficiently align two time series sequences, allowing a more intuitive similarity measure between out of sync data points.
 </div>
+
+<hr />
+<p><br /></p>
 
 <h2 id="warping-function">Warping Function</h2>
 <p>DTW uses warping function to find the best alignment between two time series sequences.
@@ -731,7 +742,7 @@ The objective is to find the path through the grids</p>
 <p>which minimizes the total distance between them.</p>
 
 <blockquote>
-  <p><img src="/zblog/images-dtw/warpinggrid.JPG" alt="warping" /></p>
+  <p><img src="/zblog/images-dtw/warpinggrid.JPG" alt="drawing" width="800" /></p>
 </blockquote>
 <div class="caption">
     DTW aims to learn a warping path that dynamically maps the data points of time series A to data points of time series B.
@@ -744,7 +755,7 @@ The objective is to find the path through the grids</p>
 <p>where \(d(P_s) = d(v_i, v_j)\) is the distance between value at \(i\)th point \(v_i\) and value at \(j\)th point \(v_j\), and \(w_s\) is the weight coefficient.</p>
 
 <blockquote>
-  <p><img src="/zblog/images-dtw/manypaths.JPG" alt="warping" /></p>
+  <p><img src="/zblog/images-dtw/manypaths.JPG" alt="drawing" width="800" /></p>
 </blockquote>
 
 <p>Considering the Figure above, there are many possible warping paths through the grid. That’s being said, to search for an optimum path, i.e.,</p>
@@ -784,8 +795,11 @@ Given \(P_s = (i, j)\) and \(P_{s-1} = (i', j')\),  \(i - i' \leq 1\) and \(j - 
 </blockquote>
 
 <blockquote>
-  <p><img src="/zblog/images-dtw/constraint.jpg" alt="constraint" /></p>
+  <p><img src="/zblog/images-dtw/constraint.jpg" alt="drawing" width="1000" /></p>
 </blockquote>
+
+<hr />
+<p><br /></p>
 
 <h2 id="dynamic-programming">Dynamic Programming</h2>
 <p>Dynamic Programming is an efficient method to find the warping path. 
@@ -817,7 +831,7 @@ Since the values at the cell above, left and diagonally above \(P_s\) are all em
 The cumulative distance \(\gamma(i=1, j=1)\) will be 2, as shown in Figure below.</p>
 
 <blockquote>
-  <p><img src="/zblog/images-dtw/compute1.jpg" alt="jpg" /></p>
+  <p><img src="/zblog/images-dtw/compute1.jpg" alt="drawing" width="800" /></p>
 </blockquote>
 
 <p>Let’s consider another point \(P_s = (4,4)\), here we have \(v(i=4) = 3\) and \(v(j=4) = 2\). 
@@ -832,14 +846,17 @@ So, the cumulative distance \(\gamma(i=4, j=4)\) will be 3, as shown in Figure b
 <p>Figure below shows the final grid (or matrix) with all the value computed.</p>
 
 <blockquote>
-  <p><img src="/zblog/images-dtw/finalcompute.jpg" alt="drawing" width="800" /></p>
+  <p><img src="/zblog/images-dtw/finalcompute.jpg" alt="drawing" width="400" /></p>
 </blockquote>
 
 <p>The warping path can be obtained by backtracking from the end point to the beginning point as shown below.</p>
 
 <blockquote>
-  <p><img src="/zblog/images-dtw/backtrack.jpg" alt="drawing" width="1000" /></p>
+  <p><img src="/zblog/images-dtw/backtrack.jpg" alt="drawing" width="1100" /></p>
 </blockquote>
+
+<hr />
+<p><br /></p>
 
 <h2 id="implementation">Implementation</h2>
 <p>Here we will walkthrough a simple implementation of above example in Python.</p>
@@ -947,6 +964,9 @@ Assume that all the point shares equal weight, i.e., \(w_s=1\) for all \(P_s\), 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Normalized Distance: 2.111111
 </code></pre></div></div>
 
+<hr />
+<p><br /></p>
+
 <h2 id="wrap-up-the-implementation-with-function">Wrap Up the Implementation with function</h2>
 <p>We can also define a few functions to handle the DTW matrix computation, get the warping path and also compute the normalized distance.</p>
 
@@ -1007,12 +1027,8 @@ Assume that all the point shares equal weight, i.e., \(w_s=1\) for all \(P_s\), 
     <span class="n">warp</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
         <span class="n">warp</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span> 
-
-    <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">warp</span><span class="p">,</span> <span class="n">dtw_mat</span>
-</code></pre></div></div>
-
-<p>The function takes in time series A and time series B as input, and return the <code class="language-plaintext highlighter-rouge">path</code>, <code class="language-plaintext highlighter-rouge">warp</code> and <code class="language-plaintext highlighter-rouge">dtw_mat</code>.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">path</span><span class="p">,</span> <span class="n">warp</span><span class="p">,</span> <span class="n">dtw_matrix</span> <span class="o">=</span> <span class="n">get_warpingPath</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="n">path</span><span class="p">,</span> <span class="n">warp</span><span class="p">,</span> <span class="n">dtw_matrix</span> <span class="o">=</span> <span class="n">get_warpingPath</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">warp</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">dtw_mat</span><span class="p">)</span>
 </code></pre></div></div>
@@ -1051,15 +1067,15 @@ Assume that all the point shares equal weight, i.e., \(w_s=1\) for all \(P_s\), 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Normalized Distance: 2.111111
 </code></pre></div></div>
 
-<h2 id="wrap-up">Wrap-Up</h2>
+<hr />
+<p><br /></p>
+
+<h2 id="summary">Summary</h2>
 <p>A python script containing all the above functions is provided <a href="https://github.com/pc-ng/dtw">here</a>
 You can also refer to the example notebook <a href="https://github.com/pc-ng/dtw/blob/master/dtw_example.ipynb">here</a> on how to apply those functions.</p>
 
 <p>There is also a useful <code class="language-plaintext highlighter-rouge">dtw-python</code> package provided by Toni dot Giorgino. You can visit his <a href="https://dynamictimewarping.github.io/python/#online-documentation">site</a> for more information about <code class="language-plaintext highlighter-rouge">dtw-python</code> package.
-You can also install the package by issuing the following command:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install dtw-python
-</code></pre></div></div>
+You can also install the package by issuing the following command: <code class="language-plaintext highlighter-rouge">pip install dtw-python</code>.</p>
 
 <p>DTW is available in Matlab through the Signal Processing Toolbox. For more information about using DTW with Matlab, check out the Matlab documentation about DTW <a href="https://www.mathworks.com/help/signal/ref/dtw.html">here</a>.</p>
 
@@ -1080,7 +1096,7 @@ You can also install the package by issuing the following command:</p>
 </footer>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/main.js?1621095052817988300"></script>
+<script type="text/javascript" src="/js/main.js?1621099905496252300"></script>
 <!--  -->
 
 <script>
