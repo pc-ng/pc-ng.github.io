@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>Dynamic Time Warping</title>
+  <meta name="description" content="">
+  <meta name="author" content="Pc Ng">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dynamic Time Warping">
+  <meta property="og:description" content="Dynamic Time Warping (DTW) is a non-linear similarity computation method that dynamically compute the similarity between time series data when the time indices between data points from time series A and time series B do not match.
+Consider the two time series sequences (time series A in green, and time series B in blue) shown in Figure below, these two sequences do not line up in time axis. However, both of them have some similarities in terms of their component shapes.
+If traditional distance metrics (e.g., Euclidean distance, Manhattan distance, etc.) are used to compute the distance between the \(i\)th point of time series A with the \(i\)th point of time series B, it will most probably produce a poor similarity score. 
+If a non-linear mapping can be used to match the similar shape of two time series even though these two time series sequences are out of phase in the time axis, it will produce a more intuitive similarity measure.
+This can be done by warping the time axis of one sequences to align the time axis.
+
+
+
+   
+
+
+
+    DTW can efficiently align two time series sequences, allowing a more intuitive similarity measure between out of sync data points.
+
+
+Warping Function
+DTW uses warping function to find the best alignment between two time series sequences.
+The objective is to find the path through the grids
+
+\[P = P_1, P_2, ..., P_s, ..., P_k\]
+
+\[P_s = (i, j)\]
+
+which minimizes the total distance between them.
+
+
+  
+
+
+    DTW aims to learn a warping path that dynamically maps the data points of time series A to data points of time series B.
+
+
+Let \(A\) and \(B\) be time series A and B, respectively, we can compute the time normalized distance between these two time series:
+
+\[D(A, B) = \frac{\sum_{s=1}^k d(P_s) w_s}{\sum_{s=1}^k w_s}\]
+
+where \(d(P_s) = d(v_i, v_j)\) is the distance between value at \(i\)th point \(v_i\) and value at \(j\)th point \(v_j\), and \(w_s\) is the weight coefficient.
+
+
+  
+
+
+Considering the Figure above, there are many possible warping paths through the grid. That’s being said, to search for an optimum path, i.e.,
+
+\[P_o = arg\min_P (D(A, B))\]
+
+can be extremely hard when the grid size is big.
+
+Furthermore, if a single point of time series A can map onto a large subsection of time series B, it will lead to an unintuitive alignment. 
+Over the decade, a few constraints have been imposed on the warping function:
+
+1. Monotonicity
+
+  Monotonicity ensures that the warping path does not go back in time. 
+Given \(P_s = (i, j)\) and \(P_{s-1} = (i', j')\),  \(i \leq i'\) and \(j \leq j'\) forces the points in \(P\) to be monotonically spaced in time
+
+
+2. Continuity
+
+  Continuity ensures that the warping path does not jump in time. 
+Given \(P_s = (i, j)\) and \(P_{s-1} = (i', j')\),  \(i - i' \leq 1\) and \(j - j' \leq 1\) restricts the allowable steps in the warping path to adjacent cells.
+
+
+3. Boundary Conditions
+
+  The boundary of the warping path states that the part should start at \(P_1 = (1, 1)\) and end at \(P_s = (m, n)\), i.e., the warping path needs to start and finish in diagonally opposite corner of the grid. This is important to make sure the warping path does not consider only partial of the sequence.
+
+
+4. Warping Window
+
+  Let \(r&gt;0\) be the length of warping window, \(\|i - j\| \leq r\) restricts allowable grid points for the warping path. The warping window ensures that the warping path does not wander too far away from the diagonal. This guarantees that the alignment will not get stuck at similar features.
+
+
+5. Slope Constraint
+
+  Slope constraint ensures that the warping path is neither too steep or too shallow. Let \(q\) and \(p\) be the number of steps in the x-direction and y-direction given the grid, then \(\frac{j_{p} - j_{0}}{i_{p} - i_{0}} \leq p\) and \(\frac{i_{q} - i_{0}}{j_{q} - j_{0}} \leq q\). That is, after \(q\) steps in x one must step in y and vice versa.
+
+
+
+  
+
+
+Dynamic Programming
+Dynamic Programming is an efficient method to find the warping path. 
+In general, dynamic programming evaluate the cumulative distance \(\gamma(i, j)\) based on the distance $d(P_s)$ at the current cell and the minimum of the cumulative distances of the adjacent elements.
+Mathematically,
+
+\[\gamma(i, j) = d(P_s) + \min \{\gamma(i-1, j-1), \gamma(i-1, j), \gamma(i, j-1)\}\]
+
+
+  
+    
+      where \(d(P_s) = d(v_i, v_j)\) can be calculated by taking the absolute difference between value at \(i\)th point and value at \(j\)point, i.e., $$d(v_i, v_j) =
+      v_i - v_j
+      $$
+    
+  
+
+
+Example
+Suppose that we have two time series A and B as follows:
+
+\[A = [ 3, 2, 2, 3, 5, 5, 6 ]\]
+
+\[B = [ 1, 3, 2, 2, 3, 5 ]\]
+
+First, let’s consider point \(P_s = (1,1)\), i.e., \(i=1\) and \(j=1\), the value at  \(i=1\) is \(v(i=1) = 3\) and the value at \(j=1\) is \(v(j=1) = 1\).
+Hence, the absolute distance at point \(P_s = (1,1)\) is \(d(P_s) = |3-1| = 2\).
+Since the values at the cell above, left and diagonally above \(P_s\) are all empty, hence, \(\min \{\gamma(i-1, j-1), \gamma(i-1, j), \gamma(i, j-1)\} = 0\).
+The cumulative distance \(\gamma(i=1, j=1)\) will be 2, as shown in Figure below.
+
+
+  
+
+
+Let’s consider another point \(P_s = (4,4)\), here we have \(v(i=4) = 3\) and \(v(j=4) = 2\). 
+Hence, the absolute distance at point \(P_s = (4,4)\) is \(d(P_s) = |3-2| = 1\).
+The values at the adjacent cells (above, left and diagonally above ) are 3, 2 and 2. By taking the minimum value, we have 2. 
+So, the cumulative distance \(\gamma(i=4, j=4)\) will be 3, as shown in Figure below.
+
+
+  
+
+
+Figure below shows the final grid (or matrix) with all the value computed.
+
+
+  
+
+
+The warping path can be obtained by backtracking from the end point to the beginning point as shown below.
+
+
+  
+
+
+Implementation
+Here we will walkthrough a simple implementation of above example in Python.
+
+First, define the two time series A and B
+
+A = np.array([3,2,2,3,5,5,6])
+B = np.array([1,3,2,2,3,5])
+
+
+Initialize a dtw matrix based on the length of A and B, i.e., length of B define the number of rows, and length of A define the number of columns.
+
+dtw_mat = np.zeros((len(B), len(A)))
+print(dtw_mat)
+
+
+output:
+
+[[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]]
+
+
+Now, we need to loop through all element in the dtw matrix, and compute the cumulative distance.
+
+# define the absolute distance function
+d = lambda x, y: np.abs(x - y)
+
+for i in range(len(B)):
+    for j in range(len(A)):
+        if i == 0 and j == 0:
+            dtw_mat[i, j] = d(B[i], A[j])
+        else:
+            if i == 0 and j &gt; 0:
+                choice = dtw_mat[i, j-1]
+            elif i &gt; 0 and j == 0:
+                choice = dtw_mat[i-1, j]
+            else:
+                choice = [dtw_mat[i-1, j], dtw_mat[i, j-1], dtw_mat[i-1, j-1]]
+            
+            dtw_mat[i, j] = d(B[i], A[j]) + np.min(choice)
+
+print(dtw_mat)
+
+
+output:
+
+[[ 2.  3.  4.  6. 10. 14. 19.]
+[ 2.  3.  4.  4.  6.  8. 11.]
+[ 3.  2.  2.  3.  6.  9. 12.]
+[ 4.  2.  2.  3.  6.  9. 13.]
+[ 4.  3.  3.  2.  4.  6.  9.]
+[ 6.  6.  6.  4.  2.  2.  3.]]
+
+
+We can find the warping path by backtracking.
+
+path = [[len(B)-1, len(A)-1]]
+while(True):
+    print(path)
+    i, j = path[-1][0], path[-1][1]
+    if i == 0 and j == 0:
+        break
+    elif i == 0 and j &gt; 0:
+        path.append([i, j-1])
+    elif i &gt; 0 and j == 0:
+        path.append([i-1, j])
+    else:
+        choice = [dtw_mat[i-1, j], dtw_mat[i, j-1], dtw_mat[i-1, j-1]]
+        ind = [[i-1, j], [i, j-1], [i-1, j-1]]
+        k = np.argmin(choice)
+        path.append(ind[k])
+
+
+warp = np.zeros((len(B), len(A)))
+for p in path:
+    warp[p[0], p[1]] = 1 
+
+print(warp)
+
+
+output:
+
+[[1. 0. 0. 0. 0. 0. 0.]
+[1. 0. 0. 0. 0. 0. 0.]
+[0. 1. 1. 0. 0. 0. 0.]
+[0. 0. 1. 0. 0. 0. 0.]
+[0. 0. 0. 1. 0. 0. 0.]
+[0. 0. 0. 0. 1. 1. 1.]]
+
+
+Then, we can calculate the normalized distance between time series A and time series B. 
+Assume that all the point shares equal weight, i.e., \(w_s=1\) for all \(P_s\), then \(D(A,B)\) can be computed as follows:
+
+\[D(A,B) = \frac{1}{k} \sum_{s = 1}^k d(P_s)\]
+
+D = np.sum(warp * dtw_mat)/len(path)
+print(f'Normalized Distance: {D:2f}')
+
+output:
+
+Normalized Distance: 2.111111
+
+
+Wrap Up the Implementation with function
+We can also define a few functions to handle the DTW matrix computation, get the warping path and also compute the normalized distance.
+
+def computed_dtwMat(A, B):
+    d = lambda x, y: np.abs(x - y)
+
+    for i in range(len(B)):
+        for j in range(len(A)):
+            if i == 0 and j == 0:
+                dtw_mat[i, j] = d(B[i], A[j])
+            else:
+                if i == 0 and j &gt; 0:
+                    choice = dtw_mat[i, j-1]
+                elif i &gt; 0 and j == 0:
+                    choice = dtw_mat[i-1, j]
+                else:
+                    choice = [dtw_mat[i-1, j], dtw_mat[i, j-1], dtw_mat[i-1, j-1]]
+                
+                dtw_mat[i, j] = d(B[i], A[j]) + np.min(choice)
+
+    return dtw_mat
+
+
+We can call the above function by providing time series A and time series B as input arguments, and it will return the dtw_mat.
+
+dtw_mat = computed_dtwMat(A, B)
+print(dtw_mat)
+
+
+output:
+
+[[ 2.  3.  4.  6. 10. 14. 19.]
+[ 2.  3.  4.  4.  6.  8. 11.]
+[ 3.  2.  2.  3.  6.  9. 12.]
+[ 4.  2.  2.  3.  6.  9. 13.]
+[ 4.  3.  3.  2.  4.  6.  9.]
+[ 6.  6.  6.  4.  2.  2.  3.]]
+
+
+We can define a function to get the warping path.
+def get_warpingPath(A, B):
+    dtw_mat = computed_dtwMat(A, B)
+    path = [[len(B)-1, len(A)-1]]
+    while(True):
+        i, j = path[-1][0], path[-1][1]
+        if i == 0 and j == 0:
+            break
+        elif i == 0 and j &gt; 0:
+            path.append([i, j-1])
+        elif i &gt; 0 and j == 0:
+            path.append([i-1, j])
+        else:
+            choice = [dtw_mat[i-1, j], dtw_mat[i, j-1], dtw_mat[i-1, j-1]]
+            ind = [[i-1, j], [i, j-1], [i-1, j-1]]
+            k = np.argmin(choice)
+            path.append(ind[k])
+
+    warp = np.zeros((len(B), len(A)))
+    for p in path:
+        warp[p[0], p[1]] = 1 
+
+    return path, warp, dtw_mat
+
+
+The function takes in time series A and time series B as input, and return the path, warp and dtw_mat.
+path, warp, dtw_matrix = get_warpingPath(A, B)
+print(warp)
+print(dtw_mat)
+
+
+output:
+
+[[1. 0. 0. 0. 0. 0. 0.]
+[1. 0. 0. 0. 0. 0. 0.]
+[0. 1. 1. 0. 0. 0. 0.]
+[0. 0. 1. 0. 0. 0. 0.]
+[0. 0. 0. 1. 0. 0. 0.]
+[0. 0. 0. 0. 1. 1. 1.]]
+
+[[ 2.  3.  4.  6. 10. 14. 19.]
+[ 2.  3.  4.  4.  6.  8. 11.]
+[ 3.  2.  2.  3.  6.  9. 12.]
+[ 4.  2.  2.  3.  6.  9. 13.]
+[ 4.  3.  3.  2.  4.  6.  9.]
+[ 6.  6.  6.  4.  2.  2.  3.]]
+
+
+Finally, we can have a function to compute the normalized distance.
+
+def normalized_dist(A, B):
+    path, warp, dtw_matrix = get_warpingPath(A, B)
+    D = np.sum(warp * dtw_mat)/len(path)
+    return D
+
+
+By calling the function normalized_dist, it will return us the normalized distance between time series A and time series B.
+D = normalized_dist(A, B)
+print(f'Normalized Distance: {D:2f}')
+
+output:
+
+Normalized Distance: 2.111111
+
+
+Wrap-Up
+A python script containing all the above functions is provided here
+You can also refer to the example notebook here on how to apply those functions.
+
+There is also a useful dtw-python package provided by Toni dot Giorgino. You can visit his site for more information about dtw-python package.
+You can also install the package by issuing the following command:
+
+pip install dtw-python
+
+
+DTW is available in Matlab through the Signal Processing Toolbox. For more information about using DTW with Matlab, check out the Matlab documentation about DTW here.
+
+
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/pc-fav.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap & MDB -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link rel="stylesheet" href="/css/main.css?1621095052817988300">
+  <link rel="canonical" href="http://localhost:4000/zblog/2021/dtw/">
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129545199-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129545199-1');
+  </script>
+
+  <script data-ad-client="ca-pub-9658356171910088" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9658356171910088"
+     crossorigin="anonymous"></script>
+</head>
+
+
+  <body>
+    
+<span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover "
+  style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        
+        <ol class="post-list">      
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/jupyterLabVirtualEnv/" title="Adding Virtual Environment to Jupyter Lab">
+              <h4 style="color:white">
+                Adding Virtual Environment to Jupyter Lab
+              </h2> 
+              <p class="excerpt">JupyterLab is the next-generation Jupyter notebook with...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-05-12 19:30" class="post-list__meta--date date">12 May 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#JupyterLab">JupyterLab</a>, <a href="/tags/#Virtual Environment">Virtual Environment</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/dtw/" title="Dynamic Time Warping">
+              <h4 style="color:white">
+                Dynamic Time Warping
+              </h2> 
+              <p class="excerpt">Dynamic Time Warping (DTW) is a non-linear...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-05-01 19:48" class="post-list__meta--date date">1 May 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#Algorithm">Algorithm</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/flattenRavel/" title="Flatten vs Ravel functions in Numpy">
+              <h4 style="color:white">
+                Flatten vs Ravel functions in Numpy
+              </h2> 
+              <p class="excerpt">Dealing with multidimensional array with Numpy is...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-04-18 19:48" class="post-list__meta--date date">18 Apr 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#Numpy">Numpy</a>, <a href="/tags/#Python">Python</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/histogramVisualization/" title="Visualize Data Distribution with Histogram">
+              <h4 style="color:white">
+                Visualize Data Distribution with Histogram
+              </h2> 
+              <p class="excerpt">Histogram allows us to visualize the frequency...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-04-12 12:30" class="post-list__meta--date date">12 Apr 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#Matplotlib">Matplotlib</a>, <a href="/tags/#Seaborn">Seaborn</a>, <a href="/tags/#Python">Python</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+            <li>
+              <li> 
+               <a href="/zblog/2021/contactTracing/" title="Smart Contact Tracing Project at University of Guelph">
+              <h4 style="color:white">
+                Smart Contact Tracing Project at University of Guelph
+              </h2> 
+              <p class="excerpt">Last year about the same time, we...&hellip;</p>
+              </a>
+              <div class="post-list__meta">
+                  <time datetime="2021-01-08 10:04" class="post-list__meta--date date">8 Jan 2021</time>
+                  
+                  &#8226; <span class="post-meta__tags">on <a href="/tags/#BLE">BLE</a>, <a href="/tags/#contact tracing">contact tracing</a></span>
+                  
+              </div>
+              <hr class="post-list__divider">
+            </li>
+          
+        </ol>
+
+        <div class="navigation-wrapper">
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+              
+              <!-- Google Scholar -->
+              <li class="navigation__item">
+                <a href="https://scholar.google.com.hk/citations?user=WBieghIAAAAJ&hl=en&authuser=2"
+                  title="@WBieghIAAAAJ on Google Scholar" target="_blank">
+                  <i class="ai ai-google-scholar" style="font-size: 1.7em;"></i>
+                  <span class="label">Google Scholar</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+
+              
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/pc-ng-3b45072b"
+                  title="pc-ng-3b45072b on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/pc-ng"
+                  title="pc-ng on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- ResearchGate -->
+              <li class="navigation__item">
+                <a href="https://www.researchgate.net/profile/Pc-Ng-2"
+                  title="Pc-Ng-2 on ResearchGate" target="_blank">
+                  <i class="ai ai-researchgate" style="font-size: 1.7em;"></i>
+                  <span class="label">ResearchGate</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- ORCID -->
+              <li class="navigation__item">
+                <a href="https://orcid.org/0000-0001-9153-5411"
+                  title="0000-0001-9153-5411 on ORCID" target="_blank">
+                  <i class="ai ai-orcid" style="font-size: 1.7em;"></i>
+                  <span class="label">ORCID</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:pc.ng@utoronto.ca" title="Email pc.ng@utoronto.ca" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+
+              <!-- RSS -->
+              <!-- <li class="navigation__item">
+                <a href="/feed.xml" title="Subscribe" target="_blank">
+                  <i class="icon icon-rss"></i>
+                  <span class="label">RSS</span>
+                </a>
+              </li> -->
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="navigation-wrapper">
+      <!-- Nav Bar -->
+<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top"">
+
+        <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/" >
+        <span class="font-weight-bold">Perfectly Imperfect</span> 
+        </a>
+
+
+        <!-- Navbar Toggle -->
+        <!-- <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+        </button> -->
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zpublications" title="Publications">
+                    Publications <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zresearch/" title="Research">
+                    Research <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zdevelopments/" title="Developments">
+                    Developments <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zcv" title="CV">
+                    CV <span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item ">
+                <a class="nav-link"  href="/zblog" title="Blog">
+                    Blog <span class="sr-only">(current)</span>
+                </a></li>
+        </ul>
+        </div>
+</nav>
+
+
+
+    </div>  
+    <div class="content-wrapper" style = "padding-top: 70px;">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2021-05-01 19:48" class="post-meta__date date">1 May 2021</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#Algorithm">Algorithm</a></span>
+      
+    </div>
+    <h1 class="post-title">Dynamic Time Warping</h1>
+  </header>
+
+  <section class="post">
+    <p>Dynamic Time Warping (DTW) is a non-linear similarity computation method that dynamically compute the similarity between time series data when the time indices between data points from time series A and time series B do not match.
+Consider the two time series sequences (time series A in green, and time series B in blue) shown in Figure below, these two sequences do not line up in time axis. However, both of them have some similarities in terms of their component shapes.
+If traditional distance metrics (e.g., Euclidean distance, Manhattan distance, etc.) are used to compute the distance between the \(i\)th point of time series A with the \(i\)th point of time series B, it will most probably produce a poor similarity score. 
+If a non-linear mapping can be used to match the similar shape of two time series even though these two time series sequences are out of phase in the time axis, it will produce a more intuitive similarity measure.
+This can be done by warping the time axis of one sequences to align the time axis.</p>
+
+<!-- <img src="/zblog/images-dtw/twosequences.JPG" alt="drawing" width="200"/> -->
+<blockquote>
+  <p><img src="/zblog/images-dtw/twosequences.JPG" alt="drawing" width="800" /> 
+<!-- > ![sequences](/zblog/images-dtw/twosequences.JPG) --></p>
+</blockquote>
+<div class="caption">
+    DTW can efficiently align two time series sequences, allowing a more intuitive similarity measure between out of sync data points.
+</div>
+
+<h2 id="warping-function">Warping Function</h2>
+<p>DTW uses warping function to find the best alignment between two time series sequences.
+The objective is to find the path through the grids</p>
+
+\[P = P_1, P_2, ..., P_s, ..., P_k\]
+
+\[P_s = (i, j)\]
+
+<p>which minimizes the total distance between them.</p>
+
+<blockquote>
+  <p><img src="/zblog/images-dtw/warpinggrid.JPG" alt="warping" /></p>
+</blockquote>
+<div class="caption">
+    DTW aims to learn a warping path that dynamically maps the data points of time series A to data points of time series B.
+</div>
+
+<p>Let \(A\) and \(B\) be time series A and B, respectively, we can compute the time normalized distance between these two time series:</p>
+
+\[D(A, B) = \frac{\sum_{s=1}^k d(P_s) w_s}{\sum_{s=1}^k w_s}\]
+
+<p>where \(d(P_s) = d(v_i, v_j)\) is the distance between value at \(i\)th point \(v_i\) and value at \(j\)th point \(v_j\), and \(w_s\) is the weight coefficient.</p>
+
+<blockquote>
+  <p><img src="/zblog/images-dtw/manypaths.JPG" alt="warping" /></p>
+</blockquote>
+
+<p>Considering the Figure above, there are many possible warping paths through the grid. That’s being said, to search for an optimum path, i.e.,</p>
+
+\[P_o = arg\min_P (D(A, B))\]
+
+<p>can be extremely hard when the grid size is big.</p>
+
+<p>Furthermore, if a single point of time series A can map onto a large subsection of time series B, it will lead to an unintuitive alignment. 
+Over the decade, a few constraints have been imposed on the warping function:</p>
+
+<h4 id="1-monotonicity">1. Monotonicity</h4>
+<blockquote>
+  <p>Monotonicity ensures that the warping path does not go back in time. 
+Given \(P_s = (i, j)\) and \(P_{s-1} = (i', j')\),  \(i \leq i'\) and \(j \leq j'\) forces the points in \(P\) to be monotonically spaced in time</p>
+</blockquote>
+
+<h4 id="2-continuity">2. Continuity</h4>
+<blockquote>
+  <p>Continuity ensures that the warping path does not jump in time. 
+Given \(P_s = (i, j)\) and \(P_{s-1} = (i', j')\),  \(i - i' \leq 1\) and \(j - j' \leq 1\) restricts the allowable steps in the warping path to adjacent cells.</p>
+</blockquote>
+
+<h4 id="3-boundary-conditions">3. Boundary Conditions</h4>
+<blockquote>
+  <p>The boundary of the warping path states that the part should start at \(P_1 = (1, 1)\) and end at \(P_s = (m, n)\), i.e., the warping path needs to start and finish in diagonally opposite corner of the grid. This is important to make sure the warping path does not consider only partial of the sequence.</p>
+</blockquote>
+
+<h4 id="4-warping-window">4. Warping Window</h4>
+<blockquote>
+  <p>Let \(r&gt;0\) be the length of warping window, \(\|i - j\| \leq r\) restricts allowable grid points for the warping path. The warping window ensures that the warping path does not wander too far away from the diagonal. This guarantees that the alignment will not get stuck at similar features.</p>
+</blockquote>
+
+<h4 id="5-slope-constraint">5. Slope Constraint</h4>
+<blockquote>
+  <p>Slope constraint ensures that the warping path is neither too steep or too shallow. Let \(q\) and \(p\) be the number of steps in the x-direction and y-direction given the grid, then \(\frac{j_{p} - j_{0}}{i_{p} - i_{0}} \leq p\) and \(\frac{i_{q} - i_{0}}{j_{q} - j_{0}} \leq q\). That is, after \(q\) steps in x one must step in y and vice versa.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/zblog/images-dtw/constraint.jpg" alt="constraint" /></p>
+</blockquote>
+
+<h2 id="dynamic-programming">Dynamic Programming</h2>
+<p>Dynamic Programming is an efficient method to find the warping path. 
+In general, dynamic programming evaluate the cumulative distance \(\gamma(i, j)\) based on the distance $d(P_s)$ at the current cell and the minimum of the cumulative distances of the adjacent elements.
+Mathematically,</p>
+
+\[\gamma(i, j) = d(P_s) + \min \{\gamma(i-1, j-1), \gamma(i-1, j), \gamma(i, j-1)\}\]
+
+<table>
+  <tbody>
+    <tr>
+      <td>where \(d(P_s) = d(v_i, v_j)\) can be calculated by taking the absolute difference between value at \(i\)th point and value at \(j\)point, i.e., $$d(v_i, v_j) =</td>
+      <td>v_i - v_j</td>
+      <td>$$</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example">Example</h3>
+<p>Suppose that we have two time series A and B as follows:</p>
+
+\[A = [ 3, 2, 2, 3, 5, 5, 6 ]\]
+
+\[B = [ 1, 3, 2, 2, 3, 5 ]\]
+
+<p>First, let’s consider point \(P_s = (1,1)\), i.e., \(i=1\) and \(j=1\), the value at  \(i=1\) is \(v(i=1) = 3\) and the value at \(j=1\) is \(v(j=1) = 1\).
+Hence, the absolute distance at point \(P_s = (1,1)\) is \(d(P_s) = |3-1| = 2\).
+Since the values at the cell above, left and diagonally above \(P_s\) are all empty, hence, \(\min \{\gamma(i-1, j-1), \gamma(i-1, j), \gamma(i, j-1)\} = 0\).
+The cumulative distance \(\gamma(i=1, j=1)\) will be 2, as shown in Figure below.</p>
+
+<blockquote>
+  <p><img src="/zblog/images-dtw/compute1.jpg" alt="jpg" /></p>
+</blockquote>
+
+<p>Let’s consider another point \(P_s = (4,4)\), here we have \(v(i=4) = 3\) and \(v(j=4) = 2\). 
+Hence, the absolute distance at point \(P_s = (4,4)\) is \(d(P_s) = |3-2| = 1\).
+The values at the adjacent cells (above, left and diagonally above ) are 3, 2 and 2. By taking the minimum value, we have 2. 
+So, the cumulative distance \(\gamma(i=4, j=4)\) will be 3, as shown in Figure below.</p>
+
+<blockquote>
+  <p><img src="/zblog/images-dtw/compute2.jpg" alt="drawing" width="800" /></p>
+</blockquote>
+
+<p>Figure below shows the final grid (or matrix) with all the value computed.</p>
+
+<blockquote>
+  <p><img src="/zblog/images-dtw/finalcompute.jpg" alt="drawing" width="800" /></p>
+</blockquote>
+
+<p>The warping path can be obtained by backtracking from the end point to the beginning point as shown below.</p>
+
+<blockquote>
+  <p><img src="/zblog/images-dtw/backtrack.jpg" alt="drawing" width="1000" /></p>
+</blockquote>
+
+<h2 id="implementation">Implementation</h2>
+<p>Here we will walkthrough a simple implementation of above example in Python.</p>
+
+<p>First, define the two time series A and B</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Initialize a dtw matrix based on the length of A and B, i.e., length of B define the number of rows, and length of A define the number of columns.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dtw_mat</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dtw_mat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>output</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]
+[0. 0. 0. 0. 0. 0. 0.]]
+</code></pre></div></div>
+
+<p>Now, we need to loop through all element in the dtw matrix, and compute the cumulative distance.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># define the absolute distance function
+</span><span class="n">d</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">choice</span> <span class="o">=</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">choice</span> <span class="o">=</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">choice</span> <span class="o">=</span> <span class="p">[</span><span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+            
+            <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="nb">min</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">dtw_mat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>output</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[ 2.  3.  4.  6. 10. 14. 19.]
+[ 2.  3.  4.  4.  6.  8. 11.]
+[ 3.  2.  2.  3.  6.  9. 12.]
+[ 4.  2.  2.  3.  6.  9. 13.]
+[ 4.  3.  3.  2.  4.  6.  9.]
+[ 6.  6.  6.  4.  2.  2.  3.]]
+</code></pre></div></div>
+
+<p>We can find the warping path by backtracking.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">path</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="p">[</span><span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+        <span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ind</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">warp</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+    <span class="n">warp</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span> 
+
+<span class="k">print</span><span class="p">(</span><span class="n">warp</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>output</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[1. 0. 0. 0. 0. 0. 0.]
+[1. 0. 0. 0. 0. 0. 0.]
+[0. 1. 1. 0. 0. 0. 0.]
+[0. 0. 1. 0. 0. 0. 0.]
+[0. 0. 0. 1. 0. 0. 0.]
+[0. 0. 0. 0. 1. 1. 1.]]
+</code></pre></div></div>
+
+<p>Then, we can calculate the normalized distance between time series A and time series B. 
+Assume that all the point shares equal weight, i.e., \(w_s=1\) for all \(P_s\), then \(D(A,B)\) can be computed as follows:</p>
+
+\[D(A,B) = \frac{1}{k} \sum_{s = 1}^k d(P_s)\]
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">warp</span> <span class="o">*</span> <span class="n">dtw_mat</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Normalized Distance: </span><span class="si">{</span><span class="n">D</span><span class="p">:</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+<p>output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Normalized Distance: 2.111111
+</code></pre></div></div>
+
+<h2 id="wrap-up-the-implementation-with-function">Wrap Up the Implementation with function</h2>
+<p>We can also define a few functions to handle the DTW matrix computation, get the warping path and also compute the normalized distance.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">computed_dtwMat</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">choice</span> <span class="o">=</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">choice</span> <span class="o">=</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">choice</span> <span class="o">=</span> <span class="p">[</span><span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+                
+                <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="nb">min</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dtw_mat</span>
+</code></pre></div></div>
+
+<p>We can call the above function by providing time series A and time series B as input arguments, and it will return the <code class="language-plaintext highlighter-rouge">dtw_mat</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dtw_mat</span> <span class="o">=</span> <span class="n">computed_dtwMat</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dtw_mat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>output</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[ 2.  3.  4.  6. 10. 14. 19.]
+[ 2.  3.  4.  4.  6.  8. 11.]
+[ 3.  2.  2.  3.  6.  9. 12.]
+[ 4.  2.  2.  3.  6.  9. 13.]
+[ 4.  3.  3.  2.  4.  6.  9.]
+[ 6.  6.  6.  4.  2.  2.  3.]]
+</code></pre></div></div>
+
+<p>We can define a function to get the warping path.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_warpingPath</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="n">dtw_mat</span> <span class="o">=</span> <span class="n">computed_dtwMat</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">choice</span> <span class="o">=</span> <span class="p">[</span><span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtw_mat</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+            <span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ind</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+
+    <span class="n">warp</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+        <span class="n">warp</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span> 
+
+    <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">warp</span><span class="p">,</span> <span class="n">dtw_mat</span>
+</code></pre></div></div>
+
+<p>The function takes in time series A and time series B as input, and return the <code class="language-plaintext highlighter-rouge">path</code>, <code class="language-plaintext highlighter-rouge">warp</code> and <code class="language-plaintext highlighter-rouge">dtw_mat</code>.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">path</span><span class="p">,</span> <span class="n">warp</span><span class="p">,</span> <span class="n">dtw_matrix</span> <span class="o">=</span> <span class="n">get_warpingPath</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">warp</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dtw_mat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>output</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[1. 0. 0. 0. 0. 0. 0.]
+[1. 0. 0. 0. 0. 0. 0.]
+[0. 1. 1. 0. 0. 0. 0.]
+[0. 0. 1. 0. 0. 0. 0.]
+[0. 0. 0. 1. 0. 0. 0.]
+[0. 0. 0. 0. 1. 1. 1.]]
+
+[[ 2.  3.  4.  6. 10. 14. 19.]
+[ 2.  3.  4.  4.  6.  8. 11.]
+[ 3.  2.  2.  3.  6.  9. 12.]
+[ 4.  2.  2.  3.  6.  9. 13.]
+[ 4.  3.  3.  2.  4.  6.  9.]
+[ 6.  6.  6.  4.  2.  2.  3.]]
+</code></pre></div></div>
+
+<p>Finally, we can have a function to compute the normalized distance.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">normalized_dist</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="n">path</span><span class="p">,</span> <span class="n">warp</span><span class="p">,</span> <span class="n">dtw_matrix</span> <span class="o">=</span> <span class="n">get_warpingPath</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+    <span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">warp</span> <span class="o">*</span> <span class="n">dtw_mat</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">D</span>
+</code></pre></div></div>
+
+<p>By calling the function <code class="language-plaintext highlighter-rouge">normalized_dist</code>, it will return us the normalized distance between time series A and time series B.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">D</span> <span class="o">=</span> <span class="n">normalized_dist</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Normalized Distance: </span><span class="si">{</span><span class="n">D</span><span class="p">:</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+<p><strong>output</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Normalized Distance: 2.111111
+</code></pre></div></div>
+
+<h2 id="wrap-up">Wrap-Up</h2>
+<p>A python script containing all the above functions is provided <a href="https://github.com/pc-ng/dtw">here</a>
+You can also refer to the example notebook <a href="https://github.com/pc-ng/dtw/blob/master/dtw_example.ipynb">here</a> on how to apply those functions.</p>
+
+<p>There is also a useful <code class="language-plaintext highlighter-rouge">dtw-python</code> package provided by Toni dot Giorgino. You can visit his <a href="https://dynamictimewarping.github.io/python/#online-documentation">site</a> for more information about <code class="language-plaintext highlighter-rouge">dtw-python</code> package.
+You can also install the package by issuing the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install dtw-python
+</code></pre></div></div>
+
+<p>DTW is available in Matlab through the Signal Processing Toolbox. For more information about using DTW with Matlab, check out the Matlab documentation about DTW <a href="https://www.mathworks.com/help/signal/ref/dtw.html">here</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+
+  </section>
+  
+</article>
+
+
+
+
+        <footer class="fixed-bottom">
+  <div class="container mt-0">
+    <span class="footer__copyright">&copy; 2021 Pc Ng. All rights reserved.</span>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1621095052817988300"></script>
+<!--  -->
+
+<script>
+$(document).ready(function(){
+    var str =$(this).attr('id');
+    
+    $(".btnId").click(function(){
+        var str = $(this).attr('id');
+        var ret = str.split("_");
+        var id = ret[1];
+        $('#' + id).toggle();
+    });
+});
+</script>
+
+    </div>
+
+  </body>
+
+  <!-- Load my JS -->
+  <script src="/js/my.js"></script>
+</html>
