@@ -21,7 +21,7 @@ for paper in PUBLICATIONS:
             paper['pdf_version'] = 'Author-supplied manuscript'
 PAPERS = {p['id']: p for p in PUBLICATIONS}
 PROJECTS = json.loads((ROOT / 'data/projects.json').read_text())
-SELECTED = ['c15', 'c7', 'j2', 'c26', 'c40', 'j4', 'j6', 'j11', 'c2']
+SELECTED = ['c15', 'c7', 'j2', 'j3', 'c40', 'j4', 'j6', 'j11', 'c2']
 HOME_SELECTED = [ident for ident in SELECTED if ident != 'c2']
 DESCRIPTION = 'Trustworthy AI for multimodal sensing in mobile and pervasive systems.'
 SITE = 'https://pc-ng.github.io'
