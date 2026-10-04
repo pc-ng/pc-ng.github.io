@@ -1,0 +1,3899 @@
+[
+  {
+    "id": "j1",
+    "authors": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2025,
+    "title": "Hierarchical Multimodal Federated Learning Over Cell-Free Massive MIMO Systems",
+    "reference": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Konstantinos N. Plataniotis (2025). Hierarchical Multimodal Federated Learning Over Cell-Free Massive MIMO Systems. IEEE Open Journal of the Communications Society 6: 8111-8127 (2025).",
+    "venue_note": "IEEE Open Journal of the Communications Society 6: 8111-8127 (2025).",
+    "source": "https://doi.org/10.1109/OJCOMS.2025.3614440",
+    "sources": [
+      "https://doi.org/10.1109/OJCOMS.2025.3614440"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/OJCOMS.2025.3614440",
+    "pdf": "",
+    "bibtex": "@article{Ng2025J1,\n  author = {Seyed Mohammad Sheikholeslami and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Hierarchical Multimodal Federated Learning Over Cell-Free Massive MIMO Systems},\n  year = {2025},\n  journal = {IEEE Open Journal of the Communications Society},\n  volume = {6},\n  pages = {8111--8127},\n  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},\n  doi = {10.1109/OJCOMS.2025.3614440},\n  url = {https://doi.org/10.1109/OJCOMS.2025.3614440}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "https://ndownloader.figshare.com/files/58481968",
+        "error": "403 Client Error: Forbidden for url: https://ndownloader.figshare.com/files/58481968"
+      },
+      {
+        "url": "https://ndownloader.figshare.com/files/58481968",
+        "error": "403 Client Error: Forbidden for url: https://ndownloader.figshare.com/files/58481968"
+      }
+    ],
+    "metadata_source": "https://api.figshare.com/v2/articles/30238525",
+    "publisher_source": "https://doi.org/10.1109/OJCOMS.2025.3614440",
+    "crossref": {
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-9380-3248",
+          "authenticated-orcid": false,
+          "given": "S. Mohammad",
+          "family": "Sheikholeslami",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "The Edward S. Rogers Sr. Department of Electrical and Computer Engineering, University of Toronto, Toronto, ON, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9153-5411",
+          "authenticated-orcid": false,
+          "given": "Pai",
+          "family": "Chet Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Infocomm Technology Cluster, Singapore Institute of Technology, Punggol Coast Rd, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-3647-5473",
+          "authenticated-orcid": false,
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "The Edward S. Rogers Sr. Department of Electrical and Computer Engineering, University of Toronto, Toronto, ON, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Open Journal of the Communications Society"
+      ],
+      "volume": "6",
+      "page": "8111-8127",
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "type": "journal-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/8782661/10829557/11178236.pdf?arnumber=11178236",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Hierarchical_Multimodal_Federated_Learning_over_Cell-Free_Massive_MIMO_Systems/30238525",
+    "repository_article_id": 30238525,
+    "pdf_candidates": [
+      "https://ndownloader.figshare.com/files/58481968"
+    ],
+    "research_venue": "IEEE Open Journal of the Communications Society, 2025"
+  },
+  {
+    "id": "j2",
+    "authors": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Jamshid Abouei, Konstantinos N. Plataniotis",
+    "year": 2025,
+    "title": "Multi-Modal Federated Learning Over Cell-Free Massive MIMO Systems for Activity Recognition",
+    "reference": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Jamshid Abouei, Konstantinos N. Plataniotis (2025). Multi-Modal Federated Learning Over Cell-Free Massive MIMO Systems for Activity Recognition. IEEE Access 13: 40844-40858 (2025).",
+    "venue_note": "IEEE Access 13: 40844-40858 (2025).",
+    "source": "https://dblp.org/rec/journals/access/SheikholeslamiNAP25",
+    "sources": [
+      "https://dblp.org/rec/journals/access/SheikholeslamiNAP25"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/ACCESS.2025.3548001",
+    "pdf": "/asset/paper/j2-multi-modal-federated-learning-over-cell-free-massive-mimo-systems-for-activity-recognition.pdf",
+    "bibtex": "@article{Ng2025J2,\n  author = {Seyed Mohammad Sheikholeslami and Pai Chet Ng and Jamshid Abouei and Konstantinos N. Plataniotis},\n  title = {Multi-Modal Federated Learning Over Cell-Free Massive MIMO Systems for Activity Recognition},\n  year = {2025},\n  journal = {IEEE Access},\n  volume = {13},\n  pages = {40844--40858},\n  doi = {10.1109/ACCESS.2025.3548001},\n  url = {https://doi.org/10.1109/ACCESS.2025.3548001}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Multi-Modal%20Federated%20Learning%20Over%20Cell-Free%20Massive%20MIMO%20Systems%20for%20Act"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Multi-Modal_Federated_Learning_Over_Cell-Free_Massive_MIMO_Systems_for_Activity_Recognition/30238528",
+    "repository_article_id": 30238528,
+    "publisher_source": "https://doi.org/10.1109/ACCESS.2025.3548001",
+    "metadata_source": "https://api.figshare.com/v2/articles/30238528",
+    "pdf_candidates": [
+      "https://ndownloader.figshare.com/files/58369480"
+    ],
+    "pdf_download_source": "https://ndownloader.figshare.com/files/58369480",
+    "crossref": {
+      "container-title": [
+        "IEEE Access"
+      ],
+      "volume": "13",
+      "page": "40844-40858"
+    },
+    "pdf_version": "Publicly available paper copy",
+    "research_venue": "IEEE Access, 2025"
+  },
+  {
+    "id": "j3",
+    "authors": "Alireza Esmaeilzehi, Ensieh Khazaei, Kai Wang, Navjot Kaur Kalsi, Pai Chet Ng, Huan Liu, Yuanhao Yu, Dimitrios Hatzinakos, Konstantinos N. Plataniotis",
+    "year": 2024,
+    "title": "HARWE: A multi-modal large-scale dataset for context-aware human activity recognition in smart working environments",
+    "reference": "Alireza Esmaeilzehi, Ensieh Khazaei, Kai Wang, Navjot Kaur Kalsi, Pai Chet Ng, Huan Liu, Yuanhao Yu, Dimitrios Hatzinakos, Konstantinos N. Plataniotis (2024). HARWE: A multi-modal large-scale dataset for context-aware human activity recognition in smart working environments. Pattern Recognition Letters 184: 126-132 (2024).",
+    "venue_note": "Pattern Recognition Letters 184: 126-132 (2024).",
+    "source": "https://dblp.org/rec/journals/prl/EsmaeilzehiKWKNLYHP24",
+    "sources": [
+      "https://dblp.org/rec/journals/prl/EsmaeilzehiKWKNLYHP24"
+    ],
+    "kind": "journal",
+    "doi": "10.1016/j.patrec.2024.06.017",
+    "pdf": "",
+    "bibtex": "@article{Ng2024J3,\n  author = {Alireza Esmaeilzehi and Ensieh Khazaei and Kai Wang and Navjot Kaur Kalsi and Pai Chet Ng and Huan Liu and Yuanhao Yu and Dimitrios Hatzinakos and Konstantinos N. Plataniotis},\n  title = {HARWE: A multi-modal large-scale dataset for context-aware human activity recognition in smart working environments},\n  year = {2024},\n  journal = {Pattern Recognition Letters},\n  volume = {184},\n  pages = {126--132},\n  doi = {10.1016/j.patrec.2024.06.017},\n  url = {https://doi.org/10.1016/j.patrec.2024.06.017}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=HARWE%3A%20A%20multi-modal%20large-scale%20dataset%20for%20context-aware%20human%20activity%"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/HARWE_A_multi-modal_large-scale_dataset_for_context-aware_human_activity_recognition_in_smart_working_environments/27134598",
+    "repository_article_id": 27134598,
+    "publisher_source": "https://doi.org/10.1016/j.patrec.2024.06.017",
+    "metadata_source": "https://api.figshare.com/v2/articles/27134598",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "Pattern Recognition Letters"
+      ],
+      "volume": "184",
+      "page": "126-132"
+    }
+  },
+  {
+    "id": "j4",
+    "authors": "Pai Chet Ng, Petros Spachos, James She, Konstantinos N. Plataniotis",
+    "year": 2023,
+    "title": "A Kernel Method to Nonlinear Location Estimation With RSS-Based Fingerprint",
+    "reference": "Pai Chet Ng, Petros Spachos, James She, Konstantinos N. Plataniotis (2023). A Kernel Method to Nonlinear Location Estimation With RSS-Based Fingerprint. IEEE Transactions on Mobile Computing 22 (8): 4388-4404 (2023).",
+    "venue_note": "IEEE Transactions on Mobile Computing 22 (8): 4388-4404 (2023).",
+    "source": "https://dblp.org/rec/journals/tmc/NgSSP23",
+    "sources": [
+      "https://dblp.org/rec/journals/tmc/NgSSP23"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/TMC.2022.3162612",
+    "pdf": "/asset/paper/j4-a-kernel-method-to-nonlinear-location-estimation-with-rss-based-fingerprint.pdf",
+    "bibtex": "@article{Ng2023J4,\n  author = {Pai Chet Ng and Petros Spachos and James She and Konstantinos N. Plataniotis},\n  title = {A Kernel Method to Nonlinear Location Estimation With RSS-Based Fingerprint},\n  year = {2023},\n  journal = {IEEE Transactions on Mobile Computing},\n  volume = {22},\n  number = {8},\n  pages = {4388--4404},\n  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},\n  doi = {10.1109/TMC.2022.3162612},\n  url = {https://doi.org/10.1109/TMC.2022.3162612}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/24219502",
+    "publisher_source": "https://doi.org/10.1109/TMC.2022.3162612",
+    "crossref": {
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-9153-5411",
+          "authenticated-orcid": false,
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Electrical and Computer Engineering, University of Toronto, Toronto, ON, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-8004-0907",
+          "authenticated-orcid": false,
+          "given": "Petros",
+          "family": "Spachos",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Engineering, University of Guelph, Guelph, ON, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7250-8220",
+          "authenticated-orcid": false,
+          "given": "James",
+          "family": "She",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Information and Computing Technology, College of Science and Engineering, Hamad Bin Khalifa University, Doha, Qatar"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-3647-5473",
+          "authenticated-orcid": false,
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Electrical and Computer Engineering, University of Toronto, Toronto, ON, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Transactions on Mobile Computing"
+      ],
+      "volume": "22",
+      "issue": "8",
+      "page": "4388-4404",
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "type": "journal-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/7755/10169862/09745787.pdf?arnumber=9745787",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/A_Kernel_Method_to_Nonlinear_Location_Estimation_With_RSS-Based_Fingerprint/24219502",
+    "repository_article_id": 24219502,
+    "pdf_candidates": [
+      "https://arxiv.org/pdf/2204.03724"
+    ],
+    "pdf_download_source": "https://arxiv.org/pdf/2204.03724",
+    "pdf_version": "arXiv author version"
+  },
+  {
+    "id": "j5",
+    "authors": "Pai Chet Ng, James She, Petros Spachos",
+    "year": 2023,
+    "title": "Energy-Efficient Overlay Protocol for BLE Beacon-Based Mesh Network",
+    "reference": "Pai Chet Ng, James She, Petros Spachos (2023). Energy-Efficient Overlay Protocol for BLE Beacon-Based Mesh Network. IEEE Transactions on Mobile Computing 22 (5): 2709-2724 (2023).",
+    "venue_note": "IEEE Transactions on Mobile Computing 22 (5): 2709-2724 (2023).",
+    "source": "https://dblp.org/rec/journals/tmc/NgSS23",
+    "sources": [
+      "https://dblp.org/rec/journals/tmc/NgSS23"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/TMC.2021.3133538",
+    "pdf": "/asset/paper/j5-energy-efficient-overlay-protocol-for-ble-beacon-based-mesh-network.pdf",
+    "bibtex": "@article{Ng2023J5,\n  author = {Pai Chet Ng and James She and Petros Spachos},\n  title = {Energy-Efficient Overlay Protocol for BLE Beacon-Based Mesh Network},\n  year = {2023},\n  journal = {IEEE Transactions on Mobile Computing},\n  volume = {22},\n  number = {5},\n  pages = {2709--2724},\n  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},\n  doi = {10.1109/TMC.2021.3133538},\n  url = {https://doi.org/10.1109/TMC.2021.3133538}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/24219472",
+    "publisher_source": "https://doi.org/10.1109/TMC.2021.3133538",
+    "crossref": {
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-9153-5411",
+          "authenticated-orcid": false,
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Electronics and Computer Engineering, Hong Kong University of Science and Technology, Hong Kong"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7250-8220",
+          "authenticated-orcid": false,
+          "given": "James",
+          "family": "She",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Electronics and Computer Engineering, Hong Kong University of Science and Technology, Hong Kong"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-8004-0907",
+          "authenticated-orcid": false,
+          "given": "Petros",
+          "family": "Spachos",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Engineering, University of Guelph, Guelph, ON, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Transactions on Mobile Computing"
+      ],
+      "volume": "22",
+      "issue": "5",
+      "page": "2709-2724",
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "type": "journal-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/7755/10091958/09640596.pdf?arnumber=9640596",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Energy-Efficient_Overlay_Protocol_for_BLE_Beacon-Based_Mesh_Network/24219472",
+    "repository_article_id": 24219472,
+    "pdf_candidates": [
+      "https://www.pspachos.net/pubs/TMC2021.pdf"
+    ],
+    "research_venue": "IEEE Transactions on Mobile Computing, 2023",
+    "pdf_download_source": "https://www.pspachos.net/pubs/TMC2021.pdf",
+    "pdf_version": "Public author-hosted version"
+  },
+  {
+    "id": "j6",
+    "authors": "Lili Zhu, Petros Spachos, Pai Chet Ng, Yuanhao Yu, Yang Wang, Konstantinos N. Plataniotis, Dimitrios Hatzinakos",
+    "year": 2023,
+    "title": "Stress Detection Through Wrist-Based Electrodermal Activity Monitoring and Machine Learning",
+    "reference": "Lili Zhu, Petros Spachos, Pai Chet Ng, Yuanhao Yu, Yang Wang, Konstantinos N. Plataniotis, Dimitrios Hatzinakos (2023). Stress Detection Through Wrist-Based Electrodermal Activity Monitoring and Machine Learning. IEEE Journal of Biomedical and Health Informatics 27 (5): 2155-2165 (2023).",
+    "venue_note": "IEEE Journal of Biomedical and Health Informatics 27 (5): 2155-2165 (2023).",
+    "source": "https://dblp.org/rec/journals/titb/ZhuSNYWPH23",
+    "sources": [
+      "https://dblp.org/rec/journals/titb/ZhuSNYWPH23"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/JBHI.2023.3239305",
+    "pdf": "/asset/paper/j6-stress-detection-through-wrist-based-electrodermal-activity-monitoring-and-machine-learning.pdf",
+    "bibtex": "@article{Ng2023J6,\n  author = {Lili Zhu and Petros Spachos and Pai Chet Ng and Yuanhao Yu and Yang Wang and Konstantinos N. Plataniotis and Dimitrios Hatzinakos},\n  title = {Stress Detection Through Wrist-Based Electrodermal Activity Monitoring and Machine Learning},\n  year = {2023},\n  journal = {IEEE Journal of Biomedical and Health Informatics},\n  volume = {27},\n  number = {5},\n  pages = {2155--2165},\n  doi = {10.1109/JBHI.2023.3239305},\n  url = {https://doi.org/10.1109/JBHI.2023.3239305}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Stress%20Detection%20Through%20Wrist-Based%20Electrodermal%20Activity%20Monitoring%20and%20M"
+      },
+      {
+        "url": "https://www.pspachos.net/pubs/JBHI2023.pdf",
+        "error": "HTTPSConnectionPool(host='www.pspachos.net', port=443): Max retries exceeded with url: /pubs/JBHI2023.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Stress_Detection_Through_Wrist-Based_Electrodermal_Activity_Monitoring_and_Machine_Learning/24219907",
+    "repository_article_id": 24219907,
+    "publisher_source": "https://doi.org/10.1109/JBHI.2023.3239305",
+    "metadata_source": "https://api.figshare.com/v2/articles/24219907",
+    "pdf_candidates": [
+      "https://www.pspachos.net/pubs/JBHI2023.pdf"
+    ],
+    "crossref": {
+      "container-title": [
+        "IEEE Journal of Biomedical and Health Informatics"
+      ],
+      "volume": "27",
+      "page": "2155-2165",
+      "issue": "5"
+    },
+    "pdf_version": "Published version from the co-author’s website",
+    "pdf_download_source": "https://www.pspachos.net/pubs/JBHI2023.pdf"
+  },
+  {
+    "id": "j7",
+    "authors": "Pai Chet Ng, James She, Rong Ran",
+    "year": 2022,
+    "title": "Compressive RF Fingerprint Acquisition and Broadcasting for Dense BLE Networks",
+    "reference": "Pai Chet Ng, James She, Rong Ran (2022). Compressive RF Fingerprint Acquisition and Broadcasting for Dense BLE Networks. IEEE Transactions on Mobile Computing 21 (4): 1196-1210 (2022).",
+    "venue_note": "IEEE Transactions on Mobile Computing 21 (4): 1196-1210 (2022).",
+    "source": "https://dblp.org/rec/journals/tmc/NgSR22",
+    "sources": [
+      "https://dblp.org/rec/journals/tmc/NgSR22"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/TMC.2020.3024842",
+    "pdf": "",
+    "bibtex": "@article{Ng2022J7,\n  author = {Pai Chet Ng and James She and Rong Ran},\n  title = {Compressive RF Fingerprint Acquisition and Broadcasting for Dense BLE Networks},\n  year = {2022},\n  journal = {IEEE Transactions on Mobile Computing},\n  volume = {21},\n  number = {4},\n  pages = {1196--1210},\n  doi = {10.1109/TMC.2020.3024842},\n  url = {https://doi.org/10.1109/TMC.2020.3024842}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Compressive%20RF%20Fingerprint%20Acquisition%20and%20Broadcasting%20for%20Dense%20BLE%20Netw"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Compressive_RF_Fingerprint_Acquisition_and_Broadcasting_for_Dense_BLE_Networks/24212874",
+    "repository_article_id": 24212874,
+    "publisher_source": "https://doi.org/10.1109/TMC.2020.3024842",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212874",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Transactions on Mobile Computing"
+      ],
+      "volume": "21",
+      "page": "1196-1210",
+      "issue": "4"
+    }
+  },
+  {
+    "id": "j8",
+    "authors": "Pai Chet Ng, Petros Spachos, Stefano Gregori, Konstantinos N. Plataniotis",
+    "year": 2022,
+    "title": "Epidemic Exposure Tracking With Wearables: A Machine Learning Approach to Contact Tracing",
+    "reference": "Pai Chet Ng, Petros Spachos, Stefano Gregori, Konstantinos N. Plataniotis (2022). Epidemic Exposure Tracking With Wearables: A Machine Learning Approach to Contact Tracing. IEEE Access 10: 14134-14148 (2022).",
+    "venue_note": "IEEE Access 10: 14134-14148 (2022).",
+    "source": "https://dblp.org/rec/journals/access/NgSGP22",
+    "sources": [
+      "https://dblp.org/rec/journals/access/NgSGP22"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/ACCESS.2022.3148051",
+    "pdf": "/asset/paper/j8-epidemic-exposure-tracking-with-wearables-a-machine-learning-approach-to-contact-tracing.pdf",
+    "bibtex": "@article{Ng2022J8,\n  author = {Pai Chet Ng and Petros Spachos and Stefano Gregori and Konstantinos N. Plataniotis},\n  title = {Epidemic Exposure Tracking With Wearables: A Machine Learning Approach to Contact Tracing},\n  year = {2022},\n  journal = {IEEE Access},\n  volume = {10},\n  pages = {14134--14148},\n  doi = {10.1109/ACCESS.2022.3148051},\n  url = {https://doi.org/10.1109/ACCESS.2022.3148051}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Epidemic%20Exposure%20Tracking%20With%20Wearables%3A%20A%20Machine%20Learning%20Approach%20t"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Epidemic_Exposure_Tracking_With_Wearables_A_Machine_Learning_Approach_to_Contact_Tracing/24219484",
+    "repository_article_id": 24219484,
+    "publisher_source": "https://doi.org/10.1109/ACCESS.2022.3148051",
+    "metadata_source": "https://api.figshare.com/v2/articles/24219484",
+    "pdf_candidates": [
+      "https://ndownloader.figshare.com/files/42812314"
+    ],
+    "pdf_download_source": "https://ndownloader.figshare.com/files/42812314",
+    "crossref": {
+      "container-title": [
+        "IEEE Access"
+      ],
+      "volume": "10",
+      "page": "14134-14148"
+    },
+    "pdf_version": "Publicly available paper copy",
+    "research_venue": "IEEE Access, 2022"
+  },
+  {
+    "id": "j9",
+    "authors": "Pai Chet Ng, James She",
+    "year": 2022,
+    "title": "Remote Proximity Sensing With a Novel Q-Learning in Bluetooth Low Energy Network",
+    "reference": "Pai Chet Ng, James She (2022). Remote Proximity Sensing With a Novel Q-Learning in Bluetooth Low Energy Network. IEEE Transactions on Wireless Communications 21 (8): 6156-6166 (2022).",
+    "venue_note": "IEEE Transactions on Wireless Communications 21 (8): 6156-6166 (2022).",
+    "source": "https://dblp.org/rec/journals/twc/NgS22",
+    "sources": [
+      "https://dblp.org/rec/journals/twc/NgS22"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/TWC.2022.3147411",
+    "pdf": "",
+    "bibtex": "@article{Ng2022J9,\n  author = {Pai Chet Ng and James She},\n  title = {Remote Proximity Sensing With a Novel Q-Learning in Bluetooth Low Energy Network},\n  year = {2022},\n  journal = {IEEE Transactions on Wireless Communications},\n  volume = {21},\n  number = {8},\n  pages = {6156--6166},\n  doi = {10.1109/TWC.2022.3147411},\n  url = {https://doi.org/10.1109/TWC.2022.3147411}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Remote%20Proximity%20Sensing%20With%20a%20Novel%20Q-Learning%20in%20Bluetooth%20Low%20Energy"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Remote_Proximity_Sensing_With_a_Novel_Q-Learning_in_Bluetooth_Low_Energy_Network/24219658",
+    "repository_article_id": 24219658,
+    "publisher_source": "https://doi.org/10.1109/TWC.2022.3147411",
+    "metadata_source": "https://api.figshare.com/v2/articles/24219658",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Transactions on Wireless Communications"
+      ],
+      "volume": "21",
+      "page": "6156-6166",
+      "issue": "8"
+    }
+  },
+  {
+    "id": "j10",
+    "authors": "Pai Chet Ng, Petros Spachos, Konstantinos N. Plataniotis",
+    "year": 2021,
+    "title": "COVID-19 and Your Smartphone: BLE-Based Smart Contact Tracing",
+    "reference": "Pai Chet Ng, Petros Spachos, Konstantinos N. Plataniotis (2021). COVID-19 and Your Smartphone: BLE-Based Smart Contact Tracing. IEEE Systems Journal 15 (4): 5367-5378 (2021).",
+    "venue_note": "IEEE Systems Journal 15 (4): 5367-5378 (2021).",
+    "source": "https://dblp.org/rec/journals/sj/NgSP21",
+    "sources": [
+      "https://dblp.org/rec/journals/sj/NgSP21"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/JSYST.2021.3055675",
+    "pdf": "/asset/paper/j10-smart-contact-tracing.pdf",
+    "bibtex": "@article{Ng2021J10,\n  author = {Pai Chet Ng and Petros Spachos and Konstantinos N. Plataniotis},\n  title = {COVID-19 and Your Smartphone: BLE-Based Smart Contact Tracing},\n  year = {2021},\n  journal = {IEEE Systems Journal},\n  volume = {15},\n  number = {4},\n  pages = {5367--5378},\n  doi = {10.1109/JSYST.2021.3055675},\n  url = {https://doi.org/10.1109/JSYST.2021.3055675}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=COVID-19%20and%20Your%20Smartphone%3A%20BLE-Based%20Smart%20Contact%20Tracing&rows=4"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/COVID-19_and_Your_Smartphone_BLE-Based_Smart_Contact_Tracing/24212928",
+    "repository_article_id": 24212928,
+    "publisher_source": "https://doi.org/10.1109/JSYST.2021.3055675",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212928",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Systems Journal"
+      ],
+      "volume": "15",
+      "page": "5367-5378",
+      "issue": "4"
+    },
+    "research_venue": "IEEE Systems Journal, 2021",
+    "pdf_version": "arXiv author version",
+    "pdf_download_source": "https://arxiv.org/pdf/2005.13754"
+  },
+  {
+    "id": "j11",
+    "authors": "Pai Chet Ng, Petros Spachos, Stefano Gregori, Konstantinos N. Plataniotis",
+    "year": 2021,
+    "title": "Personal Devices for Contact Tracing: Smartphones and Wearables to Fight Covid-19",
+    "reference": "Pai Chet Ng, Petros Spachos, Stefano Gregori, Konstantinos N. Plataniotis (2021). Personal Devices for Contact Tracing: Smartphones and Wearables to Fight Covid-19. IEEE Communications Magazine 59 (9): 24-29 (2021).",
+    "venue_note": "IEEE Communications Magazine 59 (9): 24-29 (2021).",
+    "source": "https://dblp.org/rec/journals/cm/NgSGP21",
+    "sources": [
+      "https://dblp.org/rec/journals/cm/NgSGP21"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/MCOM.001.2100002",
+    "pdf": "/asset/paper/j11-personal-devices-contact-tracing.pdf",
+    "bibtex": "@article{Ng2021J11,\n  author = {Pai Chet Ng and Petros Spachos and Stefano Gregori and Konstantinos N. Plataniotis},\n  title = {Personal Devices for Contact Tracing: Smartphones and Wearables to Fight Covid-19},\n  year = {2021},\n  journal = {IEEE Communications Magazine},\n  volume = {59},\n  number = {9},\n  pages = {24--29},\n  doi = {10.1109/MCOM.001.2100002},\n  url = {https://doi.org/10.1109/MCOM.001.2100002}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Personal%20Devices%20for%20Contact%20Tracing%3A%20Smartphones%20and%20Wearables%20to%20Fight"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Personal_Devices_for_Contact_Tracing_Smartphones_and_Wearables_to_Fight_Covid-19/24212949",
+    "repository_article_id": 24212949,
+    "publisher_source": "https://doi.org/10.1109/MCOM.001.2100002",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212949",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Communications Magazine"
+      ],
+      "volume": "59",
+      "page": "24-29",
+      "issue": "9"
+    },
+    "research_venue": "IEEE Communications Magazine, 2021",
+    "pdf_version": "arXiv author version",
+    "pdf_download_source": "https://arxiv.org/pdf/2108.02008"
+  },
+  {
+    "id": "j12",
+    "authors": "Pai Chet Ng, James She, Rong Ran",
+    "year": 2020,
+    "title": "A Reliable Smart Interaction With Physical Thing Attached With BLE Beacon",
+    "reference": "Pai Chet Ng, James She, Rong Ran (2020). A Reliable Smart Interaction With Physical Thing Attached With BLE Beacon. IEEE Internet of Things Journal 7 (4): 3650-3662 (2020).",
+    "venue_note": "IEEE Internet of Things Journal 7 (4): 3650-3662 (2020).",
+    "source": "https://dblp.org/rec/journals/iotj/NgSR20",
+    "sources": [
+      "https://dblp.org/rec/journals/iotj/NgSR20"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/JIOT.2020.2974230",
+    "pdf": "/asset/paper/j12-a-reliable-smart-interaction-with-physical-thing-attached-with-ble-beacon.pdf",
+    "bibtex": "@article{Ng2020J12,\n  author = {Pai Chet Ng and James She and Rong Ran},\n  title = {A Reliable Smart Interaction With Physical Thing Attached With BLE Beacon},\n  year = {2020},\n  journal = {IEEE Internet of Things Journal},\n  volume = {7},\n  number = {4},\n  pages = {3650--3662},\n  doi = {10.1109/JIOT.2020.2974230},\n  url = {https://doi.org/10.1109/JIOT.2020.2974230}\n}",
+    "status": "Published",
+    "legacy_pdf": "9000599.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=A%20Reliable%20Smart%20Interaction%20With%20Physical%20Thing%20Attached%20With%20BLE%20Beaco"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/9000599.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/A_Reliable_Smart_Interaction_With_Physical_Thing_Attached_With_BLE_Beacon/24212850",
+    "repository_article_id": 24212850,
+    "publisher_source": "https://doi.org/10.1109/JIOT.2020.2974230",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212850",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Internet of Things Journal"
+      ],
+      "volume": "7",
+      "page": "3650-3662",
+      "issue": "4"
+    },
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "j13",
+    "authors": "Pai Chet Ng, James She, Rong Ran",
+    "year": 2019,
+    "title": "A Compressive Sensing Approach to Detect the Proximity Between Smartphones and BLE Beacons",
+    "reference": "Pai Chet Ng, James She, Rong Ran (2019). A Compressive Sensing Approach to Detect the Proximity Between Smartphones and BLE Beacons. IEEE Internet of Things Journal 6 (4): 7162-7174 (2019).",
+    "venue_note": "IEEE Internet of Things Journal 6 (4): 7162-7174 (2019).",
+    "source": "https://dblp.org/rec/journals/iotj/NgSR19",
+    "sources": [
+      "https://dblp.org/rec/journals/iotj/NgSR19"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/JIOT.2019.2914733",
+    "pdf": "/asset/paper/j13-a-compressive-sensing-approach-to-detect-the-proximity-between-smartphones-and-ble-beacons.pdf",
+    "bibtex": "@article{Ng2019J13,\n  author = {Pai Chet Ng and James She and Rong Ran},\n  title = {A Compressive Sensing Approach to Detect the Proximity Between Smartphones and BLE Beacons},\n  year = {2019},\n  journal = {IEEE Internet of Things Journal},\n  volume = {6},\n  number = {4},\n  pages = {7162--7174},\n  doi = {10.1109/JIOT.2019.2914733},\n  url = {https://doi.org/10.1109/JIOT.2019.2914733}\n}",
+    "status": "Published",
+    "legacy_pdf": "8705339.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=A%20Compressive%20Sensing%20Approach%20to%20Detect%20the%20Proximity%20Between%20Smartphones"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/8705339.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/A_Compressive_Sensing_Approach_to_Detect_the_Proximity_Between_Smartphones_and_BLE_Beacons/24212787",
+    "repository_article_id": 24212787,
+    "publisher_source": "https://doi.org/10.1109/JIOT.2019.2914733",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212787",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Internet of Things Journal"
+      ],
+      "volume": "6",
+      "page": "7162-7174",
+      "issue": "4"
+    },
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "j14",
+    "authors": "Pai Chet Ng, James She",
+    "year": 2019,
+    "title": "Denoising-Contractive Autoencoder for Robust Device-Free Occupancy Detection",
+    "reference": "Pai Chet Ng, James She (2019). Denoising-Contractive Autoencoder for Robust Device-Free Occupancy Detection. IEEE Internet of Things Journal 6 (6): 9572-9582 (2019).",
+    "venue_note": "IEEE Internet of Things Journal 6 (6): 9572-9582 (2019).",
+    "source": "https://dblp.org/rec/journals/iotj/NgS19",
+    "sources": [
+      "https://dblp.org/rec/journals/iotj/NgS19"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/JIOT.2019.2929822",
+    "pdf": "/asset/paper/j14-denoising-contractive-autoencoder-for-robust-device-free-occupancy-detection.pdf",
+    "bibtex": "@article{Ng2019J14,\n  author = {Pai Chet Ng and James She},\n  title = {Denoising-Contractive Autoencoder for Robust Device-Free Occupancy Detection},\n  year = {2019},\n  journal = {IEEE Internet of Things Journal},\n  volume = {6},\n  number = {6},\n  pages = {9572--9582},\n  doi = {10.1109/JIOT.2019.2929822},\n  url = {https://doi.org/10.1109/JIOT.2019.2929822}\n}",
+    "status": "Published",
+    "legacy_pdf": "8766808.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Denoising-Contractive%20Autoencoder%20for%20Robust%20Device-Free%20Occupancy%20Detection&row"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/8766808.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/Denoising-Contractive_Autoencoder_for_Robust_Device-Free_Occupancy_Detection/24212838",
+    "repository_article_id": 24212838,
+    "publisher_source": "https://doi.org/10.1109/JIOT.2019.2929822",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212838",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Internet of Things Journal"
+      ],
+      "volume": "6",
+      "page": "9572-9582",
+      "issue": "6"
+    },
+    "pdf_version": "Publicly available paper copy",
+    "research_venue": "IEEE Internet of Things Journal, 2019"
+  },
+  {
+    "id": "j15",
+    "authors": "Kang Eun Jeon, James She, Perm Soonsawad, Pai Chet Ng",
+    "year": 2018,
+    "title": "BLE Beacons for Internet of Things Applications: Survey, Challenges, and Opportunities",
+    "reference": "Kang Eun Jeon, James She, Perm Soonsawad, Pai Chet Ng (2018). BLE Beacons for Internet of Things Applications: Survey, Challenges, and Opportunities. IEEE Internet of Things Journal 5 (2): 811-828 (2018).",
+    "venue_note": "IEEE Internet of Things Journal 5 (2): 811-828 (2018).",
+    "source": "https://dblp.org/rec/journals/iotj/JeonSSN18",
+    "sources": [
+      "https://dblp.org/rec/journals/iotj/JeonSSN18"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/JIOT.2017.2788449",
+    "pdf": "/asset/paper/j15-ble-beacons-for-internet-of-things-applications-survey-challenges-and-opportunities.pdf",
+    "bibtex": "@article{Ng2018J15,\n  author = {Kang Eun Jeon and James She and Perm Soonsawad and Pai Chet Ng},\n  title = {BLE Beacons for Internet of Things Applications: Survey, Challenges, and Opportunities},\n  year = {2018},\n  journal = {IEEE Internet of Things Journal},\n  volume = {5},\n  number = {2},\n  pages = {811--828},\n  doi = {10.1109/JIOT.2017.2788449},\n  url = {https://doi.org/10.1109/JIOT.2017.2788449}\n}",
+    "status": "Published",
+    "legacy_pdf": "8242361.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=BLE%20Beacons%20for%20Internet%20of%20Things%20Applications%3A%20Survey%2C%20Challenges%2C%2"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/8242361.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/BLE_Beacons_for_Internet_of_Things_Applications_Survey_Challenges_and_Opportunities/24212697",
+    "repository_article_id": 24212697,
+    "publisher_source": "https://doi.org/10.1109/JIOT.2017.2788449",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212697",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Internet of Things Journal"
+      ],
+      "volume": "5",
+      "page": "811-828",
+      "issue": "2"
+    },
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "j16",
+    "authors": "Pai Chet Ng, James She, Soochang Park",
+    "year": 2018,
+    "title": "Correction to \"High Resolution Beacon-Based Proximity Detection for Dense Deployment\"",
+    "reference": "Pai Chet Ng, James She, Soochang Park (2018). Correction to \"High Resolution Beacon-Based Proximity Detection for Dense Deployment\". IEEE Transactions on Mobile Computing 17 (10): 2467 (2018).",
+    "venue_note": "IEEE Transactions on Mobile Computing 17 (10): 2467 (2018).",
+    "source": "https://dblp.org/rec/journals/tmc/NgSP18a",
+    "sources": [
+      "https://dblp.org/rec/journals/tmc/NgSP18a"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/TMC.2018.2858518",
+    "pdf": "/asset/paper/j16-correction-to-high-resolution-beacon-based-proximity-detection-for-dense-deployment.pdf",
+    "bibtex": "@article{Ng2018J16,\n  author = {Pai Chet Ng and James She and Soochang Park},\n  title = {Correction to \"High Resolution Beacon-Based Proximity Detection for Dense Deployment\"},\n  year = {2018},\n  journal = {IEEE Transactions on Mobile Computing},\n  volume = {17},\n  number = {10},\n  pages = {2467},\n  doi = {10.1109/TMC.2018.2858518},\n  url = {https://doi.org/10.1109/TMC.2018.2858518}\n}",
+    "status": "Published",
+    "legacy_pdf": "[2018 TMC correction] Correction to “High Resolution Beacon-Based Proximity Detection for Dense Deployment”.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Correction%20to%20%22High%20Resolution%20Beacon-Based%20Proximity%20Detection%20for%20Dense%"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/[2018 TMC correction] Correction to “High Resolution Beacon-Based Proximity Detection for Dense Deployment”.pdf",
+    "metadata_source": "/asset/paper/j16-correction-to-high-resolution-beacon-based-proximity-detection-for-dense-deployment.pdf (paper title page)",
+    "publisher_source": "https://doi.org/10.1109/TMC.2018.2858518",
+    "crossref": {
+      "container-title": [
+        "IEEE Transactions on Mobile Computing"
+      ],
+      "volume": "17",
+      "page": "2467",
+      "issue": "10"
+    },
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "j17",
+    "authors": "Pai Chet Ng, James She, Soochang Park",
+    "year": 2018,
+    "title": "High Resolution Beacon-Based Proximity Detection for Dense Deployment",
+    "reference": "Pai Chet Ng, James She, Soochang Park (2018). High Resolution Beacon-Based Proximity Detection for Dense Deployment. IEEE Transactions on Mobile Computing 17 (6): 1369-1382 (2018).",
+    "venue_note": "IEEE Transactions on Mobile Computing 17 (6): 1369-1382 (2018).",
+    "source": "https://dblp.org/rec/journals/tmc/NgSP18",
+    "sources": [
+      "https://dblp.org/rec/journals/tmc/NgSP18"
+    ],
+    "kind": "journal",
+    "doi": "10.1109/TMC.2017.2759734",
+    "pdf": "/asset/paper/j17-high-resolution-beacon-based-proximity-detection-for-dense-deployment.pdf",
+    "bibtex": "@article{Ng2018J17,\n  author = {Pai Chet Ng and James She and Soochang Park},\n  title = {High Resolution Beacon-Based Proximity Detection for Dense Deployment},\n  year = {2018},\n  journal = {IEEE Transactions on Mobile Computing},\n  volume = {17},\n  number = {6},\n  pages = {1369--1382},\n  doi = {10.1109/TMC.2017.2759734},\n  url = {https://doi.org/10.1109/TMC.2017.2759734}\n}",
+    "status": "Published",
+    "legacy_pdf": "[2018 TMC correction] Correction to “High Resolution Beacon-Based Proximity Detection for Dense Deployment”.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=High%20Resolution%20Beacon-Based%20Proximity%20Detection%20for%20Dense%20Deployment&rows=4"
+      }
+    ],
+    "pdf_download_source": "/zpublications/8059756.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/High_Resolution_Beacon-Based_Proximity_Detection_for_Dense_Deployment/24210249",
+    "repository_article_id": 24210249,
+    "publisher_source": "https://doi.org/10.1109/TMC.2017.2759734",
+    "metadata_source": "https://api.figshare.com/v2/articles/24210249",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE Transactions on Mobile Computing"
+      ],
+      "volume": "17",
+      "page": "1369-1382",
+      "issue": "6"
+    },
+    "pdf_version": "Author accepted manuscript",
+    "research_venue": "IEEE Transactions on Mobile Computing, 2018"
+  },
+  {
+    "id": "j18",
+    "authors": "Pai Chet Ng, James She, Kang Eun Jeon, Matthias Baldauf",
+    "year": 2017,
+    "title": "When Smart Devices Interact With Pervasive Screens: A Survey",
+    "reference": "Pai Chet Ng, James She, Kang Eun Jeon, Matthias Baldauf (2017). When Smart Devices Interact With Pervasive Screens: A Survey. ACM Transactions on Multimedia Computing, Communications, and Applications 13 (4): 55:1-55:23 (2017).",
+    "venue_note": "ACM Transactions on Multimedia Computing, Communications, and Applications 13 (4): 55:1-55:23 (2017).",
+    "source": "https://dblp.org/rec/journals/tomccap/NgSJB17",
+    "sources": [
+      "https://dblp.org/rec/journals/tomccap/NgSJB17"
+    ],
+    "kind": "journal",
+    "doi": "10.1145/3115933",
+    "pdf": "/asset/paper/j18-when-smart-devices-interact-with-pervasive-screens-a-survey.pdf",
+    "bibtex": "@article{Ng2017J18,\n  author = {Pai Chet Ng and James She and Kang Eun Jeon and Matthias Baldauf},\n  title = {When Smart Devices Interact With Pervasive Screens: A Survey},\n  year = {2017},\n  journal = {ACM Transactions on Multimedia Computing, Communications, and Applications},\n  volume = {13},\n  number = {4},\n  pages = {55:1--55:23},\n  doi = {10.1145/3115933},\n  url = {https://doi.org/10.1145/3115933}\n}",
+    "status": "Published",
+    "legacy_pdf": "3115933.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=When%20Smart%20Devices%20Interact%20With%20Pervasive%20Screens%3A%20A%20Survey&rows=4"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/3115933.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/journal_contribution/When_Smart_Devices_Interact_With_Pervasive_Screens_A_Survey/24210213",
+    "repository_article_id": 24210213,
+    "publisher_source": "https://doi.org/10.1145/3115933",
+    "metadata_source": "https://api.figshare.com/v2/articles/24210213",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "ACM Transactions on Multimedia Computing, Communications, and Applications"
+      ],
+      "volume": "13",
+      "page": "55:1-55:23",
+      "issue": "4"
+    },
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c1",
+    "authors": "Christos Korgialas, Gabriel Jun Rong Lee, Dion Jia Xu Ho, Pai Chet Ng, Xiaoxiao Miao, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "ARMOR++: Agentic Orchestration of a Multi-Domain Primitive Set for Transferable Attacks on Deepfake Detectors",
+    "reference": "Christos Korgialas, Gabriel Jun Rong Lee, Dion Jia Xu Ho, Pai Chet Ng, Xiaoxiao Miao, Konstantinos N. Plataniotis (2026). ARMOR++: Agentic Orchestration of a Multi-Domain Primitive Set for Transferable Attacks on Deepfake Detectors. Submitted to IEEE Transactions on Reliability. Preprint: arXiv:2607.15246 (16 July 2026).",
+    "venue_note": "Submitted to IEEE Transactions on Reliability. Preprint: arXiv:2607.15246 (16 July 2026).",
+    "source": "https://arxiv.org/abs/2607.15246",
+    "sources": [
+      "https://arxiv.org/abs/2607.15246"
+    ],
+    "kind": "journal",
+    "doi": "10.48550/arXiv.2607.15246",
+    "pdf": "/asset/paper/c1-armor-agentic-orchestration-of-a-multi-domain-primitive-set-for-transferable-attacks-on-deepfake-det.pdf",
+    "bibtex": "@misc{Ng2026C1,\n  author = {Christos Korgialas and Gabriel Jun Rong Lee and Dion Jia Xu Ho and Pai Chet Ng and Xiaoxiao Miao and Konstantinos N. Plataniotis},\n  title = {ARMOR++: Agentic Orchestration of a Multi-Domain Primitive Set for Transferable Attacks on Deepfake Detectors},\n  year = {2026},\n  doi = {10.48550/arXiv.2607.15246},\n  url = {https://arxiv.org/abs/2607.15246},\n  eprint = {2607.15246},\n  archivePrefix = {arXiv},\n  note = {Preprint; submitted to IEEE Transactions on Reliability}\n}",
+    "status": "Submitted",
+    "resources": [],
+    "attempts": [],
+    "arxiv": "2607.15246",
+    "pdf_download_source": "https://arxiv.org/pdf/2607.15246",
+    "bib_venue": "arXiv",
+    "pdf_version": "arXiv author manuscript with the earlier title “ARMOR++: Agentic Reasoning for Method Orchestration and Reparameterization in Transferable Black-Box Attacks on Deepfake Detectors”",
+    "research_venue": "IEEE Transactions on Reliability; submitted",
+    "citation_note": "The arXiv metadata uses the updated title shown above.",
+    "metadata_note": "Current arXiv metadata and the downloaded manuscript use different titles; the owner has been asked which title and manuscript to use. Gabriel Jun Rong Lee follows the manuscript and the verified IEEE ARMOR author record."
+  },
+  {
+    "id": "c2",
+    "authors": "Gabriel Jun Rong Lee, Christos Korgialas, Dion Jia Xu Ho, Pai Chet Ng, Xiaoxiao Miao, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "ARMOR: Agentic Reasoning for Methods Orchestration and Reparameterization for Robust Adversarial Attacks",
+    "reference": "Gabriel Jun Rong Lee, Christos Korgialas, Dion Jia Xu Ho, Pai Chet Ng, Xiaoxiao Miao, Konstantinos N. Plataniotis. ARMOR: Agentic Reasoning for Methods Orchestration and Reparameterization for Robust Adversarial Attacks. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026, pp. 22237–22241.",
+    "venue_note": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026, pp. 22237–22241.",
+    "source": "https://cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=18822",
+    "sources": [
+      "https://cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=18822"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/icassp55912.2026.11460595",
+    "pdf": "/asset/paper/c2-armor-agentic-reasoning-for-methods-orchestration-and-reparameterization-for-robust-adversarial-atta.pdf",
+    "bibtex": "@inproceedings{Ng2026C2,\n  author = {Gabriel Jun Rong Lee and Christos Korgialas and Dion Jia Xu Ho and Pai Chet Ng and Xiaoxiao Miao and Konstantinos N. Plataniotis},\n  title = {ARMOR: Agentic Reasoning for Methods Orchestration and Reparameterization for Robust Adversarial Attacks},\n  year = {2026},\n  booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {22237--22241},\n  publisher = {IEEE},\n  doi = {10.1109/icassp55912.2026.11460595},\n  url = {https://doi.org/10.1109/icassp55912.2026.11460595}\n}",
+    "status": "Published",
+    "arxiv": "2601.18386",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "https://arxiv.org/pdf/2601.18386",
+        "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Read timed out."
+      }
+    ],
+    "metadata_source": "https://api.crossref.org/works/10.1109%2Ficassp55912.2026.11460595",
+    "publisher_source": "https://doi.org/10.1109/icassp55912.2026.11460595",
+    "crossref": {
+      "author": [
+        {
+          "given": "Gabriel Jun Rong",
+          "family": "Lee",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Infocomm Technology Cluster,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Christos",
+          "family": "Korgialas",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Aristotle University of Thessaloniki,Dept. of Informatics,Greece"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Dion Jia Xu",
+          "family": "Ho",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University,Dept. of Applied Physics and Applied Mathematics,USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Infocomm Technology Cluster,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Xiaoxiao",
+          "family": "Miao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Duke Kunshan University,Div. of Natural and Applied Sciences,China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Dept. of Electrical and Computer Engineering,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+      ],
+      "page": "22237-22241",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11460595.pdf?arnumber=11460595",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": [
+      "https://arxiv.org/pdf/2601.18386v1"
+    ],
+    "pdf_download_source": "https://arxiv.org/pdf/2601.18386v1",
+    "bib_venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+    "pdf_version": "arXiv author version",
+    "research_venue": "ICASSP2026"
+  },
+  {
+    "id": "c3",
+    "authors": "Shanhong Liu, Pai Chet Ng, De Wen Soh, Malika Meghjani, Konstantinos N. Plataniotis",
+    "year": 2027,
+    "title": "Beyond a Joke: Multi-Angle Reasoning for Detecting and Explaining Harmful Humor in Memes",
+    "reference": "Shanhong Liu, Pai Chet Ng, De Wen Soh, Malika Meghjani, Konstantinos N. Plataniotis. Beyond a Joke: Multi-Angle Reasoning for Detecting and Explaining Harmful Humor in Memes. AAAI International Conference on Web and Social Media (ICWSM), 2027. Accepted.",
+    "venue_note": "AAAI International Conference on Web and Social Media (ICWSM), 2027. Accepted.",
+    "source": "https://arxiv.org/abs/2607.15442",
+    "sources": [
+      "https://arxiv.org/abs/2607.15442"
+    ],
+    "kind": "conference",
+    "doi": "10.48550/arXiv.2607.15442",
+    "pdf": "/asset/paper/c3-beyond-a-joke-multi-angle-reasoning-for-detecting-and-explaining-harmful-humor-in-memes.pdf",
+    "bibtex": "@inproceedings{Ng2027C3,\n  author = {Shanhong Liu and Pai Chet Ng and De Wen Soh and Malika Meghjani and Konstantinos N. Plataniotis},\n  title = {Beyond a Joke: Multi-Angle Reasoning for Detecting and Explaining Harmful Humor in Memes},\n  year = {2027},\n  doi = {10.48550/arXiv.2607.15442},\n  url = {https://arxiv.org/abs/2607.15442},\n  eprint = {2607.15442},\n  archivePrefix = {arXiv},\n  booktitle = {AAAI International Conference on Web and Social Media (ICWSM)},\n  note = {Accepted; arXiv author version}\n}",
+    "status": "Accepted",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Beyond%20a%20Joke%3A%20Multi-Angle%20Reasoning%20for%20Detecting%20and%20Explaining%20Harmfu"
+      }
+    ],
+    "arxiv": "2607.15442",
+    "pdf_download_source": "https://arxiv.org/pdf/2607.15442",
+    "bib_venue": "AAAI International Conference on Web and Social Media (ICWSM)",
+    "pdf_version": "arXiv author version",
+    "research_venue": "AAAI ICWSM; Accepted"
+  },
+  {
+    "id": "c4",
+    "authors": "Crystal Min Hui Poon, Pai Chet Ng, Xiaoxiao Miao, Immanuel Jun Kai Loh, Bowen Zhang, Haoyu Song, Ian McLoughlin",
+    "year": 2026,
+    "title": "CLARITY: Contextual Linguistic Adaptation and Accent Retrieval for Dual-Bias Mitigation in Text-to-Speech Generation",
+    "reference": "Crystal Min Hui Poon, Pai Chet Ng, Xiaoxiao Miao, Immanuel Jun Kai Loh, Bowen Zhang, Haoyu Song, Ian McLoughlin (2026). CLARITY: Contextual Linguistic Adaptation and Accent Retrieval for Dual-Bias Mitigation in Text-to-Speech Generation. IEEE ICHMS 2026, pp. 548–553, Singapore. 1–3 July 2026.",
+    "venue_note": "IEEE ICHMS 2026, pp. 548–553, Singapore. 1–3 July 2026.",
+    "source": "https://doi.org/10.1109/ICHMS69701.2026.11602264",
+    "sources": [
+      "https://doi.org/10.1109/ICHMS69701.2026.11602264"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICHMS69701.2026.11602264",
+    "pdf": "/asset/paper/c4-clarity-contextual-linguistic-adaptation-and-accent-retrieval-for-dual-bias-mitigation-in-text-to-sp.pdf",
+    "bibtex": "@inproceedings{Ng2026C4,\n  author = {Crystal Min Hui Poon and Pai Chet Ng and Xiaoxiao Miao and Immanuel Jun Kai Loh and Bowen Zhang and Haoyu Song and Ian McLoughlin},\n  title = {CLARITY: Contextual Linguistic Adaptation and Accent Retrieval for Dual-Bias Mitigation in Text-to-Speech Generation},\n  year = {2026},\n  booktitle = {2026 IEEE International Conference on Human-Machine Systems (ICHMS)},\n  pages = {548--553},\n  publisher = {IEEE},\n  doi = {10.1109/ICHMS69701.2026.11602264},\n  url = {https://doi.org/10.1109/ICHMS69701.2026.11602264}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/33238125",
+    "publisher_source": "https://doi.org/10.1109/ICHMS69701.2026.11602264",
+    "crossref": {
+      "author": [
+        {
+          "given": "Crystal Min Hui",
+          "family": "Poon",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiaoxiao",
+          "family": "Miao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Duke Kunshan University,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Immanuel Jun Kai",
+          "family": "Loh",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bowen",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Haoyu",
+          "family": "Song",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ian",
+          "family": "McLoughlin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2026 IEEE International Conference on Human-Machine Systems (ICHMS)"
+      ],
+      "page": "548-553",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11602038/11602043/11602264.pdf?arnumber=11602264",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/CLARITY_Contextual_Linguistic_Adaptation_and_Accent_Retrieval_for_Dual-Bias_Mitigation_in_Text-to-Speech_Generation/33238125",
+    "repository_article_id": 33238125,
+    "pdf_candidates": [
+      "https://arxiv.org/pdf/2511.11104"
+    ],
+    "pdf_download_source": "https://arxiv.org/pdf/2511.11104",
+    "pdf_version": "arXiv author version"
+  },
+  {
+    "id": "c5",
+    "authors": "Jamal Seyedmohammadi, Vi Shean Lim, Shi Quan Marcus Foo, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "Contactless Palmprint Identification with Programmable Multispectral Imaging and Foundation Models on the Edge",
+    "reference": "Jamal Seyedmohammadi, Vi Shean Lim, Shi Quan Marcus Foo, Pai Chet Ng, Konstantinos N. Plataniotis (2026). Contactless Palmprint Identification with Programmable Multispectral Imaging and Foundation Models on the Edge. IEEE ICHMS 2026, Singapore. 1–3 July 2026.",
+    "venue_note": "IEEE ICHMS 2026, Singapore. 1–3 July 2026.",
+    "source": "https://doi.org/10.1109/ICHMS69701.2026.11602286",
+    "sources": [
+      "https://doi.org/10.1109/ICHMS69701.2026.11602286"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICHMS69701.2026.11602286",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2026C5,\n  author = {Jamal Seyedmohammadi and Vi Shean Lim and Shi Quan Marcus Foo and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Contactless Palmprint Identification with Programmable Multispectral Imaging and Foundation Models on the Edge},\n  year = {2026},\n  booktitle = {2026 IEEE International Conference on Human-Machine Systems (ICHMS)},\n  pages = {281--286},\n  publisher = {IEEE},\n  doi = {10.1109/ICHMS69701.2026.11602286},\n  url = {https://doi.org/10.1109/ICHMS69701.2026.11602286}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/33994018",
+    "publisher_source": "https://doi.org/10.1109/ICHMS69701.2026.11602286",
+    "crossref": {
+      "author": [
+        {
+          "given": "Jamal",
+          "family": "Seyedmohammadi",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Vi Shean",
+          "family": "Lim",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shi Quan Marcus",
+          "family": "Foo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2026 IEEE International Conference on Human-Machine Systems (ICHMS)"
+      ],
+      "page": "281-286",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11602038/11602043/11602286.pdf?arnumber=11602286",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Contactless_Palmprint_Identification_with_Programmable_Multispectral_Imaging_and_Foundation_Models_on_the_Edge/33994018",
+    "repository_article_id": 33994018,
+    "pdf_candidates": [],
+    "research_venue": "ICHMS2026"
+  },
+  {
+    "id": "c6",
+    "authors": "Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "FLAP: Adaptive Personalization for Federated Deepfake Detection",
+    "reference": "Pai Chet Ng, Konstantinos N. Plataniotis. FLAP: Adaptive Personalization for Federated Deepfake Detection. ARTI@IEEE ICIP2026, Tampere, Finland. 17 September 2026; accepted 27 June 2026.",
+    "venue_note": "ARTI@IEEE ICIP2026, Tampere, Finland. 17 September 2026; accepted 27 June 2026.",
+    "source": "https://2026.ieeeicip.org/satellite-workshops/",
+    "sources": [
+      "https://2026.ieeeicip.org/satellite-workshops/"
+    ],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2026C6,\n  author = {Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {FLAP: Adaptive Personalization for Federated Deepfake Detection},\n  year = {2026},\n  booktitle = {ARTI@IEEE ICIP2026},\n  url = {https://2026.ieeeicip.org/satellite-workshops/},\n  note = {Accepted}\n}",
+    "status": "Accepted",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=FLAP%3A%20Adaptive%20Personalization%20for%20Federated%20Deepfake%20Detection&rows=4"
+      }
+    ],
+    "bib_venue": "ARTI@IEEE ICIP2026",
+    "research_venue": "ARTI@IEEE ICIP2026"
+  },
+  {
+    "id": "c7",
+    "authors": "Shanhong Liu, Rui Cao, Pai Chet Ng, De Wen Soh",
+    "year": 2026,
+    "title": "I Know What You Meme, Even If it Emerged Today: Understanding Evolving Memes through Open-World Knowledge Acquisition",
+    "reference": "Shanhong Liu, Rui Cao, Pai Chet Ng, De Wen Soh (2026). I Know What You Meme, Even If it Emerged Today: Understanding Evolving Memes through Open-World Knowledge Acquisition. EMNLP 2026 main conference. Accepted.",
+    "venue_note": "EMNLP 2026 main conference. Accepted.",
+    "source": "https://arxiv.org/abs/2606.05316",
+    "sources": [
+      "https://arxiv.org/abs/2606.05316"
+    ],
+    "kind": "conference",
+    "doi": "10.48550/arXiv.2606.05316",
+    "pdf": "/asset/paper/c7-i-know-what-you-meme-even-if-it-emerged-today-understanding-evolving-memes-through-open-world-knowle.pdf",
+    "bibtex": "@inproceedings{Ng2026C7,\n  author = {Shanhong Liu and Rui Cao and Pai Chet Ng and De Wen Soh},\n  title = {I Know What You Meme, Even If it Emerged Today: Understanding Evolving Memes through Open-World Knowledge Acquisition},\n  year = {2026},\n  booktitle = {EMNLP 2026},\n  doi = {10.48550/arXiv.2606.05316},\n  url = {https://arxiv.org/abs/2606.05316},\n  eprint = {2606.05316},\n  archivePrefix = {arXiv},\n  note = {Accepted}\n}",
+    "status": "Accepted",
+    "resources": [
+      {
+        "label": "Code",
+        "url": "https://github.com/shanhongliuu/Query-Retrieve-Conclude"
+      }
+    ],
+    "attempts": [],
+    "arxiv": "2606.05316",
+    "pdf_download_source": "https://arxiv.org/pdf/2606.05316",
+    "bib_venue": "EMNLP 2026",
+    "pdf_version": "arXiv author version",
+    "research_venue": "EMNLP2026; Accepted"
+  },
+  {
+    "id": "c8",
+    "authors": "Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "Learning Identity Beyond Activity: Open-Set User Verification with WiFi CSI",
+    "reference": "Pai Chet Ng, Konstantinos N. Plataniotis (2026). Learning Identity Beyond Activity: Open-Set User Verification with WiFi CSI. IEEE PIMRC 2026, Singapore. 1–4 September 2026; accepted 2 July 2026.",
+    "venue_note": "IEEE PIMRC 2026, Singapore. 1–4 September 2026; accepted 2 July 2026.",
+    "source": "",
+    "sources": [],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2026C8,\n  author = {Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Learning Identity Beyond Activity: Open-Set User Verification with WiFi CSI},\n  year = {2026},\n  booktitle = {IEEE PIMRC 2026},\n  note = {Accepted}\n}",
+    "status": "Accepted",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Learning%20Identity%20Beyond%20Activity%3A%20Open-Set%20User%20Verification%20with%20WiFi%20"
+      }
+    ],
+    "bib_venue": "IEEE PIMRC 2026"
+  },
+  {
+    "id": "c9",
+    "authors": "Haoyu Song, Xiaoxiao Miao, Pai Chet Ng, Timothy Liu, Aik Beng Ng, Ian McLoughlin",
+    "year": 2026,
+    "title": "MER-Live: An Interactive Browser Demo of Prosody-Driven Multimodal Emotion Recognition",
+    "reference": "Haoyu Song, Xiaoxiao Miao, Pai Chet Ng, Timothy Liu, Aik Beng Ng, Ian McLoughlin (2026). MER-Live: An Interactive Browser Demo of Prosody-Driven Multimodal Emotion Recognition. Interspeech 2026, ISCA Archive. Published demonstration abstract.",
+    "venue_note": "Proceedings of Interspeech 2026, pp. 5920–5921. Published demonstration abstract.",
+    "source": "https://www.isca-archive.org/interspeech_2026/song26h_interspeech.html",
+    "sources": [
+      "https://www.isca-archive.org/interspeech_2026/song26h_interspeech.html"
+    ],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "/asset/paper/c9-mer-live-an-interactive-browser-demo-of-prosody-driven-multimodal-emotion-recognition.pdf",
+    "bibtex": "@inproceedings{Ng2026C9,\n  author = {Haoyu Song and Xiaoxiao Miao and Pai Chet Ng and Timothy Liu and Aik Beng Ng and Ian McLoughlin},\n  title = {MER-Live: An Interactive Browser Demo of Prosody-Driven Multimodal Emotion Recognition},\n  year = {2026},\n  booktitle = {Proceedings of Interspeech 2026},\n  pages = {5920--5921},\n  url = {https://www.isca-archive.org/interspeech\\_2026/song26h\\_interspeech.html}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=MER-Live%3A%20An%20Interactive%20Browser%20Demo%20of%20Prosody-Driven%20Multimodal%20Emotion"
+      }
+    ],
+    "pdf_download_source": "https://www.isca-archive.org/interspeech_2026/song26h_interspeech.pdf",
+    "bib_venue": "Interspeech 2026",
+    "crossref": {
+      "container-title": [
+        "Proceedings of Interspeech 2026"
+      ],
+      "page": "5920-5921"
+    },
+    "metadata_source": "https://www.isca-archive.org/interspeech_2026/song26h_interspeech.html (official citation metadata)",
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c10",
+    "authors": "Seyed Jamal Seyedmohammadi, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "Multi-Level Knowledge Sharing in Federated Palmprint Authentication",
+    "reference": "Seyed Jamal Seyedmohammadi, Pai Chet Ng, Konstantinos N. Plataniotis. Multi-Level Knowledge Sharing in Federated Palmprint Authentication. PFATCV@ECCV2026. 9 September 2026. Accepted.",
+    "venue_note": "PFATCV@ECCV2026. 9 September 2026. Accepted.",
+    "source": "https://openreview.net/forum?id=9mVZ7vUuHz",
+    "sources": [
+      "https://openreview.net/forum?id=9mVZ7vUuHz"
+    ],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2026C10,\n  author = {Seyed Jamal Seyedmohammadi and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Multi-Level Knowledge Sharing in Federated Palmprint Authentication},\n  year = {2026},\n  booktitle = {PFATCV@ECCV2026},\n  url = {https://openreview.net/forum?id=9mVZ7vUuHz},\n  note = {Accepted}\n}",
+    "status": "Accepted",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "https://openreview.net/pdf?id=9mVZ7vUuHz",
+        "error": "403 Client Error: Forbidden for url: https://openreview.net/pdf?id=9mVZ7vUuHz"
+      },
+      {
+        "url": "https://openreview.net/pdf/0b7e8a88c2a752811d0f0e5360982cd3ab1195bf.pdf",
+        "error": "403 Client Error: Forbidden for url: https://openreview.net/pdf/0b7e8a88c2a752811d0f0e5360982cd3ab1195bf.pdf"
+      }
+    ],
+    "bib_venue": "PFATCV@ECCV2026",
+    "research_venue": "PFATCV@ECCV2026",
+    "pdf_candidates": [
+      "https://openreview.net/pdf?id=9mVZ7vUuHz",
+      "https://openreview.net/pdf/0b7e8a88c2a752811d0f0e5360982cd3ab1195bf.pdf"
+    ],
+    "metadata_source": "https://api2.openreview.net/notes/search?term=Multi-Level%20Knowledge%20Sharing"
+  },
+  {
+    "id": "c11",
+    "authors": "Peter Febrianto Afandy, Pai Chet Ng, Xiaoxiao Miao",
+    "year": 2026,
+    "title": "Personalized Federated Learning for Multimodal Biometric User Verification",
+    "reference": "Peter Febrianto Afandy, Pai Chet Ng, Xiaoxiao Miao (2026). Personalized Federated Learning for Multimodal Biometric User Verification. APSIPA ASC 2026. Accepted 31 July 2026.",
+    "venue_note": "APSIPA ASC 2026. Accepted 31 July 2026.",
+    "source": "",
+    "sources": [],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2026C11,\n  author = {Peter Febrianto Afandy and Pai Chet Ng and Xiaoxiao Miao},\n  title = {Personalized Federated Learning for Multimodal Biometric User Verification},\n  year = {2026},\n  booktitle = {APSIPA ASC 2026},\n  note = {Accepted}\n}",
+    "status": "Accepted",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Personalized%20Federated%20Learning%20for%20Multimodal%20Biometric%20User%20Verification&row"
+      }
+    ],
+    "bib_venue": "APSIPA ASC 2026",
+    "research_venue": "APSIPA2026"
+  },
+  {
+    "id": "c12",
+    "authors": "Idris Zakariyya, Pai Chet Ng, Kaushik Bhargav Sivangi, S. Mohammad Sheikholeslami, Konstantinos N. Plataniotis, Fani Deligianni",
+    "year": 2026,
+    "title": "Privacy-Preserving Federated Action Recognition via Differentially Private Selective Tuning and Efficient Communication",
+    "reference": "Idris Zakariyya, Pai Chet Ng, Kaushik Bhargav Sivangi, S. Mohammad Sheikholeslami, Konstantinos N. Plataniotis, Fani Deligianni (2026). Privacy-Preserving Federated Action Recognition via Differentially Private Selective Tuning and Efficient Communication. IEEE ICIP 2026 main conference, Tampere, Finland. 13–17 September 2026; accepted 30 April 2026.",
+    "venue_note": "IEEE ICIP 2026 main conference, Tampere, Finland. 13–17 September 2026; accepted 30 April 2026.",
+    "source": "https://arxiv.org/abs/2603.21305",
+    "sources": [
+      "https://arxiv.org/abs/2603.21305"
+    ],
+    "kind": "conference",
+    "doi": "10.48550/arXiv.2603.21305",
+    "pdf": "/asset/paper/c12-privacy-preserving-federated-action-recognition-via-differentially-private-selective-tuning-and-effi.pdf",
+    "bibtex": "@inproceedings{Ng2026C12,\n  author = {Idris Zakariyya and Pai Chet Ng and Kaushik Bhargav Sivangi and S. Mohammad Sheikholeslami and Konstantinos N. Plataniotis and Fani Deligianni},\n  title = {Privacy-Preserving Federated Action Recognition via Differentially Private Selective Tuning and Efficient Communication},\n  year = {2026},\n  booktitle = {IEEE ICIP 2026},\n  doi = {10.48550/arXiv.2603.21305},\n  url = {https://arxiv.org/abs/2603.21305},\n  eprint = {2603.21305},\n  archivePrefix = {arXiv},\n  note = {Accepted}\n}",
+    "status": "Accepted",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Privacy-Preserving%20Federated%20Action%20Recognition%20via%20Differentially%20Private%20Sel"
+      }
+    ],
+    "arxiv": "2603.21305",
+    "pdf_download_source": "https://arxiv.org/pdf/2603.21305",
+    "bib_venue": "IEEE ICIP 2026",
+    "pdf_version": "arXiv author version",
+    "research_venue": "ICIP2026"
+  },
+  {
+    "id": "c13",
+    "authors": "Shanhong Liu, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "Profile-Aware Trustworthy Recipe Generation with Planner-Critic Agentic Remediation",
+    "reference": "Shanhong Liu, Pai Chet Ng, Konstantinos N. Plataniotis. Profile-Aware Trustworthy Recipe Generation with Planner-Critic Agentic Remediation. ARTI@IEEE ICIP2026, Tampere, Finland. September 2026; accepted 27 June 2026.",
+    "venue_note": "ARTI@IEEE ICIP2026, Tampere, Finland. September 2026; accepted 27 June 2026.",
+    "source": "",
+    "sources": [],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2026C13,\n  author = {Shanhong Liu and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Profile-Aware Trustworthy Recipe Generation with Planner-Critic Agentic Remediation},\n  year = {2026},\n  booktitle = {ARTI@IEEE ICIP2026},\n  note = {Accepted}\n}",
+    "status": "Accepted",
+    "resources": [],
+    "attempts": [],
+    "bib_venue": "ARTI@IEEE ICIP2026",
+    "research_venue": "ARTI@IEEE ICIP2026"
+  },
+  {
+    "id": "c14",
+    "authors": "Pai Chet Ng, Gabriel Jun Rong Lee, Seyed Mohammad Sheikholeslami, Malcolm Low, Nikolaos Boulgouris, Thirimachos Bourlai, Juwei Lu, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "The Hyper-Object Challenge: Inferring Beyond the Visible in Low-Cost Hyperspectral Imaging",
+    "reference": "Pai Chet Ng, Gabriel Jun Rong Lee, Seyed Mohammad Sheikholeslami, Malcolm Low, Nikolaos Boulgouris, Thirimachos Bourlai, Juwei Lu, Konstantinos N. Plataniotis (2026). The Hyper-Object Challenge: Inferring Beyond the Visible in Low-Cost Hyperspectral Imaging. ICASSP 2026 SP Grand Challenge, Barcelona, Spain. 7 May 2026.",
+    "venue_note": "ICASSP 2026 SP Grand Challenge, Barcelona, Spain. 7 May 2026.",
+    "source": "https://www.cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=19117",
+    "sources": [
+      "https://www.cmsworkshops.com/ICASSP2026/view_paper.php?PaperNum=19117"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/icassp55912.2026.11460657",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2026C14,\n  author = {Pai Chet Ng and Gabriel Jun Rong Lee and Seyed Mohammad Sheikholeslami and Malcolm Low and Nikolaos Boulgouris and Thirimachos Bourlai and Juwei Lu and Konstantinos N. Plataniotis},\n  title = {The Hyper-Object Challenge: Inferring Beyond the Visible in Low-Cost Hyperspectral Imaging},\n  year = {2026},\n  booktitle = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {21818--21820},\n  publisher = {IEEE},\n  doi = {10.1109/icassp55912.2026.11460657},\n  url = {https://doi.org/10.1109/icassp55912.2026.11460657}\n}",
+    "status": "Published",
+    "resources": [
+      {
+        "label": "Project",
+        "url": "https://hyper-object.github.io/"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/hyper-object/2026-ICASSP-SPGC"
+      },
+      {
+        "label": "Data · Track 1",
+        "url": "https://www.kaggle.com/competitions/2026-icassp-hyper-object-challenge-track-1"
+      },
+      {
+        "label": "Data · Track 2",
+        "url": "https://www.kaggle.com/competitions/2026-icassp-hyper-object-challenge-track-2"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=The%20Hyper-Object%20Challenge%3A%20Inferring%20Beyond%20the%20Visible%20in%20Low-Cost%20Hyp"
+      }
+    ],
+    "publisher_source": "https://doi.org/10.1109/icassp55912.2026.11460657",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=The%20Hyper-Object%20Challenge%3A%20Inferring%20Beyond%20the%20Visible%20in%20Low-Cost%20Hyperspectral%20Imaging%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+      ],
+      "page": "21818-21820",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11460657.pdf?arnumber=11460657",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "bib_venue": "IEEE ICASSP 2026 SP Grand Challenge",
+    "research_venue": "ICASSP2026",
+    "pdf_candidates": []
+  },
+  {
+    "id": "c15",
+    "authors": "Jamal Seyedmohammadi, Pai Chet Ng, Angelo Genovese, Zhixiang Chi, Jeannie Lee, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "X-Palm: Paired Multispectral-to-Smartphone Dataset for Cross-Domain Palmprint Authentication",
+    "reference": "Jamal Seyedmohammadi, Pai Chet Ng, Angelo Genovese, Zhixiang Chi, Jeannie Lee, Konstantinos N. Plataniotis (2026). X-Palm: Paired Multispectral-to-Smartphone Dataset for Cross-Domain Palmprint Authentication. NeurIPS 2026, Evaluations & Datasets (E&D) Track. Accepted.",
+    "venue_note": "NeurIPS 2026, Evaluations & Datasets (E&D) Track. Accepted.",
+    "source": "https://arxiv.org/abs/2606.08437",
+    "sources": [
+      "https://arxiv.org/abs/2606.08437"
+    ],
+    "kind": "conference",
+    "doi": "10.48550/arXiv.2606.08437",
+    "pdf": "/asset/paper/c15-x-palm-paired-multispectral-to-smartphone-dataset-for-cross-domain-palmprint-authentication.pdf",
+    "bibtex": "@inproceedings{Ng2026C15,\n  author = {Jamal Seyedmohammadi and Pai Chet Ng and Angelo Genovese and Zhixiang Chi and Jeannie Lee and Konstantinos N. Plataniotis},\n  title = {X-Palm: Paired Multispectral-to-Smartphone Dataset for Cross-Domain Palmprint Authentication},\n  year = {2026},\n  booktitle = {NeurIPS 2026 Evaluations \\& Datasets Track},\n  doi = {10.48550/arXiv.2606.08437},\n  url = {https://arxiv.org/abs/2606.08437},\n  eprint = {2606.08437},\n  archivePrefix = {arXiv},\n  note = {Accepted. Available PDF and DOI refer to the arXiv author version.}\n}",
+    "status": "Accepted",
+    "resources": [
+      {
+        "label": "Code & data",
+        "url": "https://github.com/X-Palm/X-Palm-2026"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=X-Palm%3A%20Paired%20Multispectral-to-Smartphone%20Dataset%20for%20Cross-Domain%20Palmprint%"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2606.08437",
+        "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Read timed out."
+      }
+    ],
+    "arxiv": "2606.08437",
+    "pdf_candidates": [
+      "https://arxiv.org/pdf/2606.08437v2"
+    ],
+    "pdf_download_source": "https://arxiv.org/pdf/2606.08437v2",
+    "bib_venue": "NeurIPS 2026 Evaluations & Datasets Track",
+    "pdf_version": "arXiv author version",
+    "bib_note": "Available PDF and DOI refer to the arXiv author version.",
+    "acceptance_source": "Author update, October 2026",
+    "research_venue": "NeurIPS2026; accepted"
+  },
+  {
+    "id": "c16",
+    "authors": "Olivia Shanhong Liu, Pai Chet Ng, De Wen Soh, Konstantinos N. Plataniotis",
+    "year": 2026,
+    "title": "Yes FLoReNce, I Will Do Better Next Time! Agentic Feedback Reasoning for Humorous Meme Detection",
+    "reference": "Olivia Shanhong Liu, Pai Chet Ng, De Wen Soh, Konstantinos N. Plataniotis. Yes FLoReNce, I Will Do Better Next Time! Agentic Feedback Reasoning for Humorous Meme Detection. LaMAS@AAAI2026, Singapore. Peer-reviewed non-archival oral presentation.",
+    "venue_note": "LaMAS@AAAI2026, Singapore. Peer-reviewed non-archival oral presentation.",
+    "source": "https://arxiv.org/abs/2601.07232",
+    "sources": [
+      "https://arxiv.org/abs/2601.07232"
+    ],
+    "kind": "conference",
+    "doi": "10.48550/arXiv.2601.07232",
+    "pdf": "/asset/paper/c16-yes-florence-i-will-do-better-next-time-agentic-feedback-reasoning-for-humorous-meme-detection.pdf",
+    "bibtex": "@inproceedings{Ng2026C16,\n  author = {Olivia Shanhong Liu and Pai Chet Ng and De Wen Soh and Konstantinos N. Plataniotis},\n  title = {Yes FLoReNce, I Will Do Better Next Time! Agentic Feedback Reasoning for Humorous Meme Detection},\n  year = {2026},\n  booktitle = {LaMAS@AAAI2026},\n  doi = {10.48550/arXiv.2601.07232},\n  url = {https://arxiv.org/abs/2601.07232},\n  eprint = {2601.07232},\n  archivePrefix = {arXiv},\n  note = {Non-archival oral presentation}\n}",
+    "status": "Non-archival",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Yes%20FLoReNce%2C%20I%20Will%20Do%20Better%20Next%20Time%21%20Agentic%20Feedback%20Reasoning"
+      }
+    ],
+    "arxiv": "2601.07232",
+    "pdf_download_source": "https://arxiv.org/pdf/2601.07232",
+    "bib_venue": "LaMAS@AAAI2026",
+    "pdf_version": "arXiv author version",
+    "research_venue": "LaMAS@AAAI2026"
+  },
+  {
+    "id": "c17",
+    "authors": "Peter Febrianto Afandy, Lionel Wei Xian Sim, Ashley Tay Yong Jun, Joshua Lim, Colin KJ Ng, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2025,
+    "title": "A Hybrid LoRa and Wi-Fi Mesh System for Multi-Floor Elderly Tracking and Monitoring",
+    "reference": "Peter Febrianto Afandy, Lionel Wei Xian Sim, Ashley Tay Yong Jun, Joshua Lim, Colin KJ Ng, Pai Chet Ng, Konstantinos N. Plataniotis (2025). A Hybrid LoRa and Wi-Fi Mesh System for Multi-Floor Elderly Tracking and Monitoring. WF-IoT 2025: 1-6.",
+    "venue_note": "WF-IoT 2025: 1-6.",
+    "source": "https://dblp.org/rec/conf/wf-iot/AfandySJLNNP25",
+    "sources": [
+      "https://dblp.org/rec/conf/wf-iot/AfandySJLNNP25"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/wf-iot64238.2025.11270548",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2025C17,\n  author = {Peter Febrianto Afandy and Lionel Wei Xian Sim and Ashley Tay Yong Jun and Joshua Lim and Colin KJ Ng and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {A Hybrid LoRa and Wi-Fi Mesh System for Multi-Floor Elderly Tracking and Monitoring},\n  year = {2025},\n  booktitle = {2025 IEEE 11th World Forum on Internet of Things (WF-IoT)},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/wf-iot64238.2025.11270548},\n  url = {https://doi.org/10.1109/wf-iot64238.2025.11270548}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=A%20Hybrid%20LoRa%20and%20Wi-Fi%20Mesh%20System%20for%20Multi-Floor%20Elderly%20Tracking%20a"
+      }
+    ],
+    "publisher_source": "https://doi.org/10.1109/wf-iot64238.2025.11270548",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=A%20Hybrid%20LoRa%20and%20Wi-Fi%20Mesh%20System%20for%20Multi-Floor%20Elderly%20Tracking%20and%20Monitoring%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "2025 IEEE 11th World Forum on Internet of Things (WF-IoT)"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11270488/11270490/11270548.pdf?arnumber=11270548",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": []
+  },
+  {
+    "id": "c18",
+    "authors": "Shi Quan Marcus Foo, Vi Shean Lim, Pai Chet Ng, Jeannie S. Lee",
+    "year": 2025,
+    "title": "Do Emotions Matter? An Empirical Exploration of Facial Recognition across Diverse Datasets",
+    "reference": "Shi Quan Marcus Foo, Vi Shean Lim, Pai Chet Ng, Jeannie S. Lee (2025). Do Emotions Matter? An Empirical Exploration of Facial Recognition across Diverse Datasets. SOLI 2025: 119-124. 28–30 September 2025.",
+    "venue_note": "SOLI 2025: 119-124. 28–30 September 2025.",
+    "source": "https://doi.org/10.25447/sit.30238516",
+    "sources": [
+      "https://doi.org/10.25447/sit.30238516"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/soli66289.2025.11396220",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2025C18,\n  author = {Shi Quan Marcus Foo and Vi Shean Lim and Pai Chet Ng and Jeannie S. Lee},\n  title = {Do Emotions Matter? An Empirical Exploration of Facial Recognition across Diverse Datasets},\n  year = {2025},\n  booktitle = {2025 IEEE International Conference on Service Operations and Logistics, and Informatics (SOLI)},\n  pages = {119--124},\n  publisher = {IEEE},\n  doi = {10.1109/soli66289.2025.11396220},\n  url = {https://doi.org/10.1109/soli66289.2025.11396220}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Do%20Emotions%20Matter%3F%20An%20Empirical%20Exploration%20of%20Facial%20Recognition%20acros"
+      },
+      {
+        "url": "https://ndownloader.figshare.com/files/58369036",
+        "error": "403 Client Error: Forbidden for url: https://ndownloader.figshare.com/files/58369036"
+      },
+      {
+        "url": "https://ndownloader.figshare.com/files/58369036",
+        "error": "403 Client Error: Forbidden for url: https://ndownloader.figshare.com/files/58369036"
+      },
+      {
+        "url": "https://ndownloader.figshare.com/files/58369036",
+        "error": "403 Client Error: Forbidden for url: https://ndownloader.figshare.com/files/58369036"
+      }
+    ],
+    "repository_doi": "10.25447/sit.30238516",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Do_Emotions_Matter_An_Empirical_Exploration_of_Facial_Recognition_across_Diverse_Datasets/30238516",
+    "repository_article_id": 30238516,
+    "pdf_candidates": [
+      "https://ndownloader.figshare.com/files/58369036"
+    ],
+    "publisher_source": "https://doi.org/10.1109/soli66289.2025.11396220",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=Do%20Emotions%20Matter%3F%20An%20Empirical%20Exploration%20of%20Facial%20Recognition%20across%20Diverse%20Datasets%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "2025 IEEE International Conference on Service Operations and Logistics, and Informatics (SOLI)"
+      ],
+      "page": "119-124",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11396074/11396101/11396220.pdf?arnumber=11396220",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c19",
+    "authors": "Peter Febrianto Afandy, Adrian Pang Zi Jian, Ryan Lai Wei Shao, Tan Yu Jie, Ashley Tay Yong Jun, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2025,
+    "title": "Enhancing LOS/NLOS Classification in UWB with Robust Feature Engineering",
+    "reference": "Peter Febrianto Afandy, Adrian Pang Zi Jian, Ryan Lai Wei Shao, Tan Yu Jie, Ashley Tay Yong Jun, Pai Chet Ng, Konstantinos N. Plataniotis (2025). Enhancing LOS/NLOS Classification in UWB with Robust Feature Engineering. WF-IoT 2025: 1-6.",
+    "venue_note": "WF-IoT 2025: 1-6.",
+    "source": "https://dblp.org/rec/conf/wf-iot/AfandyJSJJNP25",
+    "sources": [
+      "https://dblp.org/rec/conf/wf-iot/AfandyJSJJNP25"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/wf-iot64238.2025.11270703",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2025C19,\n  author = {Peter Febrianto Afandy and Adrian Pang Zi Jian and Ryan Lai Wei Shao and Tan Yu Jie and Ashley Tay Yong Jun and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Enhancing LOS/NLOS Classification in UWB with Robust Feature Engineering},\n  year = {2025},\n  booktitle = {2025 IEEE 11th World Forum on Internet of Things (WF-IoT)},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/wf-iot64238.2025.11270703},\n  url = {https://doi.org/10.1109/wf-iot64238.2025.11270703}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Enhancing%20LOS/NLOS%20Classification%20in%20UWB%20with%20Robust%20Feature%20Engineering&row"
+      }
+    ],
+    "publisher_source": "https://doi.org/10.1109/wf-iot64238.2025.11270703",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=Enhancing%20LOS/NLOS%20Classification%20in%20UWB%20with%20Robust%20Feature%20Engineering%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "2025 IEEE 11th World Forum on Internet of Things (WF-IoT)"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11270488/11270490/11270703.pdf?arnumber=11270703",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": []
+  },
+  {
+    "id": "c20",
+    "authors": "Javier Si Zhao Hong, Timothy Zoe Delaya, Sherwyn Chan Yin Kit, Pai Chet Ng, Xiaoxiao Miao",
+    "year": 2025,
+    "title": "Exploring Machine Learning and Language Models for Multimodal Depression Detection",
+    "reference": "Javier Si Zhao Hong, Timothy Zoe Delaya, Sherwyn Chan Yin Kit, Pai Chet Ng, Xiaoxiao Miao (2025). Exploring Machine Learning and Language Models for Multimodal Depression Detection. APSIPA 2025: 1509-1514.",
+    "venue_note": "APSIPA 2025: 1509-1514.",
+    "source": "https://doi.org/10.25447/sit.30238495",
+    "sources": [
+      "https://doi.org/10.25447/sit.30238495"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/apsipaasc65261.2025.11249212",
+    "pdf": "/asset/paper/c20-exploring-machine-learning-and-language-models-for-multimodal-depression-detection.pdf",
+    "bibtex": "@inproceedings{Ng2025C20,\n  author = {Javier Si Zhao Hong and Timothy Zoe Delaya and Sherwyn Chan Yin Kit and Pai Chet Ng and Xiaoxiao Miao},\n  title = {Exploring Machine Learning and Language Models for Multimodal Depression Detection},\n  year = {2025},\n  booktitle = {2025 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},\n  pages = {1509--1514},\n  publisher = {IEEE},\n  doi = {10.1109/apsipaasc65261.2025.11249212},\n  url = {https://doi.org/10.1109/apsipaasc65261.2025.11249212}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Exploring%20Machine%20Learning%20and%20Language%20Models%20for%20Multimodal%20Depression%20D"
+      }
+    ],
+    "repository_doi": "10.25447/sit.30238495",
+    "pdf_download_source": "https://ndownloader.figshare.com/files/58368925",
+    "publisher_source": "https://doi.org/10.1109/apsipaasc65261.2025.11249212",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=Exploring%20Machine%20Learning%20and%20Language%20Models%20for%20Multimodal%20Depression%20Detection%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "2025 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)"
+      ],
+      "page": "1509-1514",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11248853/11248968/11249212.pdf?arnumber=11249212",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c21",
+    "authors": "Pai Chet Ng, Arash Rasti-Meymandi, Seyed Mohammad Sheikholeslami, Konstantinos N. Plataniotis",
+    "year": 2025,
+    "title": "FedGraph: Probing-Based Personalized Federated Learning for Human Activity Recognition with Multimodal Physiological Signals",
+    "reference": "Pai Chet Ng, Arash Rasti-Meymandi, Seyed Mohammad Sheikholeslami, Konstantinos N. Plataniotis. FedGraph: Probing-Based Personalized Federated Learning for Human Activity Recognition with Multimodal Physiological Signals. FPPAI@IEEE ICDCS2025, pp. 706–716.",
+    "venue_note": "FPPAI@IEEE ICDCS2025, pp. 706–716.",
+    "source": "https://sites.google.com/view/fppaiicdcs25/program",
+    "sources": [
+      "https://sites.google.com/view/fppaiicdcs25/program"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICDCSW63273.2025.00130",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2025C21,\n  author = {Pai Chet Ng and Arash Rasti-Meymandi and Seyed Mohammad Sheikholeslami and Konstantinos N. Plataniotis},\n  title = {FedGraph: Probing-Based Personalized Federated Learning for Human Activity Recognition with Multimodal Physiological Signals},\n  year = {2025},\n  booktitle = {FPPAI@IEEE ICDCS2025},\n  pages = {706--716},\n  doi = {10.1109/ICDCSW63273.2025.00130},\n  url = {https://doi.org/10.1109/ICDCSW63273.2025.00130}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=FedGraph%3A%20Probing-Based%20Personalized%20Federated%20Learning%20for%20Human%20Activity%2"
+      }
+    ],
+    "publisher_source": "https://doi.org/10.1109/ICDCSW63273.2025.00130",
+    "bib_venue": "FPPAI@IEEE ICDCS2025",
+    "research_venue": "FPPAI@IEEE ICDCS2025",
+    "pdf_candidates": []
+  },
+  {
+    "id": "c22",
+    "authors": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2025,
+    "title": "Large-Scale Federated Learning for Hybrid Cell-Free Massive MIMO and Visible Light Communication Systems",
+    "reference": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Konstantinos N. Plataniotis (2025). Large-Scale Federated Learning for Hybrid Cell-Free Massive MIMO and Visible Light Communication Systems. PIMRC 2025: 1-6. 1–4 September 2025.",
+    "venue_note": "PIMRC 2025: 1-6. 1–4 September 2025.",
+    "source": "https://dblp.org/rec/conf/pimrc/SheikholeslamiNP25",
+    "sources": [
+      "https://dblp.org/rec/conf/pimrc/SheikholeslamiNP25"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/pimrc62392.2025.11275256",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2025C22,\n  author = {Seyed Mohammad Sheikholeslami and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Large-Scale Federated Learning for Hybrid Cell-Free Massive MIMO and Visible Light Communication Systems},\n  year = {2025},\n  booktitle = {2025 IEEE 36th International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/pimrc62392.2025.11275256},\n  url = {https://doi.org/10.1109/pimrc62392.2025.11275256}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.crossref.org/works/10.1109%2Fpimrc62392.2025.11275256",
+    "publisher_source": "https://doi.org/10.1109/pimrc62392.2025.11275256",
+    "crossref": {
+      "author": [
+        {
+          "given": "S. Mohammad",
+          "family": "Sheikholeslami",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Dept. Electrical and Computer Engineering,Toronto,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pai",
+          "family": "Chet Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Singapore,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Dept. Electrical and Computer Engineering,Toronto,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2025 IEEE 36th International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11274530/11274549/11275256.pdf?arnumber=11275256",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": []
+  },
+  {
+    "id": "c23",
+    "authors": "Dion J. X. Ho, Gabriel Lee Jun Rong, Niharika Shrivastava, Harshavardhan Abichandani, Pai Chet Ng, Xiaoxiao Miao",
+    "year": 2025,
+    "title": "MS-GAGA: Metric-Selective Guided Adversarial Generation Attack",
+    "reference": "Dion J. X. Ho, Gabriel Lee Jun Rong, Niharika Shrivastava, Harshavardhan Abichandani, Pai Chet Ng, Xiaoxiao Miao. MS-GAGA: Metric-Selective Guided Adversarial Generation Attack. PFATCV@BMVC2025. 27 November 2025.",
+    "venue_note": "PFATCV@BMVC2025. 27 November 2025.",
+    "source": "https://bmva-archive.org.uk/bmvc/2025/assets/workshops/PFATCV/Paper_8/paper.pdf",
+    "sources": [
+      "https://bmva-archive.org.uk/bmvc/2025/assets/workshops/PFATCV/Paper_8/paper.pdf"
+    ],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "/asset/paper/c23-ms-gaga-metric-selective-guided-adversarial-generation-attack.pdf",
+    "bibtex": "@inproceedings{Ng2025C23,\n  author = {Dion J. X. Ho and Gabriel Lee Jun Rong and Niharika Shrivastava and Harshavardhan Abichandani and Pai Chet Ng and Xiaoxiao Miao},\n  title = {MS-GAGA: Metric-Selective Guided Adversarial Generation Attack},\n  year = {2025},\n  booktitle = {PFATCV@BMVC2025},\n  url = {https://bmva-archive.org.uk/bmvc/2025/assets/workshops/PFATCV/Paper\\_8/paper.pdf}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=MS-GAGA%3A%20Metric-Selective%20Guided%20Adversarial%20Generation%20Attack&rows=4"
+      }
+    ],
+    "pdf_download_source": "https://bmva-archive.org.uk/bmvc/2025/assets/workshops/PFATCV/Paper_8/paper.pdf",
+    "bib_venue": "PFATCV@BMVC2025",
+    "pdf_version": "Publicly available paper copy",
+    "research_venue": "PFATCV@BMVC2025"
+  },
+  {
+    "id": "c24",
+    "authors": "Munir Bin Rudy Herman, Pai Chet Ng, Olivia Shanhong Liu",
+    "year": 2025,
+    "title": "Person Re-Identification with Structural Semantic Graphs in Resource-Constrained Environments",
+    "reference": "Munir Bin Rudy Herman, Pai Chet Ng, Olivia Shanhong Liu (2025). Person Re-Identification with Structural Semantic Graphs in Resource-Constrained Environments. IEEE TENCON 2025, pp. 1315–1319. 27–30 October 2025.",
+    "venue_note": "IEEE TENCON 2025, pp. 1315–1319. 27–30 October 2025.",
+    "source": "https://ieeemy.org/malaysiasection/event/ieee-region-10-conference-2025-tencon-2025/",
+    "sources": [
+      "https://ieeemy.org/malaysiasection/event/ieee-region-10-conference-2025-tencon-2025/"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/tencon66050.2025.11375355",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2025C24,\n  author = {Munir Bin Rudy Herman and Pai Chet Ng and Olivia Shanhong Liu},\n  title = {Person Re-Identification with Structural Semantic Graphs in Resource-Constrained Environments},\n  year = {2025},\n  booktitle = {TENCON 2025 - 2025 IEEE Region 10 Conference (TENCON)},\n  pages = {1315--1319},\n  publisher = {IEEE},\n  doi = {10.1109/tencon66050.2025.11375355},\n  url = {https://doi.org/10.1109/tencon66050.2025.11375355}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Person%20Re-Identification%20with%20Structural%20Semantic%20Graphs%20in%20Resource-Constrain"
+      }
+    ],
+    "publisher_source": "https://doi.org/10.1109/tencon66050.2025.11375355",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=Person%20Re-Identification%20with%20Structural%20Semantic%20Graphs%20in%20Resource-Constrained%20Environments%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "TENCON 2025 - 2025 IEEE Region 10 Conference (TENCON)"
+      ],
+      "page": "1315-1319",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11373911/11374914/11375355.pdf?arnumber=11375355",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": []
+  },
+  {
+    "id": "c25",
+    "authors": "Derrick Lim Jo Han, Pai Chet Ng, Malcolm Yoke Hean Low",
+    "year": 2025,
+    "title": "VoCare AI: A Multi-Agent LLM Workflow for Improved Clinic Operational Efficiency",
+    "reference": "Derrick Lim Jo Han, Pai Chet Ng, Malcolm Yoke Hean Low (2025). VoCare AI: A Multi-Agent LLM Workflow for Improved Clinic Operational Efficiency. IEEE TENCON 2025, pp. 1300–1304. 27–30 October 2025.",
+    "venue_note": "IEEE TENCON 2025, pp. 1300–1304. 27–30 October 2025.",
+    "source": "https://doi.org/10.25447/sit.33980998",
+    "sources": [
+      "https://doi.org/10.25447/sit.33980998"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/tencon66050.2025.11375163",
+    "pdf": "/asset/paper/c25-vocare-ai-a-multi-agent-llm-workflow-for-improved-clinic-operational-efficiency.pdf",
+    "bibtex": "@inproceedings{Ng2025C25,\n  author = {Derrick Lim Jo Han and Pai Chet Ng and Malcolm Yoke Hean Low},\n  title = {VoCare AI: A Multi-Agent LLM Workflow for Improved Clinic Operational Efficiency},\n  year = {2025},\n  booktitle = {TENCON 2025 - 2025 IEEE Region 10 Conference (TENCON)},\n  pages = {1300--1304},\n  publisher = {IEEE},\n  doi = {10.1109/tencon66050.2025.11375163},\n  url = {https://doi.org/10.1109/tencon66050.2025.11375163}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=VoCare%20AI%3A%20A%20Multi-Agent%20LLM%20Workflow%20for%20Improved%20Clinic%20Operational%20"
+      }
+    ],
+    "repository_doi": "10.25447/sit.33980998",
+    "pdf_download_source": "https://ndownloader.figshare.com/files/69298906",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/VoCare_AI_A_Multi-Agent_LLM_Workflow_for_Improved_Clinic_Operational_Efficiency/33980998",
+    "repository_article_id": 33980998,
+    "pdf_candidates": [
+      "https://ndownloader.figshare.com/files/69298906"
+    ],
+    "publisher_source": "https://doi.org/10.1109/tencon66050.2025.11375163",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=VoCare%20AI%3A%20A%20Multi-Agent%20LLM%20Workflow%20for%20Improved%20Clinic%20Operational%20Efficiency%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "TENCON 2025 - 2025 IEEE Region 10 Conference (TENCON)"
+      ],
+      "page": "1300-1304",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11373911/11374914/11375163.pdf?arnumber=11375163",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_version": "Publicly available paper copy",
+    "research_venue": "TENCON2025"
+  },
+  {
+    "id": "c26",
+    "authors": "Pai Chet Ng, Juwei Lu, Konstantinos N. Plataniotis",
+    "year": 2024,
+    "title": "AQF: Assessing the Quality of Hyperspectral Reconstruction with a Learnable Metric",
+    "reference": "Pai Chet Ng, Juwei Lu, Konstantinos N. Plataniotis (2024). AQF: Assessing the Quality of Hyperspectral Reconstruction with a Learnable Metric. ICASSP 2024: 3390-3394.",
+    "venue_note": "ICASSP 2024: 3390-3394.",
+    "source": "https://dblp.org/rec/conf/icassp/NgLP24",
+    "sources": [
+      "https://dblp.org/rec/conf/icassp/NgLP24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICASSP48485.2024.10446925",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C26,\n  author = {Pai Chet Ng and Juwei Lu and Konstantinos N. Plataniotis},\n  title = {AQF: Assessing the Quality of Hyperspectral Reconstruction with a Learnable Metric},\n  year = {2024},\n  booktitle = {ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages = {3390--3394},\n  publisher = {IEEE},\n  doi = {10.1109/ICASSP48485.2024.10446925},\n  url = {https://doi.org/10.1109/ICASSP48485.2024.10446925}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/27134688",
+    "publisher_source": "https://doi.org/10.1109/ICASSP48485.2024.10446925",
+    "crossref": {
+      "author": [
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Edward S. Rogers Sr. Department of Electrical and Computer Engineering"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Juwei",
+          "family": "Lu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Huawei Noah&#x2019;s Ark Lab"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Edward S. Rogers Sr. Department of Electrical and Computer Engineering"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+      ],
+      "page": "3390-3394",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/10445798/10445803/10446925.pdf?arnumber=10446925",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/AQF_Assessing_the_Quality_of_Hyperspectral_Reconstruction_with_a_Learnable_Metric/27134688",
+    "repository_article_id": 27134688,
+    "pdf_candidates": []
+  },
+  {
+    "id": "c27",
+    "authors": "Pai Chet Ng, Kostas N. Plataniotis",
+    "year": 2024,
+    "title": "Can Pretrained Face Verification Models Distinguish True Identity from Deepfakes?",
+    "reference": "Pai Chet Ng, Kostas N. Plataniotis. Can Pretrained Face Verification Models Distinguish True Identity from Deepfakes?. PFATCV@BMVC2024.",
+    "venue_note": "PFATCV@BMVC2024.",
+    "source": "https://bmva-archive.org.uk/bmvc/2024/workshops/PFATCV/15_Can_Pretrained_Face_Verific.pdf",
+    "sources": [
+      "https://dblp.org/rec/conf/bmvc/NgP24"
+    ],
+    "kind": "conference",
+    "doi": "",
+    "pdf": "/asset/paper/c27-pretrained-face-verification-and-deepfakes.pdf",
+    "bibtex": "@inproceedings{Ng2024C27,\n  author = {Pai Chet Ng and Kostas N. Plataniotis},\n  title = {Can Pretrained Face Verification Models Distinguish True Identity from Deepfakes?},\n  year = {2024},\n  booktitle = {PFATCV@BMVC2024},\n  url = {https://bmva-archive.org.uk/bmvc/2024/workshops/PFATCV/15\\_Can\\_Pretrained\\_Face\\_Verific.pdf}\n}",
+    "status": "Published",
+    "bib_venue": "PFATCV@BMVC2024",
+    "resources": [],
+    "attempts": [],
+    "pdf_download_source": "https://bmva-archive.org.uk/bmvc/2024/workshops/PFATCV/15_Can_Pretrained_Face_Verific.pdf",
+    "pdf_version": "Publicly available paper copy",
+    "research_venue": "PFATCV@BMVC2024"
+  },
+  {
+    "id": "c28",
+    "authors": "Peter Febrianto Afandy, Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2024,
+    "title": "Federated Learning for Hierarchical Fall Detection and Human Activity Recognition",
+    "reference": "Peter Febrianto Afandy, Pai Chet Ng, Konstantinos N. Plataniotis (2024). Federated Learning for Hierarchical Fall Detection and Human Activity Recognition. WF-IoT 2024: 1-6.",
+    "venue_note": "WF-IoT 2024: 1-6.",
+    "source": "https://dblp.org/rec/conf/wf-iot/AfandyNP24",
+    "sources": [
+      "https://dblp.org/rec/conf/wf-iot/AfandyNP24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/wf-iot62078.2024.10811273",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C28,\n  author = {Peter Febrianto Afandy and Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Federated Learning for Hierarchical Fall Detection and Human Activity Recognition},\n  year = {2024},\n  booktitle = {2024 IEEE 10th World Forum on Internet of Things (WF-IoT)},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/wf-iot62078.2024.10811273},\n  url = {https://doi.org/10.1109/wf-iot62078.2024.10811273}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Federated%20Learning%20for%20Hierarchical%20Fall%20Detection%20and%20Human%20Activity%20Reco"
+      }
+    ],
+    "publisher_source": "https://doi.org/10.1109/wf-iot62078.2024.10811273",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=Federated%20Learning%20for%20Hierarchical%20Fall%20Detection%20and%20Human%20Activity%20Recognition%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "2024 IEEE 10th World Forum on Internet of Things (WF-IoT)"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10811010/10811012/10811273.pdf?arnumber=10811273",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "research_venue": "IoT-WF2024",
+    "pdf_candidates": []
+  },
+  {
+    "id": "c29",
+    "authors": "Pai Chet Ng, Zhixiang Chi, Malcolm Y. H. Low, Juwei Lu, Konstantinos N. Plataniotis, Nikolaos V. Boulgouris, Thirimachos Bourlai, Yong Man Ro",
+    "year": 2024,
+    "title": "Hyperspectral Skin Vision Challenge: Can Your Camera See Beyond Your Skin?",
+    "reference": "Pai Chet Ng, Zhixiang Chi, Malcolm Y. H. Low, Juwei Lu, Konstantinos N. Plataniotis, Nikolaos V. Boulgouris, Thirimachos Bourlai, Yong Man Ro (2024). Hyperspectral Skin Vision Challenge: Can Your Camera See Beyond Your Skin? IEEE ICASSP Workshops 2024, pp. 59–60.",
+    "venue_note": "IEEE ICASSP Workshops 2024, pp. 59–60.",
+    "source": "https://dblp.org/rec/conf/icassp/NgCLLPBBR24",
+    "sources": [
+      "https://dblp.org/rec/conf/icassp/NgCLLPBBR24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICASSPW62465.2024.10626113",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C29,\n  author = {Pai Chet Ng and Zhixiang Chi and Malcolm Y. H. Low and Juwei Lu and Konstantinos N. Plataniotis and Nikolaos V. Boulgouris and Thirimachos Bourlai and Yong Man Ro},\n  title = {Hyperspectral Skin Vision Challenge: Can Your Camera See Beyond Your Skin?},\n  year = {2024},\n  booktitle = {IEEE ICASSP Workshops 2024},\n  pages = {59--60},\n  doi = {10.1109/ICASSPW62465.2024.10626113},\n  url = {https://doi.org/10.1109/ICASSPW62465.2024.10626113}\n}",
+    "status": "Published",
+    "bib_venue": "IEEE ICASSP Workshops 2024",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Hyperspectral%20Skin%20Vision%20Challenge%3A%20Can%20Your%20Camera%20See%20Beyond%20Your%20S"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Hyperspectral_Skin_Vision_Challenge_Can_Your_Camera_See_Beyond_Your_Skin_/27134655",
+    "repository_article_id": 27134655,
+    "publisher_source": "https://doi.org/10.1109/ICASSPW62465.2024.10626113",
+    "metadata_source": "https://api.figshare.com/v2/articles/27134655",
+    "pdf_candidates": [],
+    "crossref": {
+      "container-title": [
+        "IEEE ICASSP Workshops 2024"
+      ],
+      "page": "59-60"
+    },
+    "research_venue": "ICASSP2024"
+  },
+  {
+    "id": "c30",
+    "authors": "Munir Bin Rudy Herman, Pai Chet Ng, Malcolm Yoke Hean Low, Detlev Remy",
+    "year": 2024,
+    "title": "Integrating RAG with Face Recognition for Personalized Guest Services for Hospitality Industries",
+    "reference": "Munir Bin Rudy Herman, Pai Chet Ng, Malcolm Yoke Hean Low, Detlev Remy (2024). Integrating RAG with Face Recognition for Personalized Guest Services for Hospitality Industries. TENCON 2024: 1394-1397.",
+    "venue_note": "TENCON 2024: 1394-1397.",
+    "source": "https://dblp.org/rec/conf/tencon/HermanNLR24",
+    "sources": [
+      "https://dblp.org/rec/conf/tencon/HermanNLR24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/tencon61640.2024.10902965",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C30,\n  author = {Munir Bin Rudy Herman and Pai Chet Ng and Malcolm Yoke Hean Low and Detlev Remy},\n  title = {Integrating RAG with Face Recognition for Personalized Guest Services for Hospitality Industries},\n  year = {2024},\n  booktitle = {TENCON 2024},\n  pages = {1394--1397},\n  doi = {10.1109/tencon61640.2024.10902965},\n  url = {https://doi.org/10.1109/tencon61640.2024.10902965}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Integrating%20RAG%20with%20Face%20Recognition%20for%20Personalized%20Guest%20Services%20for%"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Integrating_RAG_with_Face_Recognition_for_Personalized_Guest_Services_for_Hospitality_Industries/29597096",
+    "repository_article_id": 29597096,
+    "publisher_source": "https://doi.org/10.1109/tencon61640.2024.10902965",
+    "metadata_source": "https://api.figshare.com/v2/articles/29597096",
+    "pdf_candidates": [],
+    "bib_venue": "TENCON 2024",
+    "research_venue": "TENCON2024"
+  },
+  {
+    "id": "c31",
+    "authors": "Sim Wei Xiang Calvert, Pai Chet Ng",
+    "year": 2024,
+    "title": "Leveraging Transfer Learning for Region-Specific Deepfake Detection",
+    "reference": "Sim Wei Xiang Calvert, Pai Chet Ng (2024). Leveraging Transfer Learning for Region-Specific Deepfake Detection. TENCON 2024: 310-313.",
+    "venue_note": "TENCON 2024: 310-313.",
+    "source": "https://dblp.org/rec/conf/tencon/CalvertN24",
+    "sources": [
+      "https://dblp.org/rec/conf/tencon/CalvertN24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/tencon61640.2024.10902787",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C31,\n  author = {Sim Wei Xiang Calvert and Pai Chet Ng},\n  title = {Leveraging Transfer Learning for Region-Specific Deepfake Detection},\n  year = {2024},\n  booktitle = {TENCON 2024 - 2024 IEEE Region 10 Conference (TENCON)},\n  pages = {310--313},\n  publisher = {IEEE},\n  doi = {10.1109/tencon61640.2024.10902787},\n  url = {https://doi.org/10.1109/tencon61640.2024.10902787}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.crossref.org/works/10.1109%2Ftencon61640.2024.10902787",
+    "publisher_source": "https://doi.org/10.1109/tencon61640.2024.10902787",
+    "crossref": {
+      "author": [
+        {
+          "given": "Sim Wei Xiang",
+          "family": "Calvert",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of Computing Science, University of Glasgow Singapore,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Infocomm Technology Cluster,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "TENCON 2024 - 2024 IEEE Region 10 Conference (TENCON)"
+      ],
+      "page": "310-313",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10902665/10902666/10902787.pdf?arnumber=10902787",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": []
+  },
+  {
+    "id": "c32",
+    "authors": "Pai Chet Ng, Kan Chen, Jeannie S. Lee, Tram Truong-Huu",
+    "year": 2024,
+    "title": "Multi-Template Siamese Networks with Clique Contrastive Learning for Palmprint Authentication",
+    "reference": "Pai Chet Ng, Kan Chen, Jeannie S. Lee, Tram Truong-Huu (2024). Multi-Template Siamese Networks with Clique Contrastive Learning for Palmprint Authentication. TENCON 2024: 252-255.",
+    "venue_note": "TENCON 2024: 252-255.",
+    "source": "https://dblp.org/rec/conf/tencon/NgCLT24",
+    "sources": [
+      "https://dblp.org/rec/conf/tencon/NgCLT24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/tencon61640.2024.10903122",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C32,\n  author = {Pai Chet Ng and Kan Chen and Jeannie S. Lee and Tram Truong-Huu},\n  title = {Multi-Template Siamese Networks with Clique Contrastive Learning for Palmprint Authentication},\n  year = {2024},\n  booktitle = {TENCON 2024 - 2024 IEEE Region 10 Conference (TENCON)},\n  pages = {252--255},\n  publisher = {IEEE},\n  doi = {10.1109/tencon61640.2024.10903122},\n  url = {https://doi.org/10.1109/tencon61640.2024.10903122}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.crossref.org/works/10.1109%2Ftencon61640.2024.10903122",
+    "publisher_source": "https://doi.org/10.1109/tencon61640.2024.10903122",
+    "crossref": {
+      "author": [
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "InfoComm Technology Cluster, Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Kan",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "InfoComm Technology Cluster, Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Jeannie",
+          "family": "Lee",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "InfoComm Technology Cluster, Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Tram",
+          "family": "Truong-Huu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "InfoComm Technology Cluster, Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "TENCON 2024 - 2024 IEEE Region 10 Conference (TENCON)"
+      ],
+      "page": "252-255",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10902665/10902666/10903122.pdf?arnumber=10903122",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "research_venue": "TENCON2024"
+  },
+  {
+    "id": "c33",
+    "authors": "Jeremy Stephen Gabriel Yee, Pai Chet Ng, Zhengkui Wang, Ian McLoughlin, Aik Beng Ng, Simon See",
+    "year": 2024,
+    "title": "On-Device LLMs for SMEs: Challenges and Opportunities",
+    "reference": "Jeremy Stephen Gabriel Yee, Pai Chet Ng, Zhengkui Wang, Ian McLoughlin, Aik Beng Ng, Simon See (2024). On-Device LLMs for SMEs: Challenges and Opportunities. arXiv:2410.16070. Preprint.",
+    "venue_note": "arXiv:2410.16070. Preprint.",
+    "source": "https://arxiv.org/abs/2410.16070",
+    "sources": [
+      "https://arxiv.org/abs/2410.16070"
+    ],
+    "kind": "conference",
+    "doi": "10.48550/arXiv.2410.16070",
+    "pdf": "/asset/paper/c33-on-device-llms-for-smes-challenges-and-opportunities.pdf",
+    "bibtex": "@misc{Ng2024C33,\n  author = {Jeremy Stephen Gabriel Yee and Pai Chet Ng and Zhengkui Wang and Ian McLoughlin and Aik Beng Ng and Simon See},\n  title = {On-Device LLMs for SMEs: Challenges and Opportunities},\n  year = {2024},\n  doi = {10.48550/arXiv.2410.16070},\n  url = {https://arxiv.org/abs/2410.16070},\n  eprint = {2410.16070},\n  archivePrefix = {arXiv},\n  note = {Preprint}\n}",
+    "status": "Preprint",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=On-Device%20LLMs%20for%20SMEs%3A%20Challenges%20and%20Opportunities&rows=4"
+      }
+    ],
+    "arxiv": "2410.16070",
+    "pdf_download_source": "https://arxiv.org/pdf/2410.16070",
+    "bib_venue": "arXiv:2410.16070. Preprint",
+    "pdf_version": "arXiv author version",
+    "research_venue": "arXiv2024; preprint"
+  },
+  {
+    "id": "c34",
+    "authors": "Pai Chet Ng, Konstantinos N. Plataniotis",
+    "year": 2024,
+    "title": "Palmprint Biometrics: Online Learning with Differential Evolution and Contrastive Representation",
+    "reference": "Pai Chet Ng, Konstantinos N. Plataniotis (2024). Palmprint Biometrics: Online Learning with Differential Evolution and Contrastive Representation. WF-IoT 2024: 1-6.",
+    "venue_note": "WF-IoT 2024: 1-6.",
+    "source": "https://dblp.org/rec/conf/wf-iot/NgP24",
+    "sources": [
+      "https://dblp.org/rec/conf/wf-iot/NgP24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/wf-iot62078.2024.10811233",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C34,\n  author = {Pai Chet Ng and Konstantinos N. Plataniotis},\n  title = {Palmprint Biometrics: Online Learning with Differential Evolution and Contrastive Representation},\n  year = {2024},\n  booktitle = {2024 IEEE 10th World Forum on Internet of Things (WF-IoT)},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/wf-iot62078.2024.10811233},\n  url = {https://doi.org/10.1109/wf-iot62078.2024.10811233}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.crossref.org/works/10.1109%2Fwf-iot62078.2024.10811233",
+    "publisher_source": "https://doi.org/10.1109/wf-iot62078.2024.10811233",
+    "crossref": {
+      "author": [
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,InfoComm Technology Cluster,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Toronto,The Edward S. Rogers Sr. Department of Electrical &#x0026; Computer Engineering,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2024 IEEE 10th World Forum on Internet of Things (WF-IoT)"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10811010/10811012/10811233.pdf?arnumber=10811233",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "research_venue": "IoT-WF2024",
+    "pdf_candidates": []
+  },
+  {
+    "id": "c35",
+    "authors": "Arash Rasti-Meymandi, Pai Chet Ng, Huan Liu, Yuanhao Yu, Konstantinos N. Plataniotis",
+    "year": 2024,
+    "title": "Persota FL: A Robust-to-Noise Personalized Over the Air Federated Learning for Human Activity Recognition",
+    "reference": "Arash Rasti-Meymandi, Pai Chet Ng, Huan Liu, Yuanhao Yu, Konstantinos N. Plataniotis (2024). Persota FL: A Robust-to-Noise Personalized Over the Air Federated Learning for Human Activity Recognition. ICASSP Workshops 2024: 620-624.",
+    "venue_note": "ICASSP Workshops 2024: 620-624.",
+    "source": "https://dblp.org/rec/conf/icassp/RastiMeymandiNLYP24",
+    "sources": [
+      "https://dblp.org/rec/conf/icassp/RastiMeymandiNLYP24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICASSPW62465.2024.10626042",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C35,\n  author = {Arash Rasti-Meymandi and Pai Chet Ng and Huan Liu and Yuanhao Yu and Konstantinos N. Plataniotis},\n  title = {Persota FL: A Robust-to-Noise Personalized Over the Air Federated Learning for Human Activity Recognition},\n  year = {2024},\n  booktitle = {2024 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)},\n  pages = {620--624},\n  publisher = {IEEE},\n  doi = {10.1109/ICASSPW62465.2024.10626042},\n  url = {https://doi.org/10.1109/ICASSPW62465.2024.10626042}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/27134649",
+    "publisher_source": "https://doi.org/10.1109/ICASSPW62465.2024.10626042",
+    "crossref": {
+      "author": [
+        {
+          "given": "Arash",
+          "family": "Rasti-Meymandi",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Electrical &#x0026; Computer Engineering Dpt.,Toronto,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Electrical &#x0026; Computer Engineering Dpt.,Toronto,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Huan",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Huawei Noah&#x2019;s Ark Lab,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yuanhao",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Huawei Noah&#x2019;s Ark Lab,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Konstantinos N.",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Toronto,Electrical &#x0026; Computer Engineering Dpt.,Toronto,Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2024 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)"
+      ],
+      "page": "620-624",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10625769/10625780/10626042.pdf?arnumber=10626042",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Persota_FL_A_Robust-to-Noise_Personalized_Over_the_Air_Federated_Learning_for_Human_Activity_Recognition/27134649",
+    "repository_article_id": 27134649,
+    "pdf_candidates": []
+  },
+  {
+    "id": "c36",
+    "authors": "Ryan Yan Hern Sim, Pai Chet Ng, Kan Chen, Jeannie Su Ann Lee",
+    "year": 2024,
+    "title": "Pipeline for Text-to-Image Panoramic Road Scene Generation and Evaluation",
+    "reference": "Ryan Yan Hern Sim, Pai Chet Ng, Kan Chen, Jeannie Su Ann Lee (2024). Pipeline for Text-to-Image Panoramic Road Scene Generation and Evaluation. Adjunct Proceedings of the 16th International Conference on Automotive User Interfaces and Interactive Vehicular Applications, pp. 143–148.",
+    "venue_note": "Adjunct Proceedings of the 16th International Conference on Automotive User Interfaces and Interactive Vehicular Applications, pp. 143–148.",
+    "source": "https://doi.org/10.1145/3641308.3685038",
+    "sources": [
+      "https://doi.org/10.1145/3641308.3685038"
+    ],
+    "kind": "conference",
+    "doi": "10.1145/3641308.3685038",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C36,\n  author = {Ryan Yan Hern Sim and Pai Chet Ng and Kan Chen and Jeannie Su Ann Lee},\n  title = {Pipeline for Text-to-Image Panoramic Road Scene Generation and Evaluation},\n  year = {2024},\n  booktitle = {Adjunct Proceedings of the 16th International Conference on Automotive User Interfaces and Interactive Vehicular Applications},\n  pages = {143--148},\n  publisher = {ACM},\n  doi = {10.1145/3641308.3685038},\n  url = {https://doi.org/10.1145/3641308.3685038}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3641308.3685038?download=true",
+        "error": "403 Client Error: Forbidden for url: https://dl.acm.org/doi/pdf/10.1145/3641308.3685038?download=true"
+      }
+    ],
+    "metadata_source": "https://api.crossref.org/works/10.1145%2F3641308.3685038",
+    "publisher_source": "https://doi.org/10.1145/3641308.3685038",
+    "crossref": {
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0008-2936-8315",
+          "authenticated-orcid": false,
+          "given": "Ryan Yan Hern",
+          "family": "Sim",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Infocomm Technology, Singapore Institute of Technology, Singapore and University of Glasgow, United Kingdom"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9153-5411",
+          "authenticated-orcid": false,
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Infocomm Technology, Singapore Institute of Technology, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-3628-6699",
+          "authenticated-orcid": false,
+          "given": "Kan",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Centre for Immersification, Singapore Institute of Technology, Singapore and Infocomm Technology, Singapore Institute of Technology, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0262-308X",
+          "authenticated-orcid": false,
+          "given": "Jeannie Su Ann",
+          "family": "Lee",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Centre for Immersification, Singapore Institute of Technology, Singapore and Infocomm Technology, Singapore Institute of Technology, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Adjunct Proceedings of the 16th International Conference on Automotive User Interfaces and Interactive Vehicular Applications"
+      ],
+      "page": "143-148",
+      "publisher": "ACM",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "https://dl.acm.org/doi/10.1145/3641308.3685038",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://dl.acm.org/doi/pdf/10.1145/3641308.3685038",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": [
+      "https://dl.acm.org/doi/pdf/10.1145/3641308.3685038?download=true"
+    ]
+  },
+  {
+    "id": "c37",
+    "authors": "Poh Yi Jie Nicholas, Pai Chet Ng",
+    "year": 2024,
+    "title": "ScamDetector: Leveraging Fine-Tuned Language Models for Improved Fraudulent Call Detection",
+    "reference": "Poh Yi Jie Nicholas, Pai Chet Ng (2024). ScamDetector: Leveraging Fine-Tuned Language Models for Improved Fraudulent Call Detection. TENCON 2024: 422-425.",
+    "venue_note": "TENCON 2024: 422-425.",
+    "source": "https://dblp.org/rec/conf/tencon/NicholasN24",
+    "sources": [
+      "https://dblp.org/rec/conf/tencon/NicholasN24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/tencon61640.2024.10902894",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C37,\n  author = {Poh Yi Jie Nicholas and Pai Chet Ng},\n  title = {ScamDetector: Leveraging Fine-Tuned Language Models for Improved Fraudulent Call Detection},\n  year = {2024},\n  booktitle = {TENCON 2024 - 2024 IEEE Region 10 Conference (TENCON)},\n  pages = {422--425},\n  publisher = {IEEE},\n  doi = {10.1109/tencon61640.2024.10902894},\n  url = {https://doi.org/10.1109/tencon61640.2024.10902894}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.crossref.org/works/10.1109%2Ftencon61640.2024.10902894",
+    "publisher_source": "https://doi.org/10.1109/tencon61640.2024.10902894",
+    "crossref": {
+      "author": [
+        {
+          "given": "Poh Yi Jie",
+          "family": "Nicholas",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of Computing Science, University of Glasgow Singapore,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Infocomm Technology Cluster, Singapore Institute of Technology,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "TENCON 2024 - 2024 IEEE Region 10 Conference (TENCON)"
+      ],
+      "page": "422-425",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10902665/10902666/10902894.pdf?arnumber=10902894",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": []
+  },
+  {
+    "id": "c38",
+    "authors": "Diren D. Bharwani, Pai Chet Ng, Purnima Murali Mohan",
+    "year": 2024,
+    "title": "Secure and Immutable Blockchain-Based E-Voting for Efficient Overseas e-Voting",
+    "reference": "Diren D. Bharwani, Pai Chet Ng, Purnima Murali Mohan (2024). Secure and Immutable Blockchain-Based E-Voting for Efficient Overseas e-Voting. WF-IoT 2024: 631-636.",
+    "venue_note": "WF-IoT 2024: 631-636.",
+    "source": "https://dblp.org/rec/conf/wf-iot/BharwaniNM24",
+    "sources": [
+      "https://dblp.org/rec/conf/wf-iot/BharwaniNM24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/wf-iot62078.2024.10811413",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C38,\n  author = {Diren D. Bharwani and Pai Chet Ng and Purnima Murali Mohan},\n  title = {Secure and Immutable Blockchain-Based E-Voting for Efficient Overseas e-Voting},\n  year = {2024},\n  booktitle = {2024 IEEE 10th World Forum on Internet of Things (WF-IoT)},\n  pages = {631--636},\n  publisher = {IEEE},\n  doi = {10.1109/wf-iot62078.2024.10811413},\n  url = {https://doi.org/10.1109/wf-iot62078.2024.10811413}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Secure%20and%20Immutable%20Blockchain-Based%20E-Voting%20for%20Efficient%20Overseas%20e-Voti"
+      }
+    ],
+    "publisher_source": "https://doi.org/10.1109/wf-iot62078.2024.10811413",
+    "metadata_source": "https://api.crossref.org/works?query.bibliographic=Secure%20and%20Immutable%20Blockchain-Based%20E-Voting%20for%20Efficient%20Overseas%20e-Voting%20Pai%20Chet%20Ng&rows=3",
+    "crossref": {
+      "container-title": [
+        "2024 IEEE 10th World Forum on Internet of Things (WF-IoT)"
+      ],
+      "page": "631-636",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10811010/10811012/10811413.pdf?arnumber=10811413",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_candidates": []
+  },
+  {
+    "id": "c39",
+    "authors": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Huan Liu, Yuanhao Yu, Konstantinos N. Plataniotis",
+    "year": 2024,
+    "title": "Towards Collaborative Multimodal Federated Learning for Human Activity Recognition in Smart Workplace Environments",
+    "reference": "Seyed Mohammad Sheikholeslami, Pai Chet Ng, Huan Liu, Yuanhao Yu, Konstantinos N. Plataniotis (2024). Towards Collaborative Multimodal Federated Learning for Human Activity Recognition in Smart Workplace Environments. ICASSP Workshops 2024: 635-639.",
+    "venue_note": "ICASSP Workshops 2024: 635-639.",
+    "source": "https://dblp.org/rec/conf/icassp/SheikholeslamiNLYP24",
+    "sources": [
+      "https://dblp.org/rec/conf/icassp/SheikholeslamiNLYP24"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICASSPW62465.2024.10627018",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2024C39,\n  author = {Seyed Mohammad Sheikholeslami and Pai Chet Ng and Huan Liu and Yuanhao Yu and Konstantinos N. Plataniotis},\n  title = {Towards Collaborative Multimodal Federated Learning for Human Activity Recognition in Smart Workplace Environments},\n  year = {2024},\n  booktitle = {ICASSP Workshops 2024},\n  pages = {635--639},\n  doi = {10.1109/ICASSPW62465.2024.10627018},\n  url = {https://doi.org/10.1109/ICASSPW62465.2024.10627018}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Towards%20Collaborative%20Multimodal%20Federated%20Learning%20for%20Human%20Activity%20Recog"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Towards_Collaborative_Multimodal_Federated_Learning_for_Human_Activity_Recognition_in_Smart_Workplace_Environments/27134706",
+    "repository_article_id": 27134706,
+    "publisher_source": "https://doi.org/10.1109/ICASSPW62465.2024.10627018",
+    "metadata_source": "https://api.figshare.com/v2/articles/27134706",
+    "pdf_candidates": [],
+    "bib_venue": "ICASSP Workshops 2024",
+    "research_venue": "ICASSP2024"
+  },
+  {
+    "id": "c40",
+    "authors": "Pai Chet Ng, Zhixiang Chi, Yannick Verdie, Juwei Lu, Konstantinos N. Plataniotis",
+    "year": 2023,
+    "title": "Hyper-Skin: A Hyperspectral Dataset for Reconstructing Facial Skin-Spectra from RGB Images",
+    "reference": "Pai Chet Ng, Zhixiang Chi, Yannick Verdie, Juwei Lu, Konstantinos N. Plataniotis (2023). Hyper-Skin: A Hyperspectral Dataset for Reconstructing Facial Skin-Spectra from RGB Images. NeurIPS 2023, Datasets and Benchmarks Track, pp. 24158–24170.",
+    "venue_note": "NeurIPS 2023, Datasets and Benchmarks Track, pp. 24158–24170.",
+    "source": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/4c0986bd04d747745beba3752bdf4d9d-Abstract-Datasets_and_Benchmarks.html",
+    "sources": [
+      "https://dblp.org/rec/conf/nips/NgCVLP23"
+    ],
+    "kind": "conference",
+    "doi": "10.52202/075280-1050",
+    "pdf": "/asset/paper/c40-hyper-skin-a-hyperspectral-dataset-for-reconstructing-facial-skin-spectra-from-rgb-images.pdf",
+    "bibtex": "@inproceedings{Ng2023C40,\n  author = {Pai Chet Ng and Zhixiang Chi and Yannick Verdie and Juwei Lu and Konstantinos N. Plataniotis},\n  title = {Hyper-Skin: A Hyperspectral Dataset for Reconstructing Facial Skin-Spectra from RGB Images},\n  year = {2023},\n  booktitle = {Advances in Neural Information Processing Systems 36},\n  pages = {24158--24170},\n  publisher = {Neural Information Processing Systems Foundation, Inc. (NeurIPS)},\n  doi = {10.52202/075280-1050},\n  url = {https://doi.org/10.52202/075280-1050}\n}",
+    "status": "Published",
+    "arxiv": "2310.17911",
+    "pdf_candidates": [
+      "https://proceedings.neurips.cc/paper_files/paper/2023/file/4c0986bd04d747745beba3752bdf4d9d-Paper-Datasets_and_Benchmarks.pdf",
+      "https://ndownloader.figshare.com/files/42925321"
+    ],
+    "resources": [
+      {
+        "label": "Project",
+        "url": "https://hyper-skin-2023.github.io/"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/hyperspectral-skin/Hyper-Skin-2023"
+      },
+      {
+        "label": "Data access",
+        "url": "https://hyperskinsiteapp--hyperskinwebapp.asia-east1.hosted.app/dataAccess"
+      },
+      {
+        "label": "Slides",
+        "url": "https://neurips.cc/media/neurips-2023/Slides/73523.pdf"
+      }
+    ],
+    "attempts": [],
+    "metadata_source": "https://api.crossref.org/works/10.52202%2F075280-1050",
+    "publisher_source": "https://doi.org/10.52202/075280-1050",
+    "crossref": {
+      "author": [
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zhixiang",
+          "family": "Chi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yannick",
+          "family": "Verdie",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Juwei",
+          "family": "Lu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Konstantinos N",
+          "family": "Plataniotis",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Advances in Neural Information Processing Systems 36"
+      ],
+      "page": "24158-24170",
+      "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+      "type": "proceedings-article"
+    },
+    "pdf_download_source": "https://proceedings.neurips.cc/paper_files/paper/2023/file/4c0986bd04d747745beba3752bdf4d9d-Paper-Datasets_and_Benchmarks.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Hyper-Skin_A_Hyperspectral_Dataset_for_Reconstructing_Facial_Skin-Spectra_from_RGB_Images/24219937",
+    "repository_article_id": 24219937,
+    "bib_venue": "Advances in Neural Information Processing Systems 36, Datasets and Benchmarks Track",
+    "pdf_version": "Publicly available paper copy",
+    "research_venue": "NeurIPS2023"
+  },
+  {
+    "id": "c41",
+    "authors": "Jiqing Wen, Pai Chet Ng, Ian McLoughlin",
+    "year": 2023,
+    "title": "Interactive Dance with Visual Background Recomposition using BLE Beacons",
+    "reference": "Jiqing Wen, Pai Chet Ng, Ian McLoughlin (2023). Interactive Dance with Visual Background Recomposition using BLE Beacons. 6th International Conference on Applied Computational Intelligence in Information Systems (ACIIS), pp. 1–6.",
+    "venue_note": "6th International Conference on Applied Computational Intelligence in Information Systems (ACIIS), pp. 1–6.",
+    "source": "https://doi.org/10.1109/ACIIS59385.2023.10367393",
+    "sources": [
+      "https://doi.org/10.1109/ACIIS59385.2023.10367393"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ACIIS59385.2023.10367393",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2023C41,\n  author = {Jiqing Wen and Pai Chet Ng and Ian McLoughlin},\n  title = {Interactive Dance with Visual Background Recomposition using BLE Beacons},\n  year = {2023},\n  booktitle = {2023 6th International Conference on Applied Computational Intelligence in Information Systems (ACIIS)},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/ACIIS59385.2023.10367393},\n  url = {https://doi.org/10.1109/ACIIS59385.2023.10367393}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/27134721",
+    "publisher_source": "https://doi.org/10.1109/ACIIS59385.2023.10367393",
+    "crossref": {
+      "author": [
+        {
+          "given": "Jiqing",
+          "family": "Wen",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Arizona State University,School of Arts Media and Engineering,Tempe,United States"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Infocomm Technology Cluster,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Ian",
+          "family": "McLoughlin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Singapore Institute of Technology,Infocomm Technology Cluster,Singapore"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2023 6th International Conference on Applied Computational Intelligence in Information Systems (ACIIS)"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/10367208/10367220/10367393.pdf?arnumber=10367393",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Interactive_Dance_with_Visual_Background_Recomposition_using_BLE_Beacons/27134721",
+    "repository_article_id": 27134721,
+    "pdf_candidates": []
+  },
+  {
+    "id": "c42",
+    "authors": "Pai Chet Ng, Yannick Verdie, Juwei Lu, Konstantinos N. Plataniotis",
+    "year": 2022,
+    "title": "Efficient Hyperspectral Reconstruction from RGB Images with Line-Pixel Deconvolution",
+    "reference": "Pai Chet Ng, Yannick Verdie, Juwei Lu, Konstantinos N. Plataniotis (2022). Efficient Hyperspectral Reconstruction from RGB Images with Line-Pixel Deconvolution. IVMSP 2022: 1-5.",
+    "venue_note": "IVMSP 2022: 1-5.",
+    "source": "https://dblp.org/rec/conf/ivmsp/NgVLP22",
+    "sources": [
+      "https://dblp.org/rec/conf/ivmsp/NgVLP22"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/IVMSP54334.2022.9816227",
+    "pdf": "",
+    "bibtex": "@inproceedings{Ng2022C42,\n  author = {Pai Chet Ng and Yannick Verdie and Juwei Lu and Konstantinos N. Plataniotis},\n  title = {Efficient Hyperspectral Reconstruction from RGB Images with Line-Pixel Deconvolution},\n  year = {2022},\n  booktitle = {IVMSP 2022},\n  pages = {1--5},\n  doi = {10.1109/IVMSP54334.2022.9816227},\n  url = {https://doi.org/10.1109/IVMSP54334.2022.9816227}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Efficient%20Hyperspectral%20Reconstruction%20from%20RGB%20Images%20with%20Line-Pixel%20Decon"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Efficient_Hyperspectral_Reconstruction_from_RGB_Images_with_Line-Pixel_Deconvolution/24219889",
+    "repository_article_id": 24219889,
+    "publisher_source": "https://doi.org/10.1109/IVMSP54334.2022.9816227",
+    "metadata_source": "https://api.figshare.com/v2/articles/24219889",
+    "pdf_candidates": [],
+    "bib_venue": "IVMSP 2022"
+  },
+  {
+    "id": "c43",
+    "authors": "Lili Zhu, Pai Chet Ng, Yuanhao Yu, Yang Wang, Petros Spachos, Dimitrios Hatzinakos, Konstantinos N. Plataniotis",
+    "year": 2022,
+    "title": "Feasibility Study of Stress Detection with Machine Learning through EDA from Wearable Devices",
+    "reference": "Lili Zhu, Pai Chet Ng, Yuanhao Yu, Yang Wang, Petros Spachos, Dimitrios Hatzinakos, Konstantinos N. Plataniotis (2022). Feasibility Study of Stress Detection with Machine Learning through EDA from Wearable Devices. ICC 2022: 4800-4805.",
+    "venue_note": "ICC 2022: 4800-4805.",
+    "source": "https://dblp.org/rec/conf/icc/ZhuNYWSHP22",
+    "sources": [
+      "https://dblp.org/rec/conf/icc/ZhuNYWSHP22"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICC45855.2022.9838970",
+    "pdf": "/asset/paper/c43-feasibility-study-of-stress-detection-with-machine-learning-through-eda-from-wearable-devices.pdf",
+    "bibtex": "@inproceedings{Ng2022C43,\n  author = {Lili Zhu and Pai Chet Ng and Yuanhao Yu and Yang Wang and Petros Spachos and Dimitrios Hatzinakos and Konstantinos N. Plataniotis},\n  title = {Feasibility Study of Stress Detection with Machine Learning through EDA from Wearable Devices},\n  year = {2022},\n  booktitle = {ICC 2022},\n  pages = {4800--4805},\n  doi = {10.1109/ICC45855.2022.9838970},\n  url = {https://doi.org/10.1109/ICC45855.2022.9838970}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Feasibility%20Study%20of%20Stress%20Detection%20with%20Machine%20Learning%20through%20EDA%20"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Feasibility_Study_of_Stress_Detection_with_Machine_Learning_through_EDA_from_Wearable_Devices/24219664",
+    "repository_article_id": 24219664,
+    "publisher_source": "https://doi.org/10.1109/ICC45855.2022.9838970",
+    "metadata_source": "https://api.figshare.com/v2/articles/24219664",
+    "pdf_candidates": [
+      "https://www.pspachos.net/pubs/ICC2022.pdf"
+    ],
+    "bib_venue": "ICC 2022",
+    "pdf_download_source": "https://www.pspachos.net/pubs/ICC2022.pdf",
+    "pdf_version": "Public author-hosted version"
+  },
+  {
+    "id": "c44",
+    "authors": "Dae Yon Hwang, Pai Chet Ng, Yuanhao Yu, Yang Wang, Petros Spachos, Dimitrios Hatzinakos, Konstantinos N. Plataniotis",
+    "year": 2022,
+    "title": "Hierarchical Deep Learning Model with Inertial and Physiological Sensors Fusion for Wearable-Based Human Activity Recognition",
+    "reference": "Dae Yon Hwang, Pai Chet Ng, Yuanhao Yu, Yang Wang, Petros Spachos, Dimitrios Hatzinakos, Konstantinos N. Plataniotis (2022). Hierarchical Deep Learning Model with Inertial and Physiological Sensors Fusion for Wearable-Based Human Activity Recognition. ICASSP 2022: 21-25.",
+    "venue_note": "ICASSP 2022: 21-25.",
+    "source": "https://dblp.org/rec/conf/icassp/HwangNYWSHP22",
+    "sources": [
+      "https://dblp.org/rec/conf/icassp/HwangNYWSHP22"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICASSP43922.2022.9747471",
+    "pdf": "/asset/paper/c44-hierarchical-deep-learning-model-with-inertial-and-physiological-sensors-fusion-for-wearable-based-h.pdf",
+    "bibtex": "@inproceedings{Ng2022C44,\n  author = {Dae Yon Hwang and Pai Chet Ng and Yuanhao Yu and Yang Wang and Petros Spachos and Dimitrios Hatzinakos and Konstantinos N. Plataniotis},\n  title = {Hierarchical Deep Learning Model with Inertial and Physiological Sensors Fusion for Wearable-Based Human Activity Recognition},\n  year = {2022},\n  booktitle = {ICASSP 2022},\n  pages = {21--25},\n  doi = {10.1109/ICASSP43922.2022.9747471},\n  url = {https://doi.org/10.1109/ICASSP43922.2022.9747471}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Hierarchical%20Deep%20Learning%20Model%20with%20Inertial%20and%20Physiological%20Sensors%20F"
+      }
+    ],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Hierarchical_Deep_Learning_Model_with_Inertial_and_Physiological_Sensors_Fusion_for_Wearable-Based_Human_Activity_Recognition/24219862",
+    "repository_article_id": 24219862,
+    "publisher_source": "https://doi.org/10.1109/ICASSP43922.2022.9747471",
+    "metadata_source": "https://api.figshare.com/v2/articles/24219862",
+    "pdf_candidates": [
+      "https://www.pspachos.net/pubs/ICASSP2022.pdf"
+    ],
+    "bib_venue": "ICASSP 2022",
+    "pdf_download_source": "https://www.pspachos.net/pubs/ICASSP2022.pdf",
+    "pdf_version": "Public author-hosted version"
+  },
+  {
+    "id": "c45",
+    "authors": "Pai Chet Ng, James She, Petros Spachos, Rong Ran",
+    "year": 2020,
+    "title": "A Fast Item Identification and Counting in Ultra-dense Beacon Networks",
+    "reference": "Pai Chet Ng, James She, Petros Spachos, Rong Ran (2020). A Fast Item Identification and Counting in Ultra-dense Beacon Networks. GLOBECOM 2020: 1-6.",
+    "venue_note": "GLOBECOM 2020: 1-6.",
+    "source": "https://dblp.org/rec/conf/globecom/NgSSR20",
+    "sources": [
+      "https://dblp.org/rec/conf/globecom/NgSSR20"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/GLOBECOM42002.2020.9348011",
+    "pdf": "/asset/paper/c45-a-fast-item-identification-and-counting-in-ultra-dense-beacon-networks.pdf",
+    "bibtex": "@inproceedings{Ng2020C45,\n  author = {Pai Chet Ng and James She and Petros Spachos and Rong Ran},\n  title = {A Fast Item Identification and Counting in Ultra-dense Beacon Networks},\n  year = {2020},\n  booktitle = {GLOBECOM 2020 - 2020 IEEE Global Communications Conference},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/GLOBECOM42002.2020.9348011},\n  url = {https://doi.org/10.1109/GLOBECOM42002.2020.9348011}\n}",
+    "status": "Published",
+    "legacy_pdf": "9348011.pdf",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/24212898",
+    "publisher_source": "https://doi.org/10.1109/GLOBECOM42002.2020.9348011",
+    "crossref": {
+      "author": [
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "James",
+          "family": "She",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Petros",
+          "family": "Spachos",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Rong",
+          "family": "Ran",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "GLOBECOM 2020 - 2020 IEEE Global Communications Conference"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/9322055/9321973/09348011.pdf?arnumber=9348011",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_download_source": "Original website: /zpublications/9348011.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/A_Fast_Item_Identification_and_Counting_in_Ultra-dense_Beacon_Networks/24212898",
+    "repository_article_id": 24212898,
+    "pdf_candidates": [],
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c46",
+    "authors": "Pai Chet Ng, James She",
+    "year": 2019,
+    "title": "A Novel Overlay Mesh with Bluetooth Low Energy Network",
+    "reference": "Pai Chet Ng, James She (2019). A Novel Overlay Mesh with Bluetooth Low Energy Network. WCNC 2019: 1-6.",
+    "venue_note": "WCNC 2019: 1-6.",
+    "source": "https://dblp.org/rec/conf/wcnc/NgS19",
+    "sources": [
+      "https://dblp.org/rec/conf/wcnc/NgS19"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/WCNC.2019.8886069",
+    "pdf": "/asset/paper/c46-a-novel-overlay-mesh-with-bluetooth-low-energy-network.pdf",
+    "bibtex": "@inproceedings{Ng2019C46,\n  author = {Pai Chet Ng and James She},\n  title = {A Novel Overlay Mesh with Bluetooth Low Energy Network},\n  year = {2019},\n  booktitle = {2019 IEEE Wireless Communications and Networking Conference (WCNC)},\n  pages = {1--6},\n  publisher = {IEEE},\n  doi = {10.1109/WCNC.2019.8886069},\n  url = {https://doi.org/10.1109/WCNC.2019.8886069}\n}",
+    "status": "Published",
+    "legacy_pdf": "8886069.pdf",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/24212757",
+    "publisher_source": "https://doi.org/10.1109/WCNC.2019.8886069",
+    "crossref": {
+      "author": [
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "James",
+          "family": "She",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2019 IEEE Wireless Communications and Networking Conference (WCNC)"
+      ],
+      "page": "1-6",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/8870904/8885408/08886069.pdf?arnumber=8886069",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_download_source": "Original website: /zpublications/8886069.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/A_Novel_Overlay_Mesh_with_Bluetooth_Low_Energy_Network/24212757",
+    "repository_article_id": 24212757,
+    "pdf_candidates": [],
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c47",
+    "authors": "Perm Soonsawad, Kang Eun Jeon, James She, Ching Hong Lam, Pai Chet Ng",
+    "year": 2019,
+    "title": "Maximizing Energy Harvesting with Adjustable Solar Panel for BLE Beacon",
+    "reference": "Perm Soonsawad, Kang Eun Jeon, James She, Ching Hong Lam, Pai Chet Ng (2019). Maximizing Energy Harvesting with Adjustable Solar Panel for BLE Beacon. iThings/GreenCom/CPSCom/SmartData 2019: 229-234.",
+    "venue_note": "iThings/GreenCom/CPSCom/SmartData 2019: 229-234.",
+    "source": "https://dblp.org/rec/conf/ithings/SoonsawadJSLN19",
+    "sources": [
+      "https://dblp.org/rec/conf/ithings/SoonsawadJSLN19"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/iThings/GreenCom/CPSCom/SmartData.2019.00058",
+    "pdf": "/asset/paper/c47-maximizing-energy-harvesting-with-adjustable-solar-panel-for-ble-beacon.pdf",
+    "bibtex": "@inproceedings{Ng2019C47,\n  author = {Perm Soonsawad and Kang Eun Jeon and James She and Ching Hong Lam and Pai Chet Ng},\n  title = {Maximizing Energy Harvesting with Adjustable Solar Panel for BLE Beacon},\n  year = {2019},\n  booktitle = {iThings/GreenCom/CPSCom/SmartData 2019},\n  pages = {229--234},\n  doi = {10.1109/iThings/GreenCom/CPSCom/SmartData.2019.00058},\n  url = {https://doi.org/10.1109/iThings/GreenCom/CPSCom/SmartData.2019.00058}\n}",
+    "status": "Published",
+    "legacy_pdf": "8875324.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Maximizing%20Energy%20Harvesting%20with%20Adjustable%20Solar%20Panel%20for%20BLE%20Beacon&ro"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/8875324.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Maximizing_Energy_Harvesting_with_Adjustable_Solar_Panel_for_BLE_Beacon/24212826",
+    "repository_article_id": 24212826,
+    "publisher_source": "https://doi.org/10.1109/iThings/GreenCom/CPSCom/SmartData.2019.00058",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212826",
+    "pdf_candidates": [],
+    "bib_venue": "iThings/GreenCom/CPSCom/SmartData 2019",
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c48",
+    "authors": "Pai Chet Ng, James She, Rong Ran",
+    "year": 2019,
+    "title": "Towards Sub-Room Level Occupancy Detection with Denoising-Contractive Autoencoder",
+    "reference": "Pai Chet Ng, James She, Rong Ran (2019). Towards Sub-Room Level Occupancy Detection with Denoising-Contractive Autoencoder. ICC 2019: 1-6.",
+    "venue_note": "ICC 2019: 1-6.",
+    "source": "https://dblp.org/rec/conf/icc/NgSR19",
+    "sources": [
+      "https://dblp.org/rec/conf/icc/NgSR19"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICC.2019.8761294",
+    "pdf": "/asset/paper/c48-towards-sub-room-level-occupancy-detection-with-denoising-contractive-autoencoder.pdf",
+    "bibtex": "@inproceedings{Ng2019C48,\n  author = {Pai Chet Ng and James She and Rong Ran},\n  title = {Towards Sub-Room Level Occupancy Detection with Denoising-Contractive Autoencoder},\n  year = {2019},\n  booktitle = {ICC 2019},\n  pages = {1--6},\n  doi = {10.1109/ICC.2019.8761294},\n  url = {https://doi.org/10.1109/ICC.2019.8761294}\n}",
+    "status": "Published",
+    "legacy_pdf": "8761294.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Towards%20Sub-Room%20Level%20Occupancy%20Detection%20with%20Denoising-Contractive%20Autoenco"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/8761294.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Towards_Sub-Room_Level_Occupancy_Detection_with_Denoising-Contractive_Autoencoder/24212808",
+    "repository_article_id": 24212808,
+    "publisher_source": "https://doi.org/10.1109/ICC.2019.8761294",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212808",
+    "pdf_candidates": [],
+    "bib_venue": "ICC 2019",
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c49",
+    "authors": "Ching Hong Lam, Pai Chet Ng, James She",
+    "year": 2018,
+    "title": "Improved Distance Estimation with BLE Beacon Using Kalman Filter and SVM",
+    "reference": "Ching Hong Lam, Pai Chet Ng, James She (2018). Improved Distance Estimation with BLE Beacon Using Kalman Filter and SVM. ICC 2018: 1-6.",
+    "venue_note": "ICC 2018: 1-6.",
+    "source": "https://dblp.org/rec/conf/icc/LamNS18",
+    "sources": [
+      "https://dblp.org/rec/conf/icc/LamNS18"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICC.2018.8423010",
+    "pdf": "/asset/paper/c49-improved-distance-estimation-with-ble-beacon-using-kalman-filter-and-svm.pdf",
+    "bibtex": "@inproceedings{Ng2018C49,\n  author = {Ching Hong Lam and Pai Chet Ng and James She},\n  title = {Improved Distance Estimation with BLE Beacon Using Kalman Filter and SVM},\n  year = {2018},\n  booktitle = {ICC 2018},\n  pages = {1--6},\n  doi = {10.1109/ICC.2018.8423010},\n  url = {https://doi.org/10.1109/ICC.2018.8423010}\n}",
+    "status": "Published",
+    "legacy_pdf": "8423010.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Improved%20Distance%20Estimation%20with%20BLE%20Beacon%20Using%20Kalman%20Filter%20and%20SVM"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/8423010.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Improved_Distance_Estimation_with_BLE_Beacon_Using_Kalman_Filter_and_SVM/24212706",
+    "repository_article_id": 24212706,
+    "publisher_source": "https://doi.org/10.1109/ICC.2018.8423010",
+    "metadata_source": "https://api.figshare.com/v2/articles/24212706",
+    "pdf_candidates": [],
+    "bib_venue": "ICC 2018",
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c50",
+    "authors": "Pai Chet Ng, Li Zhu, James She, Rong Ran, Soochang Park",
+    "year": 2017,
+    "title": "Beacon-based proximity detection using compressive sensing for sparse deployment",
+    "reference": "Pai Chet Ng, Li Zhu, James She, Rong Ran, Soochang Park (2017). Beacon-based proximity detection using compressive sensing for sparse deployment. WoWMoM 2017: 1-6.",
+    "venue_note": "WoWMoM 2017: 1-6.",
+    "source": "https://dblp.org/rec/conf/wowmom/NgZSRP17",
+    "sources": [
+      "https://dblp.org/rec/conf/wowmom/NgZSRP17"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/WoWMoM.2017.7974317",
+    "pdf": "/asset/paper/c50-beacon-based-proximity-detection-using-compressive-sensing-for-sparse-deployment.pdf",
+    "bibtex": "@inproceedings{Ng2017C50,\n  author = {Pai Chet Ng and Li Zhu and James She and Rong Ran and Soochang Park},\n  title = {Beacon-based proximity detection using compressive sensing for sparse deployment},\n  year = {2017},\n  booktitle = {WoWMoM 2017},\n  pages = {1--6},\n  doi = {10.1109/WoWMoM.2017.7974317},\n  url = {https://doi.org/10.1109/WoWMoM.2017.7974317}\n}",
+    "status": "Published",
+    "legacy_pdf": "Beacon-based Proximity detection using Compressive Sensing for Sparse Deployment.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Beacon-based%20proximity%20detection%20using%20compressive%20sensing%20for%20sparse%20deploy"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/Beacon-based Proximity detection using Compressive Sensing for Sparse Deployment.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Beacon-based_proximity_detection_using_compressive_sensing_for_sparse_deployment/24210012",
+    "repository_article_id": 24210012,
+    "publisher_source": "https://doi.org/10.1109/WoWMoM.2017.7974317",
+    "metadata_source": "https://api.figshare.com/v2/articles/24210012",
+    "pdf_candidates": [],
+    "bib_venue": "WoWMoM 2017",
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c51",
+    "authors": "Pai Chet Ng, James She, Soochang Park",
+    "year": 2017,
+    "title": "Notify-and-interact: A beacon-smartphone interaction for user engagement in galleries",
+    "reference": "Pai Chet Ng, James She, Soochang Park (2017). Notify-and-interact: A beacon-smartphone interaction for user engagement in galleries. ICME 2017: 1069-1074.",
+    "venue_note": "ICME 2017: 1069-1074.",
+    "source": "https://dblp.org/rec/conf/icmcs/NgSP17",
+    "sources": [
+      "https://dblp.org/rec/conf/icmcs/NgSP17"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICME.2017.8019467",
+    "pdf": "/asset/paper/c51-notify-and-interact-a-beacon-smartphone-interaction-for-user-engagement-in-galleries.pdf",
+    "bibtex": "@inproceedings{Ng2017C51,\n  author = {Pai Chet Ng and James She and Soochang Park},\n  title = {Notify-and-interact: A beacon-smartphone interaction for user engagement in galleries},\n  year = {2017},\n  booktitle = {ICME 2017},\n  pages = {1069--1074},\n  doi = {10.1109/ICME.2017.8019467},\n  url = {https://doi.org/10.1109/ICME.2017.8019467}\n}",
+    "status": "Published",
+    "legacy_pdf": "8019467.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=Notify-and-interact%3A%20A%20beacon-smartphone%20interaction%20for%20user%20engagement%20in%"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/8019467.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Notify-and-interact_A_beacon-smartphone_interaction_for_user_engagement_in_galleries/24210156",
+    "repository_article_id": 24210156,
+    "publisher_source": "https://doi.org/10.1109/ICME.2017.8019467",
+    "metadata_source": "https://api.figshare.com/v2/articles/24210156",
+    "pdf_candidates": [],
+    "bib_venue": "ICME 2017",
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c52",
+    "authors": "Li Zhu, Rong Ran, Pai Chet Ng, James She",
+    "year": 2017,
+    "title": "Using generalized similarity filter to enhance proximity detection for sparse beacon deployment",
+    "reference": "Li Zhu, Rong Ran, Pai Chet Ng, James She (2017). Using generalized similarity filter to enhance proximity detection for sparse beacon deployment. ICTC 2017: 433-438.",
+    "venue_note": "ICTC 2017: 433-438.",
+    "source": "https://dblp.org/rec/conf/ictc/ZhuRNS17",
+    "sources": [
+      "https://dblp.org/rec/conf/ictc/ZhuRNS17"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/ICTC.2017.8190754",
+    "pdf": "/asset/paper/c52-using-generalized-similarity-filter-to-enhance-proximity-detection-for-sparse-beacon-deployment.pdf",
+    "bibtex": "@inproceedings{Ng2017C52,\n  author = {Li Zhu and Rong Ran and Pai Chet Ng and James She},\n  title = {Using generalized similarity filter to enhance proximity detection for sparse beacon deployment},\n  year = {2017},\n  booktitle = {2017 International Conference on Information and Communication Technology Convergence (ICTC)},\n  pages = {433--438},\n  publisher = {IEEE},\n  doi = {10.1109/ICTC.2017.8190754},\n  url = {https://doi.org/10.1109/ICTC.2017.8190754}\n}",
+    "status": "Published",
+    "legacy_pdf": "8190754.pdf",
+    "resources": [],
+    "attempts": [],
+    "metadata_source": "https://api.figshare.com/v2/articles/24210276",
+    "publisher_source": "https://doi.org/10.1109/ICTC.2017.8190754",
+    "crossref": {
+      "author": [
+        {
+          "given": "Li",
+          "family": "Zhu",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Rong",
+          "family": "Ran",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pai Chet",
+          "family": "Ng",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "James",
+          "family": "She",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "2017 International Conference on Information and Communication Technology Convergence (ICTC)"
+      ],
+      "page": "433-438",
+      "publisher": "IEEE",
+      "type": "proceedings-article",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/8125636/8190740/08190754.pdf?arnumber=8190754",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "pdf_download_source": "Original website: /zpublications/8190754.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Using_generalized_similarity_filter_to_enhance_proximity_detection_for_sparse_beacon_deployment/24210276",
+    "repository_article_id": 24210276,
+    "pdf_candidates": [],
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "c53",
+    "authors": "Pai Chet Ng, James She, Ming Cheung, Alexander Cebulla",
+    "year": 2016,
+    "title": "An Images-Textual Hybrid Recommender System for Vacation Rental",
+    "reference": "Pai Chet Ng, James She, Ming Cheung, Alexander Cebulla (2016). An Images-Textual Hybrid Recommender System for Vacation Rental. BigMM 2016: 60-63.",
+    "venue_note": "BigMM 2016: 60-63.",
+    "source": "https://dblp.org/rec/conf/bigmm/NgSCC16",
+    "sources": [
+      "https://dblp.org/rec/conf/bigmm/NgSCC16"
+    ],
+    "kind": "conference",
+    "doi": "10.1109/BigMM.2016.71",
+    "pdf": "/asset/paper/c53-an-images-textual-hybrid-recommender-system-for-vacation-rental.pdf",
+    "bibtex": "@inproceedings{Ng2016C53,\n  author = {Pai Chet Ng and James She and Ming Cheung and Alexander Cebulla},\n  title = {An Images-Textual Hybrid Recommender System for Vacation Rental},\n  year = {2016},\n  booktitle = {BigMM 2016},\n  pages = {60--63},\n  doi = {10.1109/BigMM.2016.71},\n  url = {https://doi.org/10.1109/BigMM.2016.71}\n}",
+    "status": "Published",
+    "legacy_pdf": "7544997.pdf",
+    "resources": [],
+    "attempts": [
+      {
+        "url": "Crossref title/DOI lookup",
+        "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=An%20Images-Textual%20Hybrid%20Recommender%20System%20for%20Vacation%20Rental&rows=4"
+      }
+    ],
+    "pdf_download_source": "Original website: /zpublications/7544997.pdf",
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/An_Images-Textual_Hybrid_Recommender_System_for_Vacation_Rental/24209949",
+    "repository_article_id": 24209949,
+    "publisher_source": "https://doi.org/10.1109/BigMM.2016.71",
+    "metadata_source": "https://api.figshare.com/v2/articles/24209949",
+    "pdf_candidates": [],
+    "bib_venue": "BigMM 2016",
+    "pdf_version": "Publicly available paper copy"
+  },
+  {
+    "id": "d1",
+    "authors": "Pai Chet Ng, Petros Spachos",
+    "year": 2022,
+    "title": "RSS Fingerprint Data",
+    "reference": "Pai Chet Ng, Petros Spachos (2022). RSS Fingerprint Data. IEEE DataPort, 2022.",
+    "venue_note": "IEEE DataPort, 2022.",
+    "source": "https://ieee-dataport.org/documents/rss-fingerprint-data",
+    "sources": [
+      "https://dblp.org/rec/data/10/NgS22"
+    ],
+    "kind": "dataset",
+    "doi": "10.21227/933k-0s17",
+    "pdf": "",
+    "bibtex": "@misc{Ng2022D1,\n  author = {Pai Chet Ng and Petros Spachos},\n  title = {RSS Fingerprint Data},\n  year = {2022},\n  doi = {10.21227/933k-0s17},\n  url = {https://doi.org/10.21227/933k-0s17}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "publisher_source": "https://doi.org/10.21227/933k-0s17",
+    "metadata_source": "https://api.datacite.org/dois/10.21227/933k-0s17"
+  },
+  {
+    "id": "d2",
+    "authors": "Pai Chet Ng, Petros Spachos, Konstantinos N. Plataniotis",
+    "year": 2020,
+    "title": "RSSdata_HumanHuman",
+    "reference": "Pai Chet Ng, Petros Spachos, Konstantinos N. Plataniotis (2020). RSSdata_HumanHuman. IEEE DataPort.",
+    "venue_note": "IEEE DataPort, 2020.",
+    "source": "https://ieee-dataport.org/open-access/rssdatahumanhuman",
+    "sources": [
+      "https://dblp.org/rec/data/10/NgSP22"
+    ],
+    "kind": "dataset",
+    "doi": "10.21227/4wxt-kh44",
+    "pdf": "",
+    "bibtex": "@misc{Ng2020D2,\n  author = {Pai Chet Ng and Petros Spachos and Konstantinos N. Plataniotis},\n  title = {RSSdata\\_HumanHuman},\n  year = {2020},\n  doi = {10.21227/4wxt-kh44},\n  url = {https://doi.org/10.21227/4wxt-kh44}\n}",
+    "status": "Published",
+    "resources": [],
+    "attempts": [],
+    "publisher_source": "https://doi.org/10.21227/4wxt-kh44",
+    "metadata_source": "https://api.datacite.org/dois/10.21227/4wxt-kh44",
+    "metadata_note": "Publisher DataCite record dates the open-access release to 8 May 2020; the supplied CV lists 2022."
+  },
+  {
+    "id": "c54",
+    "authors": "Pai Chet Ng",
+    "title": "Optimization of spectrum sensing for cognitive sensor network using differential evolution approach in smart environment",
+    "year": 2015,
+    "reference": "Pai Chet Ng (2015). Optimization of spectrum sensing for cognitive sensor network using differential evolution approach in smart environment. 2015 IEEE 12th International Conference on Networking, Sensing and Control, pp. 592–596.",
+    "venue_note": "2015 IEEE 12th International Conference on Networking, Sensing and Control, pp. 592–596.",
+    "source": "https://doi.org/10.1109/ICNSC.2015.7116104",
+    "kind": "conference",
+    "status": "Published",
+    "doi": "10.1109/ICNSC.2015.7116104",
+    "pdf": "/asset/paper/c54-spectrum-sensing-cognitive-sensor-network.pdf",
+    "resources": [],
+    "attempts": [],
+    "repository_source": "https://irr.singaporetech.edu.sg/articles/conference_contribution/Optimization_of_spectrum_sensing_for_cognitive_sensor_network_using_differential_evolution_approach_in_smart_environment/24209607",
+    "repository_article_id": 24209607,
+    "publisher_source": "https://doi.org/10.1109/ICNSC.2015.7116104",
+    "metadata_source": "https://api.figshare.com/v2/articles/24209607",
+    "pdf_candidates": [],
+    "bibtex": "@inproceedings{Ng2015C54,\n  author = {Pai Chet Ng},\n  title = {Optimization of spectrum sensing for cognitive sensor network using differential evolution approach in smart environment},\n  year = {2015},\n  booktitle = {2015 IEEE 12th International Conference on Networking, Sensing and Control},\n  pages = {592--596},\n  doi = {10.1109/ICNSC.2015.7116104},\n  url = {https://doi.org/10.1109/ICNSC.2015.7116104}\n}",
+    "pdf_download_source": "Original website: /zpublications/7116104.pdf",
+    "bib_venue": "2015 IEEE 12th International Conference on Networking, Sensing and Control",
+    "pdf_version": "Publicly available paper copy"
+  }
+]

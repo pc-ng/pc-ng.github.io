@@ -1,0 +1,167 @@
+[
+  {
+    "id": "hyper-skin",
+    "title": "Hyper-Skin",
+    "subtitle": "Seeing beyond RGB on consumer devices",
+    "theme": "Hyperspectral imaging",
+    "image": "/asset/images/hyper-skin.webp",
+    "alt": "Hyper-Skin Figure 1: visible and near-infrared skin spectra, hyperspectral cubes, and facial images at individual wavelengths.",
+    "description": "Reconstructing facial skin spectra from ordinary camera images. Hyper-Skin pairs RGB inputs with hyperspectral measurements, providing a dataset and benchmark for studying spectral reconstruction on consumer devices.",
+    "contribution": "Dataset design, spectral reconstruction, and the ICASSP 2024 Hyperspectral Skin Vision Challenge.",
+    "publications": [
+      "c40",
+      "c29"
+    ],
+    "figure_credit": "Figure 1 · Hyper-Skin, NeurIPS 2023",
+    "figure_source": "c40",
+    "resources": [
+      {
+        "label": "Project",
+        "url": "https://hyper-skin-2023.github.io/"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/hyperspectral-skin/Hyper-Skin-2023"
+      },
+      {
+        "label": "Data access",
+        "url": "https://hyperskinsiteapp--hyperskinwebapp.asia-east1.hosted.app/dataAccess"
+      },
+      {
+        "label": "Slides",
+        "url": "/asset/slides/hyper-skin-slides.pdf"
+      }
+    ]
+  },
+  {
+    "id": "hyper-object",
+    "title": "Hyper-Object",
+    "subtitle": "Low-cost inputs, richer spectral information",
+    "theme": "Hyperspectral imaging",
+    "image": "/asset/images/hyper-object.webp",
+    "alt": "Hyper-Object Track 2 diagram: a low-resolution RGB image is transformed into a high-resolution hyperspectral cube spanning 400 to 1000 nanometres.",
+    "description": "Learning to recover the spectral information of everyday objects from affordable imaging inputs. The ICASSP 2026 challenge studies spectral reconstruction from mosaic images and joint spatial–spectral super-resolution from low-resolution RGB images.",
+    "contribution": "Challenge chair and organiser; benchmark and evaluation design for accessible hyperspectral imaging.",
+    "publications": [
+      "c14"
+    ],
+    "figure_credit": "Track 2 overview · Hyper-Object Challenge",
+    "figure_source": "https://hyper-object.github.io/",
+    "resources": [
+      {
+        "label": "Project",
+        "url": "https://hyper-object.github.io/"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/hyper-object/2026-ICASSP-SPGC"
+      },
+      {
+        "label": "Data · Track 1",
+        "url": "https://www.kaggle.com/competitions/2026-icassp-hyper-object-challenge-track-1"
+      },
+      {
+        "label": "Data · Track 2",
+        "url": "https://www.kaggle.com/competitions/2026-icassp-hyper-object-challenge-track-2"
+      }
+    ]
+  },
+  {
+    "id": "x-palm",
+    "title": "X-Palm & Federated-Auth",
+    "subtitle": "Biometrics across devices and environments",
+    "theme": "Biometrics & federated learning",
+    "image": "/asset/images/x-palm.webp",
+    "alt": "X-Palm paired acquisition diagram showing controlled multispectral palmprint enrollment and unconstrained smartphone authentication.",
+    "description": "Connecting controlled multispectral enrollment with everyday smartphone authentication. X-Palm provides paired palmprint data for studying cross-domain robustness; the broader Federated-Auth programme investigates privacy-preserving learning across multiple biometric modalities.",
+    "contribution": "Principal investigator, Federated-Auth; paired multispectral–smartphone data and research on federated palmprint authentication.",
+    "publications": [
+      "c15",
+      "c5",
+      "c10",
+      "c11",
+      "c32",
+      "c34"
+    ],
+    "figure_credit": "Paired acquisition diagram · X-Palm, author version",
+    "figure_source": "c15",
+    "resources": [
+      {
+        "label": "Code",
+        "url": "https://github.com/X-Palm/X-Palm-2026"
+      },
+      {
+        "label": "Data access",
+        "url": "https://github.com/X-Palm/X-Palm-2026#dataset-access"
+      }
+    ]
+  },
+  {
+    "id": "federated-sensing",
+    "title": "Federated Multimodal Sensing",
+    "subtitle": "Learning human behaviour across distributed devices",
+    "theme": "Biometrics & federated learning",
+    "image": "/asset/images/federated.webp",
+    "alt": "Research system diagram showing multimodal activity recognition and federated learning across distributed sensing and wireless infrastructure.",
+    "description": "Privacy-preserving activity recognition from physiological and wireless signals. This work connects personalised federated learning, heterogeneous sensing, and communication-aware learning over distributed mobile and IoT infrastructure.",
+    "contribution": "FedGraph for personalised physiological-signal learning; collaborative work on hierarchical multimodal learning and cell-free massive MIMO systems.",
+    "publications": [
+      "c21",
+      "j1",
+      "j2",
+      "c12",
+      "c39",
+      "c28"
+    ],
+    "figure_credit": "System model · Multi-Modal Federated Learning, IEEE Access 2025",
+    "figure_source": "j2",
+    "resources": [
+      {
+        "label": "Healthcare collaboration",
+        "url": "https://mhba-fl.github.io/"
+      }
+    ]
+  },
+  {
+    "id": "armor",
+    "title": "ARMOR",
+    "subtitle": "Agentic reasoning for robust vision",
+    "theme": "Trustworthy & agentic AI",
+    "image": "/asset/images/armor.webp",
+    "alt": "Original ARMOR Figure 1 comparing an unmodified deepfake with ARMOR and five other adversarial methods, including detector predictions and image similarity.",
+    "description": "Studying the reliability of deepfake detectors through agentic adversarial evaluation. Vision-language and language-model agents coordinate complementary methods, exposing weaknesses in cross-model robustness and informing more trustworthy visual systems.",
+    "contribution": "Collaborative research on agentic orchestration and deepfake robustness; related work on personalised federated detection through FLAP.",
+    "publications": [
+      "c2",
+      "c1",
+      "c6",
+      "c23",
+      "c27"
+    ],
+    "figure_credit": "Figure 1 · ARMOR, IEEE ICASSP 2026",
+    "figure_source": "c2",
+    "resources": []
+  },
+  {
+    "id": "pcar",
+    "title": "Agentic Workflow",
+    "subtitle": "Structured reasoning, evidence acquisition, and trustworthy assistance",
+    "theme": "Trustworthy & agentic AI",
+    "image": "/asset/images/mar12-overview.png",
+    "alt": "MAR-12 architecture with twelve reasoning perspectives, role-aware attention, and an explanation synthesizer.",
+    "description": "MAR-12 reasons across twelve complementary perspectives to detect and explain harmful humor in memes. This research programme also studies open-world knowledge acquisition for evolving memes, profile-aware planner–critic remediation, and multi-agent workflows for practical assistance.",
+    "contribution": "Collaborative research and student supervision in trustworthy applied AI, reasoning, and practical agentic systems.",
+    "publications": [
+      "c3",
+      "c7",
+      "c13",
+      "c16",
+      "c25",
+      "c30",
+      "c33"
+    ],
+    "figure_credit": "MAR-12 · Figure 2, Beyond a Joke",
+    "figure_source": "c3",
+    "resources": []
+  }
+]

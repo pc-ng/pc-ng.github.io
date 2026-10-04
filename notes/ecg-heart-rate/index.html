@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heart Rate Measurement from ECG · Pai Chet Ng</title><meta name="description" content="A practical signal-processing walkthrough of ECG filtering, R-peak detection, and heart-rate calculation.">
+<link rel="canonical" href="https://pc-ng.github.io/notes/ecg-heart-rate/"><meta property="og:type" content="website"><meta property="og:title" content="Heart Rate Measurement from ECG · Pai Chet Ng"><meta property="og:description" content="A practical signal-processing walkthrough of ECG filtering, R-peak detection, and heart-rate calculation."><meta property="og:url" content="https://pc-ng.github.io/notes/ecg-heart-rate/">
+<meta name="theme-color" content="#fbfaf7"><link rel="icon" href="/asset/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/asset/site.css"><link rel="stylesheet" href="/asset/vendor/katex/katex.min.css"><script src="/asset/vendor/katex/katex.min.js" defer></script><script src="/asset/vendor/katex/auto-render.min.js" defer></script><script src="/asset/note-math.js" defer></script><script src="/asset/site.js" defer></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Pai Chet Ng", "givenName": "Pai Chet", "familyName": "Ng", "jobTitle": "Assistant Professor", "url": "https://pc-ng.github.io", "affiliation": {"@type": "CollegeOrUniversity", "name": "Singapore Institute of Technology"}, "sameAs": ["https://orcid.org/0000-0001-9153-5411", "https://scholar.google.com/citations?user=WBieghIAAAAJ"], "knowsAbout": ["Trustworthy artificial intelligence", "Multimodal sensing", "Federated learning", "Hyperspectral imaging", "Mobile and pervasive systems"]}</script></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/research/">Research</a><a href="/publications/">Publications</a><a href="/teaching/">Teaching</a><a href="/service/">Service</a></nav></div></header>
+<main id="main" class="wrap"><article class="note-article"><p class="eyebrow">Notes · 24 May 2021</p><h1>Heart Rate Measurement from ECG</h1><div class="note-body">
+
+
+<h2 id="electrocardiogram-ecg">Electrocardiogram (ECG)</h2>
+<p>Electrocardiogram (ECG) measures the electrical activity in our heart. ECG machine is commonly used in hospital to monitor patient's heart rate. Nowadays, a few consumer-grade device has integrated the ECG sensor into their smartwatch, for example <a href="https://www.apple.com/ca/healthcare/apple-watch/" rel="noopener noreferrer" target="_blank">Apple Watch</a> and <a href="https://www.fitbit.com/global/us/technology/ecg" rel="noopener noreferrer" target="_blank">Fitbit</a>.</p>
+<p><img alt="Heart Rate Measurement from ECG — ecgwatch" loading="lazy" src="/asset/notes/ecg-heart-rate/ecgwatch.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 1100px;"/></p>
+<h3 id="ecg-morphology">ECG Morphology</h3>
+<p>ECG morphology can be described by 5 waves: P-wave, Q-wave, R-wave, S-wave, and T-wave.</p>
+<ul>
+<li>P-wave reflects atrial depolarization. It is a small wave due to the small muscle mass made by atria.</li>
+<li>T-wave reflects the rapid repolarization of contractile cell. Normal T-wave is slightly asymmetric, with a steeper downward slope.</li>
+<li>Q-wave, R-wave, S-wave are knowns as QRS complex in general. The QRS complex represents the depolarization of the ventricles. A QRS complex with a short duration implies a rapid depolarization, proving that the conduction system functions properly. A QRS complex with a long duration implies a slow depolarization, showing a high likelihood the dysfunction in conduction system.</li>
+</ul>
+<p><img alt="Heart Rate Measurement from ECG — qrs" loading="lazy" src="/asset/notes/ecg-heart-rate/qrs.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 500px;"/></p>
+<h3 id="determine-the-heart-rate-from-ecg">Determine the heart rate from ECG</h3>
+<p>The heart rate can be determined by measuring the duration of RR interval between two successive QRS complexes.
+Once the RR interval is known, the heart rate can be computed as follows:</p>
+<div class="arithmatex">\[
+HR = 60 \frac{1}{d_{RR}}
+\]</div>
+<p>where HR is heart rate is bpm, and <span class="arithmatex">\(d_{RR}\)</span> is the duration of RR interval.</p>
+<p><img alt="Heart Rate Measurement from ECG — rpeak" loading="lazy" src="/asset/notes/ecg-heart-rate/rpeak.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 550px;"/></p>
+<p>Hence, the first problem to heart rate estimation is to locate the position of R-peak. </p>
+<h2 id="r-peak-detection">R-peak Detection</h2>
+<p>We will use a sample <a href="https://github.com/pc-ng/Physiological-Demo/blob/master/ECG-HR/sample-ecg-data-70.csv" rel="noopener noreferrer" target="_blank">ECG data</a> to demonstrate the R-peak detection, estimating the RR interval, and calculating the heart rate.<br/>
+This sample ECG data is generated artificially using <a href="https://neurokit2.readthedocs.io/en/latest/introduction.html" rel="noopener noreferrer" target="_blank">neurokit2</a>. A 5 second data is generated with 100Hz sampling rate.</p>
+<p>The data is saved in csv file so we can use pandas to read the data. We can visualize the sample data using matplotlib.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'sample-ecg-data-70.csv'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Time (s)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'ECG Amplitude'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>
+<figure><img alt="Heart Rate Measurement from ECG — aboutecg 3 0" loading="lazy" src="/asset/notes/ecg-heart-rate/aboutecg_3_0.svg"/>
+</figure>
+</p>
+</div>
+<p>From the plot, we can clearly identify the P-wave, T-wave, and the QRS complex.
+The goal is to locate all the R-peaks given the 5 second ECG signal.
+There are a number of ways to R-peaks detection, one of them is described in <a href="https://ieeexplore.ieee.org/document/1166717" rel="noopener noreferrer" target="_blank">Halmiton algorithm</a></p>
+<p>Here, we will use a simple moving average approach to R-peak detection. The key steps of this approach is summarized as follows:</p>
+<ul>
+<li>compute the moving average with a window that is at least half the sampling frequency</li>
+<li>mark the region of interest (RoI) for those signals above the moving average</li>
+<li>locate the peak value and peak location for all RoIs</li>
+<li>calculate the average peak value of all peaks, and reject those peaks with peak value less than the average</li>
+<li>compute the duration between each RR-interval, and use the mean duration to compute the heart rate.</li>
+</ul>
+<h3 id="step-1-moving-average">Step 1: Moving average</h3>
+<p>The sampling rate is 100Hz, so half the sampling rate is 50Hz, which means 50 data points per one second.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. compute the moving average with window of 50 data points</span>
+<span class="n">window</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># use the convolve function by numpy to compute the moving average</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'ECG_ma'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">window</span><span class="p">),</span> <span class="s1">'same'</span><span class="p">)</span> <span class="o">/</span><span class="n">window</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'raw ECG data'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG_ma</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'moving average'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Time (s)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'ECG Amplitude'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">framealpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>
+<figure><img alt="Heart Rate Measurement from ECG — aboutecg 7 0" loading="lazy" src="/asset/notes/ecg-heart-rate/aboutecg_7_0.svg"/>
+</figure>
+</p>
+</div>
+<h3 id="step-2-rois-identification">Step 2: RoIs Identification</h3>
+<p>From the above plot, we can see that some data points are above the moving average line, and some are below.
+We can mark those above the moving average line as RoI.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 2. find all the RoIs</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'roi'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">track_start</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="c1"># check if the point is above the moving average point</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">ECG</span> <span class="o">&gt;</span> <span class="n">row</span><span class="o">.</span><span class="n">ECG_ma</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">track_start</span><span class="p">):</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">roi</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'[</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">] RoI detected...'</span><span class="p">)</span>
+            <span class="n">track_start</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">roi</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">track_start</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<div class="highlight"><pre><span></span><code>[1] RoI detected...
+[2] RoI detected...
+[3] RoI detected...
+[4] RoI detected...
+[5] RoI detected...
+[6] RoI detected...
+[7] RoI detected...
+[8] RoI detected...
+[9] RoI detected...
+[10] RoI detected...
+[11] RoI detected...
+[12] RoI detected...
+[13] RoI detected...
+[14] RoI detected...
+[15] RoI detected...
+[16] RoI detected...
+[17] RoI detected...
+[18] RoI detected...
+</code></pre></div>
+</div>
+<h3 id="step-3-peak-detection">Step 3: Peak Detection</h3>
+<p>For each RoI, we can compute the peak value and peak position by taking the maximum value.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 3. locate the peak for all RoIs</span>
+<span class="n">groups</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'roi'</span><span class="p">])</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'roi'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">,</span> <span class="s1">'position'</span><span class="p">]</span>
+<span class="n">peak</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,(</span><span class="n">roi</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">groups</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">roi</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">peak</span> <span class="o">=</span> <span class="n">peak</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+                                <span class="s1">'roi'</span><span class="p">:</span> <span class="n">roi</span><span class="p">,</span>
+                                <span class="s1">'value'</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">ECG</span><span class="p">),</span>
+                                <span class="s1">'position'</span><span class="p">:</span> <span class="n">group</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">ECG</span><span class="p">)]</span>
+                            <span class="p">},</span> <span class="n">name</span> <span class="o">=</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'raw ECG data'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG_ma</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'moving average'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">peak</span><span class="o">.</span><span class="n">position</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">peak</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"R-peak"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Time (s)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'ECG Amplitude'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">framealpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>
+<figure><img alt="Heart Rate Measurement from ECG — aboutecg 12 0" loading="lazy" src="/asset/notes/ecg-heart-rate/aboutecg_12_0.svg"/>
+</figure>
+</p>
+</div>
+<h3 id="step-4-peak-validation">Step 4: Peak Validation</h3>
+<p>From the above plot, it shows that the peak of QRS complex is detected, as well as the peak from T-wave and P-wave. However, we just want to keep the peak from the QRS complex. We can validate the peak to see if the peak is the one we would like to keep or to reject. The simplest way is to compare each peak value with the average peak value and then keep only those peaks with value greater than the average peak value.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># compute the average peak values</span>
+<span class="n">average_peak_value</span> <span class="o">=</span> <span class="n">peak</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># keep only the peaks that are greater than the average peak value</span>
+<span class="n">val_peak</span> <span class="o">=</span> <span class="n">peak</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">peak</span><span class="o">.</span><span class="n">value</span><span class="o">&gt;</span><span class="n">average_peak_value</span><span class="p">,</span> <span class="p">:]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'raw ECG data'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG_ma</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'moving average'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">val_peak</span><span class="o">.</span><span class="n">position</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">val_peak</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Validated R-peak"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Time (s)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'ECG Amplitude'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">framealpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>
+<figure><img alt="Heart Rate Measurement from ECG — aboutecg 15 0" loading="lazy" src="/asset/notes/ecg-heart-rate/aboutecg_15_0.svg"/>
+</figure>
+</p>
+</div>
+<h3 id="step-5-heart-rate-computation">Step 5: Heart Rate Computation</h3>
+<p>First, compute the duration between each RR interval, and then use the duration to compute for the heart rate, i.e., </p>
+<div class="arithmatex">\[
+HR = 60 \frac{1}{d_{RR}}, \qquad (bpm)
+\]</div>
+<div class="highlight"><pre><span></span><code><span class="n">RR_duration</span> <span class="o">=</span> <span class="p">(</span><span class="n">val_peak</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="n">val_peak</span><span class="o">.</span><span class="n">position</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="n">fs</span>
+<span class="n">HR</span> <span class="o">=</span> <span class="mi">60</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">RR_duration</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Heart rate: </span><span class="si">{</span><span class="n">HR</span><span class="si">}</span><span class="s1"> bpm'</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>Heart rate: 70.09345794392523 bpm</p>
+</div>
+<h2 id="wrap-up-the-r-peak-detection">Wrap Up the R-peak Detection</h2>
+<p>We can group those five steps into a single function that accepts the ECG data and sampling rate as input argument and return a list of tuple containing R-peak values and their corresponding positions. The benefit of using function is that we can reuse the function for different ECG data without rewriting the same code. Let's realize this function implementation for R-peak detection.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">ecg</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">ecg</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">window</span><span class="p">),</span> <span class="s1">'same'</span><span class="p">)</span> <span class="o">/</span><span class="n">window</span>
+
+<span class="k">def</span> <span class="nf">rpeak_detection</span><span class="p">(</span><span class="n">ecg</span><span class="p">,</span> <span class="n">fs</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ecg</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ECG'</span><span class="p">])</span>
+
+    <span class="c1"># 1. moving average</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">'ECG_ma'</span><span class="p">]</span> <span class="o">=</span> <span class="n">moving_average</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">fs</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+
+    <span class="c1"># 2. find all the RoIs</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">'roi'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="n">track_start</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="c1"># check if the point is above the moving average point</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">ECG</span> <span class="o">&gt;</span> <span class="n">row</span><span class="o">.</span><span class="n">ECG_ma</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">track_start</span><span class="p">):</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">roi</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">track_start</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">roi</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">track_start</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># 3. locate the peak for all RoIs</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'roi'</span><span class="p">])</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'roi'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">,</span> <span class="s1">'position'</span><span class="p">]</span>
+    <span class="n">peak</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,(</span><span class="n">roi</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">groups</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">roi</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">peak</span> <span class="o">=</span> <span class="n">peak</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+                                    <span class="s1">'roi'</span><span class="p">:</span> <span class="n">roi</span><span class="p">,</span>
+                                    <span class="s1">'value'</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">ECG</span><span class="p">),</span>
+                                    <span class="s1">'position'</span><span class="p">:</span> <span class="n">group</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">ECG</span><span class="p">)]</span>
+                                <span class="p">},</span> <span class="n">name</span> <span class="o">=</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="c1"># 4. validate the peak</span>
+    <span class="n">average_peak_value</span> <span class="o">=</span> <span class="n">peak</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">val_peak</span> <span class="o">=</span> <span class="n">peak</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">peak</span><span class="o">.</span><span class="n">value</span><span class="o">&gt;</span><span class="n">average_peak_value</span><span class="p">,</span> <span class="p">:]</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">val_peak</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">val_peak</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<p>Create a function to compute the heart rate given the list of R-peak positions as input argument.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cal_HR</span><span class="p">(</span><span class="n">rpeak_position</span><span class="p">):</span>
+    <span class="n">RR_duration</span> <span class="o">=</span> <span class="p">(</span><span class="n">rpeak_position</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="n">rpeak_position</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="n">fs</span>
+    <span class="k">return</span> <span class="mi">60</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">RR_duration</span><span class="p">)</span>
+</code></pre></div>
+<p>Create a plotting function to visualize the detected R-peaks with respect to the ECG data.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_rpeak</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">ecg</span><span class="p">,</span> <span class="n">peak_position</span><span class="p">,</span> <span class="n">peak_value</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ecg</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">ecg</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'raw ECG data'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">peak_position</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">),</span> <span class="n">peak_value</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Validated R-peak"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Time (s)'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'ECG Amplitude'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">framealpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>We can now call the function by supplying the ECG data and the sampling rate. Besides trying with the ECG data we have previously, we can also try with another two ECG samples: <a href="https://github.com/pc-ng/Physiological-Demo/blob/master/ECG-HR/sample-ecg-data-75.csv" rel="noopener noreferrer" target="_blank">sample-ecg-data-75</a>, <a href="https://github.com/pc-ng/Physiological-Demo/blob/master/ECG-HR/sample-ecg-data-85.csv" rel="noopener noreferrer" target="_blank">sample-ecg-data-85</a>.
+Both samples are of 5 second duration with sampling rate equals to 100Hz. Note that the <code>rpeak_detection</code> function takes in a numpy array as input argument, so we got to be careful when supplying the ecg input to the function.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># try with sample-ecg-data-70</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'sample-ecg-data-70.csv'</span><span class="p">)</span>
+<span class="n">rpeaks</span> <span class="o">=</span> <span class="n">rpeak_detection</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plot_rpeak</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">rpeaks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rpeaks</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># compute the heart rate</span>
+<span class="n">HR</span> <span class="o">=</span> <span class="n">cal_HR</span><span class="p">(</span><span class="n">rpeaks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Heart rate: </span><span class="si">{</span><span class="n">HR</span><span class="si">}</span><span class="s1"> bpm'</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>
+<figure><img alt="Heart Rate Measurement from ECG — aboutecg 27 0" loading="lazy" src="/asset/notes/ecg-heart-rate/aboutecg_27_0.svg"/>
+</figure>
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>Heart rate: 70.09345794392523 bpm</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># try with sample-ecg-data-75</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'sample-ecg-data-75.csv'</span><span class="p">)</span>
+
+<span class="n">rpeaks</span> <span class="o">=</span> <span class="n">rpeak_detection</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plot_rpeak</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">rpeaks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rpeaks</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># compute the heart rate</span>
+<span class="n">HR</span> <span class="o">=</span> <span class="n">cal_HR</span><span class="p">(</span><span class="n">rpeaks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Heart rate: </span><span class="si">{</span><span class="n">HR</span><span class="si">}</span><span class="s1"> bpm'</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>
+<figure><img alt="Heart Rate Measurement from ECG — aboutecg 28 0" loading="lazy" src="/asset/notes/ecg-heart-rate/aboutecg_28_0.svg"/>
+</figure>
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>Heart rate: 75.0 bpm</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># try with sample-ecg-data-85</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'sample-ecg-data-85.csv'</span><span class="p">)</span>
+
+<span class="n">rpeaks</span> <span class="o">=</span> <span class="n">rpeak_detection</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plot_rpeak</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">ECG</span><span class="p">,</span> <span class="n">rpeaks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rpeaks</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># compute the heart rate</span>
+<span class="n">HR</span> <span class="o">=</span> <span class="n">cal_HR</span><span class="p">(</span><span class="n">rpeaks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Heart rate: </span><span class="si">{</span><span class="n">HR</span><span class="si">}</span><span class="s1"> bpm'</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>
+<figure><img alt="Heart Rate Measurement from ECG — aboutecg 29 0" loading="lazy" src="/asset/notes/ecg-heart-rate/aboutecg_29_0.svg"/>
+</figure>
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Output:</p>
+<p>Heart rate: 85.02024291497976 bpm</p>
+</div>
+<h2 id="resources">Resources</h2>
+<p>The complete code to the above implementation is available <a href="https://github.com/pc-ng/Physiological-Demo/blob/master/ECG-HR/aboutecg.ipynb" rel="noopener noreferrer" target="_blank">here</a>.
+Many algorithms have been developed to compute the R-peak detection. <a href="https://github.com/berndporr/py-ecg-detectors" rel="noopener noreferrer" target="_blank">Here</a> you can find a collection of 7 ECG heartbeat detection algorithms implemented in Python. You can try out those peak detection algorithms by installing the package using <code>pip install py-ecg-detectors</code>.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p class="note-provenance">From <a href="https://github.com/pc-ng/pc-blog/blob/master/biometric_signals/aboutecg/aboutecg/index.html" target="_blank" rel="noopener noreferrer">Pai’s original blog</a>.</p></div></article></main><footer class="site-footer"><div class="wrap footer-inner"><span>© 2026 Pai Chet Ng · Singapore</span><div class="footer-links"><a href="mailto:paichet.ng@singaporetech.edu.sg">Email</a><a href="https://orcid.org/0000-0001-9153-5411" target="_blank" rel="noopener noreferrer">ORCID</a><a href="/notes/">Notes</a></div></div></footer></body></html>
